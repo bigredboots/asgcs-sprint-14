@@ -1,0 +1,13 @@
+<app-dashboard-layout [configuration]="configuration">
+  <div container="sidePanel" id="sidebar">
+    <app-navigation-bar></app-navigation-bar>
+    <app-navigation-side-panel [links]="links"></app-navigation-side-panel>
+  </div>
+
+  <div container="header">
+    <app-header></app-header>
+  </div>
+  <div container="mainContent">
+    <router-outlet (activate)="onActivate($event)"></router-outlet>
+  </div>
+</app-dashboard-layout>

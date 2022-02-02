@@ -1,0 +1,485 @@
+<div class="settings" #overview>
+  <app-sidebar (onToggleSidebar)="toggleSidebar()"></app-sidebar>
+  <div class="overlayer" (click)="toggleSidebar()"></div>
+  <div class="overlayer-filter" (click)="toggleFilters()"></div>
+  <div
+    class="overlayer-navigation"
+    singleDoubleClick
+    (onSingleClick)="handleSingleClicks()"
+  ></div>
+</div>
+
+<div class="main-header">
+  <div id="dash-header">
+    <div class="top-navigation-block">
+      <div
+        role="button"
+        class="hamburger toggler"
+        singleDoubleClick
+        (onSingleClick)="handleSingleClicks()"
+      >
+        <span></span>
+      </div>
+      <div class="company-logo ciena"></div>
+      <div class="breadcrumb mobile-breadcrumb">
+        <span>{{ this.myBreadCrumb }}</span>
+        <app-breadcrumb></app-breadcrumb>
+      </div>
+      <input type="checkbox" id="toggle-search" />
+      <div class="top-fields">
+        <nav
+          aria-label="breadcrumb"
+          role="navigation"
+          class="breadcrumb {{ this.myBreadCrumb }}"
+        >
+          <span>{{ this.myBreadCrumb }}</span>
+          <app-breadcrumb></app-breadcrumb>
+          <div class="refresh-date">
+            <span class="title">Refreshed on</span> 01 Jan 2022
+            <span class="time">21:00 GMT</span>
+          </div>
+        </nav>
+
+        <div class="search-block">
+          <div class="mobile-search-header">
+            Search
+            <label for="toggle-search">+</label>
+          </div>
+          <input
+            type="text"
+            name="search"
+            autocomplete="off"
+            placeholder="Search for anything"
+            class="search-field"
+          />
+          <button class="search-submit blue">Search</button>
+        </div>
+        <div class="header-events">
+          <label for="toggle-search" class="icon site-search"
+            >Search Field</label
+          >
+          <div class="notifications">
+            <input type="checkbox" id="toggle-notifications" />
+            <label for="toggle-notifications" class="icon active"
+              >Notifications</label
+            >
+            <div class="notifications-popup">
+              <span class="notifications-title">Notifications</span>
+              <ul>
+                <li>You have no notifications at this time</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-header-events"></div>
+      <div class="user-block" (click)="toggleSidebar()">
+        <div class="avatar"></div>
+        <div class="name">LongFirstNameWithNoBreakingSpace V.</div>
+      </div>
+    </div>
+  </div>
+  <!--THIS FILTER SHOULD SHOW FOR DEMAND OVERVIEW and DEMAND DISCOVER SCREENS ONLY -->
+  <ng-container *ngIf="breadcrumbService.currentModule$ | async as module">
+    <div
+      class="filter-block filter-active filter-active"
+      #filters
+      *ngIf="module == 'demand'"
+    >
+      <div class="filters" (click)="toggleFilters()">
+        <span class="filter-title">Filters</span>
+        <span class="filter-close">+</span>
+      </div>
+      <div class="overview-filters">
+        <div class="filter-container">
+          <div class="block-filters">
+            <div class="filter-item">
+              <div class="filter-label">Status</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select">
+                  <span class="k-icon k-i-arrow-s"></span>
+                </span>
+              </span>
+            </div>
+            <div class="filter-item">
+              <div class="filter-label">Dates</div>
+              <div class="datepicker">
+                <div class="from-date">8/31/2021</div>
+                <div class="text-date">TO</div>
+                <div class="to-date">12/31/2021</div>
+                <span role="button" class="k-select">
+                  <span class="k-icon k-i-calendar"></span>
+                </span>
+              </div>
+            </div>
+
+            <div class="filter-item">
+              <div class="filter-label">Type</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span
+                ></span>
+              </span>
+            </div>
+
+            <div class="filter-item">
+              <div class="filter-label">Sites</div>
+              <span class="k-dropdown-wrap"
+                ><span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span></span
+              ></span>
+            </div>
+
+            <div class="filter-item">
+              <div class="filter-label">Supplier</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span
+                ></span>
+              </span>
+            </div>
+          </div>
+
+          <div class="block-filterbuttons">
+            <button kendobutton="" class="secondary">Reset</button>
+            <button kendobutton="" class="blue">Apply</button>
+            <div class="close-filters" (click)="toggleFilters()">+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--THIS FILTER SHOULD SHOW FOR OUTBOUND SHIPPING OVERVIEW and OUTBOUND SHIPPING DISCOVER SCREENS ONLY -->
+    <div
+      class="filter-block filter-active"
+      [ngClass]="{ 'd-none': hideFilters }"
+      #outboundfilters
+      *ngIf="module == 'outbound'"
+    >
+      <div class="filters" (click)="toggleOutboundFilters()">
+        <span class="filter-title">Filters</span>
+        <span class="filter-close">+</span>
+      </div>
+      <div class="overview-filters">
+        <div class="filter-container">
+          <div class="block-filters">
+            <div class="filter-item">
+              <div class="filter-label">Customer</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select">
+                  <span class="k-icon k-i-arrow-s"></span>
+                </span>
+              </span>
+            </div>
+            <div class="filter-item">
+              <div class="filter-label">Dates</div>
+              <div class="datepicker">
+                <div class="from-date">8/31/2021</div>
+                <div class="text-date">TO</div>
+                <div class="to-date">12/31/2021</div>
+                <span role="button" class="k-select">
+                  <span class="k-icon k-i-calendar"></span>
+                </span>
+              </div>
+            </div>
+
+            <div class="filter-item">
+              <div class="filter-label">Supplier</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span
+                ></span>
+              </span>
+            </div>
+
+            <div class="filter-item">
+              <div class="filter-label">incoTerms</div>
+              <span class="k-dropdown-wrap"
+                ><span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span></span
+              ></span>
+            </div>
+
+            <div class="filter-item">
+              <div class="filter-label">Ship From</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span
+                ></span>
+              </span>
+            </div>
+
+            <div class="filter-item">
+              <div class="filter-label">Ship To</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span
+                ></span>
+              </span>
+            </div>
+          </div>
+
+          <div class="block-filterbuttons">
+            <button kendobutton="" class="secondary">Reset</button>
+            <button kendobutton="" class="blue">Apply</button>
+            <div class="close-filters" (click)="toggleOutboundFilters()">+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--THIS FILTER SHOULD SHOW FOR JUST HUBS -->
+    <div
+      class="filter-block hubfilters filter-active"
+      [ngClass]="{ 'd-none': hideFilters }"
+      #hubfilters
+      *ngIf="module == 'hubs'"
+    >
+      <div class="filters" (click)="toggleHubFilters()">
+        <span class="filter-title">Filters</span>
+        <span class="filter-close">+</span>
+      </div>
+      <div class="overview-filters">
+        <div class="filter-container">
+          <div class="block-filters">
+            <div class="filter-item">
+              <div class="filter-label">Supplier</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select">
+                  <span class="k-icon k-i-arrow-s"></span>
+                </span>
+              </span>
+            </div>
+            <div class="filter-item">
+              <div class="filter-label">Dates</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select">
+                  <span class="k-icon k-i-arrow-s"></span>
+                </span>
+              </span>
+            </div>
+
+            <div class="filter-item">
+              <div class="filter-label">Type</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span
+                ></span>
+              </span>
+            </div>
+
+            <div class="filter-item">
+              <div class="filter-label">Warehouse Name</div>
+              <span class="k-dropdown-wrap"
+                ><span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span></span
+              ></span>
+            </div>
+          </div>
+
+          <div class="block-filterbuttons">
+            <button kendobutton="" class="secondary">Reset</button>
+            <button kendobutton="" class="blue">Apply</button>
+            <div class="close-filters" (click)="toggleHubFilters()">+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--THIS FILTER SHOULD SHOW FOR JUST REPORTS -->
+    <div
+      class="filter-block reportfilters filter-active"
+      #reportfilters
+      *ngIf="module == 'reports'"
+    >
+      <div class="filters" (click)="toggleReportFilters()">
+        <span class="filter-title">Filters</span>
+        <span class="filter-close">+</span>
+      </div>
+      <div class="overview-filters">
+        <div class="filter-container">
+          <div class="block-filters">
+            <div class="filter-item">
+              <div class="filter-label">Field 1</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select">
+                  <span class="k-icon k-i-arrow-s"></span>
+                </span>
+              </span>
+            </div>
+            <div class="filter-item">
+              <div class="filter-label">Field 2</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select">
+                  <span class="k-icon k-i-arrow-s"></span>
+                </span>
+              </span>
+            </div>
+
+            <div class="filter-item">
+              <div class="filter-label">Field 3</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span
+                ></span>
+              </span>
+            </div>
+
+            <div class="filter-item">
+              <div class="filter-label">Field 4</div>
+              <span class="k-dropdown-wrap"
+                ><span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span></span
+              ></span>
+            </div>
+            <div class="filter-item">
+              <div class="filter-label">Field 5</div>
+              <span class="k-dropdown-wrap"
+                ><span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span></span
+              ></span>
+            </div>
+            <div class="filter-item">
+              <div class="filter-label">Field 6</div>
+              <span class="k-dropdown-wrap"
+                ><span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span></span
+              ></span>
+            </div>
+            <div class="filter-item">
+              <div class="filter-label">Field 7</div>
+              <span class="k-dropdown-wrap"
+                ><span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span></span
+              ></span>
+            </div>
+            <div class="filter-item">
+              <div class="filter-label">Field 8</div>
+              <span class="k-dropdown-wrap"
+                ><span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span></span
+              ></span>
+            </div>
+            <div class="filter-item">
+              <div class="filter-label">Field 9</div>
+              <span class="k-dropdown-wrap"
+                ><span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span></span
+              ></span>
+            </div>
+            <div class="filter-item">
+              <div class="filter-label">Field 10</div>
+              <span class="k-dropdown-wrap"
+                ><span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span></span
+              ></span>
+            </div>
+          </div>
+
+          <div class="block-filterbuttons">
+            <button kendobutton="" class="secondary">Reset</button>
+            <button kendobutton="" class="blue">Apply</button>
+            <div class="close-filters" (click)="toggleReportFilters()">+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--THIS FILTER SHOULD SHOW FOR JUST SUPPLY -->
+    <div
+      class="filter-block supplyfilters filter-active"
+      [ngClass]="{ 'd-none': hideFilters }"
+      #supplyfilters
+      *ngIf="module == 'supply'"
+    >
+      <div class="filters" (click)="toggleSupplyFilters()">
+        <span class="filter-title">Filters</span>
+        <span class="filter-close">+</span>
+      </div>
+      <div class="overview-filters">
+        <div class="filter-container">
+          <div class="block-filters">
+            <div class="filter-item">
+              <div class="filter-label">Supplier</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select">
+                  <span class="k-icon k-i-arrow-s"></span>
+                </span>
+              </span>
+            </div>
+            <div class="filter-item">
+              <div class="filter-label">Owner</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select">
+                  <span class="k-icon k-i-arrow-s"></span>
+                </span>
+              </span>
+            </div>
+
+            <div class="filter-item">
+              <div class="filter-label">Aging Category</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span
+                ></span>
+              </span>
+            </div>
+
+            <div class="filter-item">
+              <div class="filter-label">Warehouse</div>
+              <span class="k-dropdown-wrap"
+                ><span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span></span
+              ></span>
+            </div>
+
+            <div class="filter-item filter-by">
+              <div class="filter-label">
+                Filter <span>(Case sensitive)</span>
+              </div>
+              <span class="k-dropdown-wrap">
+                <input
+                  class="k-textbox"
+                  type="text"
+                  placeholder="+3 characters"
+                />
+              </span>
+            </div>
+          </div>
+
+          <div class="block-filterbuttons">
+            <button kendobutton="" class="secondary">Reset</button>
+            <button kendobutton="" class="blue">Apply</button>
+            <div class="close-filters" (click)="toggleSupplyFilters()">+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

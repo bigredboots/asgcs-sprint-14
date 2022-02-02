@@ -1,0 +1,364 @@
+<!-- <div
+  kendoTooltip
+  showOn="none"
+  [tooltipTemplate]="template"
+  filter=".k-grid td"
+  (mouseover)="showTooltip($event)"
+> -->
+
+<div id="alt-vertical-grid-container" class="altvertgrid">
+<kendo-grid
+[rowClass]="rowCallback"
+  #mylabel
+  id="alt-vertical-grid"
+  [kendoGridBinding]="gridView"
+  kendoGridSelectBy="id"
+  [selectedKeys]="mySelection"
+  [pageSize]="30"
+  [columnMenu]="{ columnChooser: false }"
+  [skip]="skip"
+  [pageable]="{
+    buttonCount: buttonCount,
+    info: info,
+    type: type,
+    pageSizes: pageSizes,
+    previousNext: previousNext,
+    position: position
+  }"
+  [groupable]="false"
+  scrollable="scrollable"
+  [sortable]="true"
+  [reorderable]="true"
+  [resizable]="true"
+  [columnMenu]="{ filter: false }"
+  (pageChange)="pageChange($event)"
+>
+  <ng-template kendoGridToolbarTemplate>
+    <div class="card-title-text">GAP AND CEW</div>
+
+    <div class="filter-block vertgrid">
+      <div class="filters">
+        <span class="filter-title">Filters: </span>
+      </div>
+      <div class="overview-filters">
+        <div class="filter-container">
+          <div class="block-filters">
+            <div class="filter-item">
+              <div class="filter-label">Status</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select">
+                  <span class="k-icon k-i-arrow-s"></span>
+                </span>
+              </span>
+            </div>
+            <div class="filter-item">
+              <div class="filter-label">Dates</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span
+                ></span>
+              </span>
+            </div>
+
+            <div class="filter-item">
+              <div class="filter-label">Type</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span
+                ></span>
+              </span>
+            </div>
+
+            <div class="filter-item">
+              <div class="filter-label">Sites</div>
+              <span class="k-dropdown-wrap"
+                ><span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span></span
+              ></span>
+            </div>
+
+            <div class="filter-item">
+              <div class="filter-label">Supplier</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Select</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span
+                ></span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block-filterbuttons">
+        <button kendobutton="" class="secondary">Reset</button>
+        <button kendobutton="" class="blue">Apply</button>
+      </div>
+    </div>
+
+    <div class="card-title-buttons">
+      <div class="opened full-screen" (click)="openFullscreen($event)">
+        <span></span>Full Screen
+      </div>
+      <div class="closed full-screen" (click)="closeFullscreen($event)">
+        <span></span>Exit Full Screen
+      </div>
+      <kendo-grid-column-chooser></kendo-grid-column-chooser>
+      <button kendoGridExcelCommand type="button" icon="file-excel">
+        Export to Excel
+      </button>
+    </div>
+  </ng-template>
+  <kendo-grid-column media="(max-width: 500px)" title="Items" [width]="300">
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <h4>CPN: {{ dataItem.id }}</h4>
+      <dl>
+        <dt>Ericsson PN</dt>
+        <dd>{{ dataItem.gender }}</dd>
+
+        <dt>Arrow PN</dt>
+        <dd>{{ dataItem.full_name }}</dd>
+
+        <dt>Customer PN</dt>
+        <dd>{{ dataItem.job_title }}</dd>
+
+        <dt>Supplier PN</dt>
+        <dd>{{ dataItem.country }}</dd>
+
+        <dt>Logistic</dt>
+        <dd>{{ dataItem.budget | currency }}</dd>
+      </dl>
+    </ng-template>
+  </kendo-grid-column>
+
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="gender"
+    title="Ericsson PN"
+    [width]="220"
+    [locked]="true"
+  >
+    <ng-template kendoGridCellTemplate let-dataItem>
+      {{ dataItem.gender }}
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="id"
+    title="Arrow PN"
+    [width]="150"
+    [locked]="true"
+  >
+    <ng-template kendoGridCellTemplate let-dataItem>
+      {{ dataItem.id }}
+    </ng-template>
+  </kendo-grid-column>
+
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="full_name"
+    title="Customer PN"
+    [width]="150"
+    [locked]="true"
+  >
+    <ng-template kendoGridCellTemplate let-dataItem>
+      {{ dataItem.full_name }}
+    </ng-template>
+  </kendo-grid-column>
+
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="job_title"
+    title="Supplier PN"
+    [width]="150"
+  >
+    <ng-template kendoGridCellTemplate let-dataItem>
+      {{ dataItem.job_title }}
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="country"
+    title="Country"
+    [width]="130"
+    [class]="{ 'text-center': true }"
+    [resizable]="true"
+  >
+    <ng-template kendoGridCellTemplate let-dataItem>
+      {{ dataItem.country }}
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column
+    field="is_online"
+    media="(min-width: 501px)"
+    title="Logistic"
+    [width]="110"
+    [class]="{ 'text-center': true }"
+    [resizable]="true"
+  >
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <span *ngIf="dataItem.is_online === true" class="good">On Time</span>
+      <span *ngIf="dataItem.is_online === false" class="late">-28D late</span>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column
+    field="rating"
+    title="Region"
+    media="(min-width: 501px)"
+    [width]="110"
+    [resizable]="true"
+    filter="numeric"
+  >
+    <ng-template kendoGridCellTemplate let-dataItem>
+      {{ dataItem.rating }}
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column
+    field="target"
+    media="(min-width: 501px)"
+    title="Supplier"
+    [width]="110"
+    [resizable]="true"
+    filter="numeric"
+  >
+    <ng-template kendoGridCellTemplate let-dataItem>
+      {{ dataItem.target }}
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column
+    field="budget"
+    media="(min-width: 501px)"
+    title="Suppliers"
+    [width]="150"
+    filter="numeric"
+  >
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <span [ngClass]="{ 'red text-bold': dataItem.budget < 0 }">{{
+        dataItem.budget | currency
+      }}</span>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="Supplier"
+    title="Phone"
+    [width]="130"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="address"
+    title="Supplier PN"
+    [width]="80"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="address"
+    title="Inventory Movement"
+    [width]="140"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="address"
+    title="Customer"
+    [width]="140"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="address"
+    title="Stlead"
+    [width]="120"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="address"
+    title="Shortage Status"
+    [width]="120"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="address"
+    title="1234"
+    [width]="85"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="address"
+    title="2345"
+    [width]="85"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="address"
+    title="3456"
+    [width]="85"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="address"
+    title="4567"
+    [width]="85"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="address"
+    title="5678"
+    [width]="85"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="address"
+    title="6789"
+    [width]="85"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="address"
+    title="7890"
+    [width]="85"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="address"
+    title="8901"
+    [width]="85"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="address"
+    title="9012"
+    [width]="85"
+  >
+  </kendo-grid-column>
+  <kendo-grid-column
+    media="(min-width: 501px)"
+    field="address"
+    title="0123"
+    [width]="85"
+  >
+  </kendo-grid-column>
+
+  <kendo-grid-pdf
+    fileName="Employees.pdf"
+    [repeatHeaders]="true"
+  ></kendo-grid-pdf>
+  <kendo-grid-excel fileName="Employees.xlsx"></kendo-grid-excel>
+</kendo-grid>
+<!-- </div> -->
+</div>

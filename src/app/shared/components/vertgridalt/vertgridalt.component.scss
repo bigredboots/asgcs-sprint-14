@@ -1,0 +1,75 @@
+
+@import '../../../scss/global';
+.k-grid tr.k-alt {
+  background: transparent;
+}
+.k-grid tr.totalrow.k-state-selected td {
+  color: $white;
+}
+#alt-vertical-grid
+  .k-grid-container
+  div:nth-child(1)
+  .k-grid-table-wrap
+  .k-grid-table {
+  .totalrow td:nth-child(1)::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #a2a2a2; //one-off color not used anywhere else
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    border-radius: 0px 0px 0px 20px;
+    border: 10px solid $black;
+    border-width: 0px 0px 10px 10px;
+    transition: $fast-transition;
+  }
+  .totalrow:hover td:nth-child(1)::after {
+    background-color: $table-hover;
+  }
+  .totalrow.k-state-selected td:nth-child(1)::after {
+    background-color: #6f7c82; //one-off color not used anywhere else
+  }
+}
+
+.k-grid tr.subtotalrow {
+  background: $grey-darker;
+
+  td {
+    border-top: 1px dashed $grey-darker;
+    border-bottom: 1px dashed $grey-light;
+  }
+}
+
+.k-grid tr.totalrow {
+  background-color: $grey-light;
+  color: $black;
+
+  td {
+    color: $black;
+    font-weight: bold;
+    border-top: 0px;
+    border-bottom: 30px solid $black;
+    border-left: 0px;
+    position: relative;
+  }
+  &:hover td {
+    color: $white;
+  }
+}
+.k-grid .k-grid-content-locked tr.subtotalrow td,
+.k-grid .k-grid-content-locked tr.totalrow td
+ {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.k-grid tbody tr:hover,
+.k-grid tbody tr:hover td,
+.k-grid .k-grid-content-locked tr:hover td,
+.k-grid .k-grid-content-locked tr.subtotalrow:hover td,
+.k-grid tr.k-alt.subtotalrow:hover td,
+.k-grid tr.subtotalrow:hover td {
+  background-color: $table-hover;
+  border-top: 1px solid $grey-light;
+}
