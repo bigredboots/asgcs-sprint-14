@@ -13,6 +13,7 @@ import { NavigationLink } from './shared';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+
   breadCrumb = GlobalConstants.breadCrumb;
 
   public configuration: DashboardLayoutConfiguration;

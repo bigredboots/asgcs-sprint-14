@@ -41,8 +41,6 @@ import { SupplyComponent } from './pages/supply/supply/supply.component';
 import { SettingsComponent } from './pages/settings/settings/settings.component';
 import 'hammerjs';
 
-
-
 @NgModule({
   imports: [
     AppRoutingModule,
@@ -57,7 +55,7 @@ import 'hammerjs';
     DropDownsModule,
     LabelModule,
     InputsModule,
-    ButtonsModule
+    ButtonsModule,
   ],
   declarations: [
     AppComponent,
@@ -83,4 +81,6 @@ import 'hammerjs';
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  DropDownFillMode;
+}

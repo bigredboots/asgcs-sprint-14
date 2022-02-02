@@ -17,12 +17,19 @@ import { VertgridaltComponent } from './components/vertgridalt/vertgridalt.compo
 import { HorizgridComponent } from './components/horizgrid/horizgrid.component';
 import { DonutComponentAlt } from './components/charts/donut-chart-alt/donut-chart-alt.component';
 import { ChartsModule } from '@progress/kendo-angular-charts';
+
+import {
+  DropDownsModule
+} from '@progress/kendo-angular-dropdowns';
+import { LabelModule } from '@progress/kendo-angular-label';
+import { InputsModule } from '@progress/kendo-angular-inputs';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+
 import {
   GridModule,
   PDFModule,
   ExcelModule,
 } from '@progress/kendo-angular-grid';
-import { InputsModule } from '@progress/kendo-angular-inputs';
 
 @NgModule({
   declarations: [
@@ -47,7 +54,10 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
     GridModule,
     PDFModule,
     ExcelModule,
+    DropDownsModule,
+    LabelModule,
     InputsModule,
+    ButtonsModule,
   ],
   exports: [
     DonutComponent,
@@ -65,4 +75,5 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
   ],
   bootstrap: [DonutComponent],
 })
-export class SharedModule {}
+export class SharedModule {
+}

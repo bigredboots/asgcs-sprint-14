@@ -1,4 +1,6 @@
 import { BreadcrumbService } from './../../../services/breadcrumb.service';
+import { NgModule } from '@angular/core';
+
 import {
   Component,
   OnInit,
@@ -31,13 +33,17 @@ export class HeaderComponent implements OnInit {
   }
 
   public listItems: Array<string> = [
-    'X-Small',
-    'Small',
-    'Medium',
-    'Large',
-    'X-Large',
-    '2X-Large',
-];
+    'Last Year',
+    'Last Quarter',
+    'This Calendar year',
+    'Long explanation of time range',
+    'Custom Range'
+  ];
+  public defaultItem: { text: string } = {
+    text: "Last Fiscal Year to Present"
+  };
+
+  
 
   @ViewChild('overview') overview: ElementRef;
   @ViewChild('filters') filters: ElementRef;
