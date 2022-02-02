@@ -27,7 +27,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    data: { title: '8Main Page', breadcrumb: 'Dashboard' },
+    data: { title: '88Main Page', breadcrumb: 'Dashboard', filter: false, },
   },
   {
     path: 'demandOverview',

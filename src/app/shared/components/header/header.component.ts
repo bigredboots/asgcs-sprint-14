@@ -30,6 +30,15 @@ export class HeaderComponent implements OnInit {
     this._subscriptionsSubject$ = new Subject<void>();
   }
 
+  public listItems: Array<string> = [
+    'X-Small',
+    'Small',
+    'Medium',
+    'Large',
+    'X-Large',
+    '2X-Large',
+];
+
   @ViewChild('overview') overview: ElementRef;
   @ViewChild('filters') filters: ElementRef;
   @ViewChild('hubfilters') hubfilters: ElementRef;

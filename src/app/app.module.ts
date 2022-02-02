@@ -3,6 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { LabelModule } from '@progress/kendo-angular-label';
+import { InputsModule } from '@progress/kendo-angular-inputs';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
@@ -49,6 +54,10 @@ import 'hammerjs';
     CoreModule,
     HTMLEscapeUnescapeModule,
     SharedModule,
+    DropDownsModule,
+    LabelModule,
+    InputsModule,
+    ButtonsModule
   ],
   declarations: [
     AppComponent,

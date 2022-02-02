@@ -32,13 +32,18 @@
           role="navigation"
           class="breadcrumb {{ this.myBreadCrumb }}"
         >
-          <span>{{ this.myBreadCrumb }}</span>
-          <app-breadcrumb></app-breadcrumb>
-          <div class="refresh-date">
-            <span class="title">Refreshed on</span> 01 Jan 2022
-            <span class="time">21:00 GMT</span>
-          </div>
         </nav>
+        <div class="filter-dates">
+          <div class="date-selector">
+          <!-- <kendo-dropdownlist [data]="listItems"> </kendo-dropdownlist> -->
+          </div>
+        <span>{{ this.myBreadCrumb }}</span>
+        <app-breadcrumb></app-breadcrumb>
+        <div class="refresh-date">
+          <span class="title">Refreshed on</span> 01 Jan 2022
+          <span class="time">21:00 GMT</span>
+        </div>
+        </div>
 
         <div class="search-block">
           <div class="mobile-search-header">
