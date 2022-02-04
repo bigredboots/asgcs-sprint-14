@@ -64,7 +64,30 @@
         <kendo-grid-column field="Uncomfirmed" [width]="80"></kendo-grid-column>
         <kendo-grid-column field="OutsideWindow" [width]="80"></kendo-grid-column>
         <ng-template kendoGridDetailTemplate let-dataItem>
-          <kendo-grid [data]="dataItem.thirdLevelData"></kendo-grid>
+          <kendo-grid [data]="dataItem.thirdLevelData">
+          <kendo-grid-column field="EricssonPN" width="170"></kendo-grid-column>
+          <kendo-grid-column field="ArrowPN" [width]="120"></kendo-grid-column>
+          <kendo-grid-column field="SupplierPN" [width]="120"></kendo-grid-column>
+          <kendo-grid-column field="Logistic" [width]="120"></kendo-grid-column>
+          <kendo-grid-column field="Region" [width]="120"></kendo-grid-column>
+          <kendo-grid-column field="Supplier" [width]="120"></kendo-grid-column>
+          <kendo-grid-column field="Suppliers" [width]="120"></kendo-grid-column>
+          <kendo-grid-column field="SupplierPNs" [width]="170"></kendo-grid-column>
+          <kendo-grid-column field="inventory" [width]="170"></kendo-grid-column>
+          <kendo-grid-column field="Customer" [width]="170"></kendo-grid-column>
+          <kendo-grid-column field="Stdlead" [width]="120"></kendo-grid-column>
+          <kendo-grid-column field="2204" [width]="80"></kendo-grid-column>
+          <kendo-grid-column field="2205" [width]="80"></kendo-grid-column>
+          <kendo-grid-column field="2206" [width]="80"></kendo-grid-column>
+          <kendo-grid-column field="2207" [width]="80"></kendo-grid-column>
+          <kendo-grid-column field="2208" [width]="80"></kendo-grid-column>
+          <kendo-grid-column field="2209" [width]="80"></kendo-grid-column>
+          <kendo-grid-column field="2210" [width]="80"></kendo-grid-column>
+          <kendo-grid-column field="2211" [width]="80"></kendo-grid-column>
+          <kendo-grid-column field="2212" [width]="80"></kendo-grid-column>
+          <kendo-grid-column field="Uncomfirmed" [width]="80"></kendo-grid-column>
+          <kendo-grid-column field="OutsideWindow" [width]="80"></kendo-grid-column>
+        </kendo-grid>
         </ng-template>
       </kendo-grid>
     </ng-template>
