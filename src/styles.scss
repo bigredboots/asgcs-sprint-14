@@ -503,7 +503,40 @@ h4 {
   display: block;
   position: relative;
 }
-
+.dates-block .k-input {
+  background: transparent;
+  padding: 0px;
+  font-size: 21px;
+  border: 0px;
+  color: #;
+  text-decoration: underline;
+  outline: 0;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 2px;
+  font-weight: bold;
+}
+.dates-block .k-dropdown {
+  width: unset;
+}
+.dates-block .k-dropdown .k-dropdown-wrap .k-select {
+  background: transparent;
+  border: 0px;
+}
+.dates-title {
+  font-size: 13px;
+  color: #ccc;
+  margin: 0;
+  padding: 0;
+  line-height: 8px;
+}
+.k-dropdown .k-dropdown-wrap {
+  border-bottom: 2px solid grey;
+  margin-bottom: 5px;
+}
+.dates-block .k-dropdown .k-dropdown-wrap .k-select span {
+  border-top: 6px solid $blue-color;
+  margin-top: 9px;
+}
 @media (max-width: 500px) {
   .card-title-buttons {
     display: none;
@@ -515,4 +548,3 @@ h4 {
     display: none;
   }
 }
-

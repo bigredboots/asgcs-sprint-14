@@ -237,14 +237,10 @@ button.search-submit {
   font-size: $smallest-font;
   color: $grey-light;
   position: relative;
-  border-left: 2px solid $grey-light;
-  padding-left: 10px;
-  margin-left: 10px;
-  height: 40px;
+  text-align: center;
 }
 .refresh-date .title {
   font-weight: bold;
-  display: block;
   font-size: $small-font;
 }
 
