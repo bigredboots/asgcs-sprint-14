@@ -84,11 +84,17 @@
 
 #expandall {
   background-color: transparent;
+  border-left: 1px solid #fff;
+  margin-left: 7px;
+  padding: 0px 0px 0px 7px;
 }
 #expandall::before {
-  content: '';
-  background-image: url('/assets/icons/expandall.svg');
-  width: 10px;
-  height: 10px;
+  content: "";
+  background-image: url("/assets/icons/expandall.svg");
+  width: 15px;
+  height: 15px;
   display: inline-block;
+  opacity: 1;
+  position: relative;
+  background-size: contain;
 }
