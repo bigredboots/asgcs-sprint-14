@@ -23,6 +23,7 @@ export class VertgridaltComponent {
   public data = [
     {
       EricssonPN: '00001-0001',
+      Region: 'Europe',
       Suppliers: 'XILINX',
       SupplierPNs: 'XC3S1500-4FGG456C',
       Stdlead: '52',
@@ -86,6 +87,7 @@ export class VertgridaltComponent {
     },
     {
       EricssonPN: '00002-0002',
+      Region: 'Europe',
       Suppliers: 'XILINX',
       SupplierPNs: 'XC3S1500-4FGG456C',
       Stdlead: '52',
@@ -241,6 +243,7 @@ export class VertgridaltComponent {
     },
     {
       EricssonPN: '00003-0003',
+      Region: 'Europe',
       Suppliers: 'XILINX',
       SupplierPNs: 'XC3S1500-4FGG456C',
       Stdlead: '52',
