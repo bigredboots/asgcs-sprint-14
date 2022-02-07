@@ -1,4 +1,3 @@
-
 @import '../../../scss/global';
 .k-grid tr.k-alt {
   background: transparent;
@@ -59,8 +58,7 @@
   }
 }
 .k-grid .k-grid-content-locked tr.subtotalrow td,
-.k-grid .k-grid-content-locked tr.totalrow td
- {
+.k-grid .k-grid-content-locked tr.totalrow td {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -72,4 +70,25 @@
 .k-grid tr.subtotalrow:hover td {
   background-color: $table-hover;
   border-top: 1px solid $grey-light;
+}
+
+#vertical-grid.k-grid tr:nth-child(2n + 1) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.k-grid tr.k-alt {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+#vertical-grid.k-grid tbody tr:hover td {
+  background-color: #0f1f26;
+}
+
+#expandall {
+  background-color: transparent;
+}
+#expandall::before {
+  content: '';
+  background-image: url('/assets/icons/expandall.svg');
+  width: 10px;
+  height: 10px;
+  display: inline-block;
 }

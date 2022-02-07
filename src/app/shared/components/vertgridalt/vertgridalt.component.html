@@ -5,9 +5,11 @@
   filter=".k-grid td"
   (mouseover)="showTooltip($event)"
 > -->
-<div class="card-title-text">Reg Vertical Grid Title</div>
-<button class="k-button" (click)="expandAll(grid)">Expand all</button>
-<button class="k-button" (click)="collapseAll(grid)">Collapse all</button>
+<div class="card-title left">
+  <div class="card-title-text">Expanded Vertical Grid Title</div>
+  <button class="k-button" id="expandall" (click)="expandAll(grid)">Expand all</button>
+  <!-- <button class="k-button" id="collapseall" (click)="collapseAll(grid)">Collapse all</button> -->
+</div>
 <div id="alt-vertical-grid-container" class="altvertgrid">
   <kendo-grid
     #grid
