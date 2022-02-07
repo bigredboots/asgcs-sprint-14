@@ -3,7 +3,7 @@ import { Component, Input, ElementRef, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-demand',
   templateUrl: './demandDiscover.component.html',
-  styleUrls: ['./demandDiscover.component.scss']
+  styleUrls: ['./demandDiscover.component.scss'],
 })
 export class DemandDiscoverComponent {
   @ViewChild('mapmoreinfo') mapmoreinfo: ElementRef;

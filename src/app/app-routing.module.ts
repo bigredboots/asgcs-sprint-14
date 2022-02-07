@@ -157,6 +157,11 @@ const routes: Routes = [
     data: { title: '16Main Page', breadcrumb: '' },
   },
   {
+    path: 'expandedreports',
+    component: ExpandedReportsComponent,
+    data: { title: '18Main Page', breadcrumb: '' },
+  },
+  {
     path: 'settings',
     component: SettingsComponent,
     data: { title: 'settings Page', breadcrumb: 'Settings', filter: true },
