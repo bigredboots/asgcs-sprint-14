@@ -21,6 +21,7 @@ import { OutboundReportsProfileComponent } from './pages/outbound/outbound-repor
 import { HubsComponent } from './pages/hubs/hubs/hubs.component';
 import { SupplyComponent } from './pages/supply/supply/supply.component';
 import { ReportsComponent } from './pages/reports/reports/reports.component';
+import { ExpandedReportsComponent } from './pages/expandedreports/expandedreports.component';
 import { SettingsComponent } from './pages/settings/settings/settings.component';
 
 const routes: Routes = [

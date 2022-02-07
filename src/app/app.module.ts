@@ -36,6 +36,7 @@ import { OutboundReportsProfileComponent } from './pages/outbound/outbound-repor
 
 import { HubsComponent } from './pages/hubs/hubs/hubs.component';
 import { ReportsComponent } from './pages/reports/reports/reports.component';
+import { ExpandedReportsComponent } from './pages/expandedreports/expandedreports.component';
 import { SupplyComponent } from './pages/supply/supply/supply.component';
 
 import { SettingsComponent } from './pages/settings/settings/settings.component';
@@ -68,6 +69,7 @@ import 'hammerjs';
     HubsComponent,
     SupplyComponent,
     ReportsComponent,
+    ExpandedReportsComponent,
     SettingsComponent,
     DemandReportsLocationsComponent,
     DemandReportsProfileComponent,
