@@ -92,23 +92,16 @@
 }
 .expand-button-container {
   border-left: 1px solid #fff;
-  display: block;;
+  display: block;
   padding: 0px 0px 0px 5px;
-  height: 19px;
+  height: 18px;
   margin-left: 5px;
-  width: 100px;
-  overflow-x: hidden;
+  width: 90px;
+  margin-top: 3px;
+  overflow: hidden;
+  position: relative;
 }
-#expandall {
-  background-color: transparent;
-  color: $blue-color;
-  padding: 0px;
-  font-size: $smallest-font;
-  margin-top: -3px;
-  transition: $default-transition;
-}
-#expandall::before,
-#collapseall::before {
+.expand-button-container::before {
   content: '';
   background-image: url('/assets/icons/expandall-blue.svg');
   width: 15px;
@@ -116,23 +109,38 @@
   background-color: transparent;
   display: inline-block;
   opacity: 1;
-  position: relative;
   background-size: contain;
+  margin-right: 3px;
+  position: absolute;
+  transition: $default-transition;
 }
-.expanded #expandall {
-  margin-top: -40px;
+
+.expanded .expand-button-container::before {
+  transform: rotate(180deg);
 }
+#expandall,
 #collapseall {
   background-color: transparent;
   color: $blue-color;
-  padding: 0px 0px 0px 7px;
+  padding: 0px;
+  margin-left: 17px;
+  position: relative;
   font-size: $smallest-font;
-  margin-top: -100px;
-  transition: $default-transition;
+  transition: $fast-transition;
 }
-#collapseall::before {
-  transform: rotate(90deg);
+#expandall {
+  top: -3px;
+  opacity: 1;
+}
+#collapseall {
+  top: 0px;
+  opacity: 0;
+}
+.expanded #expandall {
+  top: -20px;
+  opacity: 0;
 }
 .expanded #collapseall {
-  margin-top: -44pxpx;
+  top: -25px;
+  opacity: 1;
 }

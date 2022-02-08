@@ -475,6 +475,7 @@ export class VertgridaltComponent {
   ];
 
   public collapseAll(topGrid) {
+    this.collapsed.nativeElement.classList.toggle('expanded');
     this.data.forEach((item, idx) => {
       topGrid.collapseRow(idx);
     });
