@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import {
   OnInit,
+  ViewChild,
+  ElementRef,
   Component,
   ViewEncapsulation,
   ViewChildren,
@@ -18,6 +20,8 @@ import { GridComponent, GridDataResult } from '@progress/kendo-angular-grid';
 })
 export class VertgridaltComponent {
   @ViewChildren(GridComponent) private grids: QueryList<GridComponent>;
+  @ViewChild('collapsed') collapsed: ElementRef;
+
   public mySelection: string[] = [];
 
   public data = [
@@ -477,6 +481,7 @@ export class VertgridaltComponent {
   }
 
   public expandAll(topGrid) {
+    this.collapsed.nativeElement.classList.toggle('expanded');
     this.data.forEach((item, idx) => {
       topGrid.expandRow(idx);
     });

@@ -90,15 +90,25 @@
 #vertical-grid-alt.k-grid {
   border: 0px;
 }
+.expand-button-container {
+  border-left: 1px solid #fff;
+  display: block;;
+  padding: 0px 0px 0px 5px;
+  height: 19px;
+  margin-left: 5px;
+  width: 100px;
+  overflow-x: hidden;
+}
 #expandall {
   background-color: transparent;
-  border-left: 1px solid #fff;
-  margin-left: 7px;
   color: $blue-color;
-  padding: 0px 0px 0px 7px;
+  padding: 0px;
   font-size: $smallest-font;
+  margin-top: -3px;
+  transition: $default-transition;
 }
-#expandall::before {
+#expandall::before,
+#collapseall::before {
   content: '';
   background-image: url('/assets/icons/expandall-blue.svg');
   width: 15px;
@@ -108,4 +118,21 @@
   opacity: 1;
   position: relative;
   background-size: contain;
+}
+.expanded #expandall {
+  margin-top: -40px;
+}
+#collapseall {
+  background-color: transparent;
+  color: $blue-color;
+  padding: 0px 0px 0px 7px;
+  font-size: $smallest-font;
+  margin-top: -100px;
+  transition: $default-transition;
+}
+#collapseall::before {
+  transform: rotate(90deg);
+}
+.expanded #collapseall {
+  margin-top: -44pxpx;
 }

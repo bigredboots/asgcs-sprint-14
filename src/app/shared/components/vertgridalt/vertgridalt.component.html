@@ -27,12 +27,14 @@
     }"
   >
     <ng-template kendoGridToolbarTemplate>
-      <div class="card-title left">
+      <div class="card-title left" #collapsed>
         <div class="card-title-text">Expanded Vertical Grid Title</div>
+        <div class="expand-button-container">
         <button class="k-button" id="expandall" (click)="expandAll(grid)">
           Expand all
         </button>
-        <!-- <button class="k-button" id="collapseall" (click)="collapseAll(grid)">Collapse all</button> -->
+        <button class="k-button" id="collapseall" (click)="collapseAll(grid)">Collapse all</button>
+        </div>
       </div>
 
       <div class="filter-block vertgrid">
