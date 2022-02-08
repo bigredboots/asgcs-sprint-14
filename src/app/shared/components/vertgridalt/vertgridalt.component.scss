@@ -81,18 +81,29 @@
 #vertical-grid.k-grid tbody tr:hover td {
   background-color: #0f1f26;
 }
+/* new stuff */
 
+.filter-block.vertgrid {
+  display: none;
+}
+
+#vertical-grid-alt.k-grid {
+  border: 0px;
+}
 #expandall {
   background-color: transparent;
   border-left: 1px solid #fff;
   margin-left: 7px;
+  color: $blue-color;
   padding: 0px 0px 0px 7px;
+  font-size: $smallest-font;
 }
 #expandall::before {
-  content: "";
-  background-image: url("/assets/icons/expandall.svg");
+  content: '';
+  background-image: url('/assets/icons/expandall-blue.svg');
   width: 15px;
   height: 15px;
+  background-color: transparent;
   display: inline-block;
   opacity: 1;
   position: relative;
