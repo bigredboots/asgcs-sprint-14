@@ -145,8 +145,21 @@
 
 .k-icon.k-i-plus:before {
   content: "\e005";
+  transform: rotate(0deg);
+  transition: $default-transition;
 }
 .k-icon.k-i-minus:before {
   content: "\e005";
-}
+  transform: rotate(-90deg);
 
+}
+.k-grid .k-grid-content td[data-kendo-grid-column-index="0"] {
+  border-left: 0px;
+}
+.k-detail-row .k-detail-cell {
+  margin-left: -45px;
+  display: table;
+}
+.k-detail-row div.k-grid-header {
+  display: none;
+}

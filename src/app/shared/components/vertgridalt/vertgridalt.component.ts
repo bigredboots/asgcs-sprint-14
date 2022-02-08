@@ -62,7 +62,6 @@ export class VertgridaltComponent {
           OutsideWindow: '0',
           thirdLevelData: [
             {
-              EricssonPN: '00000-0003',
               ArrowPN: 'XC3S1500-4FGG456C',
               SupplierPN: 'XC3S1500-4FGG456C',
               Logistic: 'SPMI',
@@ -126,7 +125,6 @@ export class VertgridaltComponent {
           OutsideWindow: '0',
           thirdLevelData: [
             {
-              EricssonPN: '00002-0002',
               ArrowPN: 'XC3S1500-4FGG456C',
               SupplierPN: 'XC3S1500-4FGG456C',
               Logistic: 'SPMI',
@@ -150,7 +148,6 @@ export class VertgridaltComponent {
               OutsideWindow: '0',
             },
             {
-              EricssonPN: '00002-0002',
               ArrowPN: 'XC3S1500-4FGG456C',
               SupplierPN: 'XC3S1500-4FGG456C',
               Logistic: 'SPMI',
@@ -194,7 +191,6 @@ export class VertgridaltComponent {
           OutsideWindow: '0',
           thirdLevelData: [
             {
-              EricssonPN: '00002-0002',
               ArrowPN: 'XC3S1500-4FGG456C',
               SupplierPN: 'XC3S1500-4FGG456C',
               Logistic: 'SPMI',
@@ -218,7 +214,6 @@ export class VertgridaltComponent {
               OutsideWindow: '0',
             },
             {
-              EricssonPN: '00002-0002',
               ArrowPN: 'XC3S1500-4FGG456C',
               SupplierPN: 'XC3S1500-4FGG456C',
               Logistic: 'SPMI',
@@ -305,7 +300,6 @@ export class VertgridaltComponent {
           OutsideWindow: '0',
           thirdLevelData: [
             {
-              EricssonPN: '00003-0003',
               ArrowPN: 'XC3S1500-4FGG456C',
               SupplierPN: 'XC3S1500-4FGG456C',
               Logistic: 'SPMI',
@@ -329,7 +323,6 @@ export class VertgridaltComponent {
               OutsideWindow: '0',
             },
             {
-              EricssonPN: '00003-0003',
               ArrowPN: 'XC3S1500-4FGG456C',
               SupplierPN: 'XC3S1500-4FGG456C',
               Logistic: 'SPMI',
@@ -353,7 +346,6 @@ export class VertgridaltComponent {
               OutsideWindow: '0',
             },
             {
-              EricssonPN: '00003-0003',
               ArrowPN: 'XC3S1500-4FGG456C',
               SupplierPN: 'XC3S1500-4FGG456C',
               Logistic: 'SPMI',
@@ -397,7 +389,6 @@ export class VertgridaltComponent {
           OutsideWindow: '0',
           thirdLevelData: [
             {
-              EricssonPN: '00003-0003',
               ArrowPN: 'XC3S1500-4FGG456C',
               SupplierPN: 'XC3S1500-4FGG456C',
               Logistic: 'SPMI',
@@ -421,7 +412,6 @@ export class VertgridaltComponent {
               OutsideWindow: '0',
             },
             {
-              EricssonPN: '00003-0003',
               ArrowPN: 'XC3S1500-4FGG456C',
               SupplierPN: 'XC3S1500-4FGG456C',
               Logistic: 'SPMI',
@@ -445,7 +435,6 @@ export class VertgridaltComponent {
               OutsideWindow: '0',
             },
             {
-              EricssonPN: '00003-0003',
               ArrowPN: 'XC3S1500-4FGG456C',
               SupplierPN: 'XC3S1500-4FGG456C',
               Logistic: 'SPMI',
