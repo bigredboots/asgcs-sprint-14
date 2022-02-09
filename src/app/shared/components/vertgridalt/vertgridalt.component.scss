@@ -192,11 +192,15 @@
   right: 0px;
   top: 5px;
 }
+.k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-minus {
+  top: 12px;
+}
 .k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-plus::before,
 .k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-minus::before {
   color: white;
   font-size: 24px;
 }
+
 
 .k-grid .k-detail-row .k-grid-content td[data-kendo-grid-column-index='0'] {
   margin-left: 0px;
@@ -310,6 +314,7 @@ margin: 0px 15px 10px 15px;
 border-radius: 0px 0px 8px 8px;
 border-width: 7px 2px 2px 2px;
 border-color: #525252;
+border-style: solid;
 }
 .thirdleveldata.k-widget.k-grid {
   
