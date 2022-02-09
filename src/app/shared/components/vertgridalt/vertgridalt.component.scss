@@ -144,21 +144,9 @@
   opacity: 1;
 }
 
-.k-icon.k-i-plus:before,
-.k-icon.k-i-minus:before  {
-  content: "\e005";
-  transform: rotate(0deg);
-  transition: $default-transition;
-  font-size: 32px;
-  color: black;
-  line-height: 0px;
-  display: block;
-}
-.k-icon.k-i-minus:before {
-  transform: rotate(90deg);
-  margin-top: -7px;
-}
-.k-grid .k-hierarchy-cell > .k-icon.k-i-plus, .k-grid .k-hierarchy-cell > .k-icon.k-i-minus {
+
+.k-grid .k-hierarchy-cell > .k-icon.k-i-plus,
+.k-grid .k-hierarchy-cell > .k-icon.k-i-minus {
   position: absolute;
   right: -155px;
   z-index: 6;
@@ -166,6 +154,21 @@
   height: 10px;
   top: 20px;
 }
+.k-icon.k-i-plus:before,
+.k-icon.k-i-minus:before  {
+  content: "\e005";
+  transform: rotate(0deg);
+  transition: $default-transition;
+  font-size: 32px;
+  color: $blue-color;
+  line-height: 0px;
+  display: block;
+}
+.k-icon.k-i-minus:before {
+  transform: rotate(90deg);
+  margin-top: -7px;
+}
+
 
 .k-grid .k-grid-content td[data-kendo-grid-column-index="0"] {
   border-left: 0px;
@@ -241,11 +244,10 @@
 .k-grid .k-detail-row tr.k-master-row td {
   background: #525252;
   font-weight: bold;
-  color: black;
-  padding: 10px 0 10px 5px;
-  font-size: 16px;
+  color: white;
+  padding: 5px 0 5px 5px;
+  font-size: 14px;
   position: relative;
-  border-left: 1px solid #999;
 }
 
 .k-grid tr.k-detail-row {
