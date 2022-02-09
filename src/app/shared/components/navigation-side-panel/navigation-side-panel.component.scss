@@ -28,9 +28,13 @@
 
     &.dashboard {
       margin-bottom: 50px;
+      display: none;
     }
     &.reports {
       margin-top: 50px;
+    }
+    &.settings {
+      display: none;
     }
     &.open span:after {
       transform: rotate(180deg);
