@@ -463,6 +463,11 @@ export class VertgridaltComponent {
     },
   ];
 
+  // public expandedDetailKeys: any[] = [1];
+  // public expandDetailsBy = (dataItem: any): any => {
+  //   return dataItem.secondLevelData.EricssonPN;
+  // };
+
   public collapseAll(topGrid) {
     this.collapsed.nativeElement.classList.toggle('expanded');
     this.data.forEach((item, idx) => {

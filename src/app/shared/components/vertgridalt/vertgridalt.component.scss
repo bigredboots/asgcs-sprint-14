@@ -160,7 +160,7 @@
   transform: rotate(0deg);
   transition: $default-transition;
   font-size: 32px;
-  color: $blue-color;
+  color: black;
   line-height: 0px;
   display: block;
 }
@@ -189,15 +189,23 @@
 .k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-minus {
   position: relative;
   right: 0px;
-  top: 0px;
+  top: 5px;
 }
+.k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-plus,
+.k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-minus {
+  color: white;
+  font-size: 24px;
+}
+
 
 .k-grid .k-detail-row .k-grid-content td[data-kendo-grid-column-index="0"] {
   margin-left: 0px;
   padding-left: 10px;
   display: table-cell;
 }
-
+.k-grid .k-grid-content td[data-kendo-grid-column-index="1"] {
+  border-left: 2px solid black;
+}
 
 
 #vertical-grid-alt .k-grid-header .k-header {
@@ -219,23 +227,28 @@
   font-size: 14px;
 }
 .k-grid tbody tr.k-master-row:hover {
-  background: rgba(182, 182, 182, .7);
+  background: rgba(175, 212, 230, .7)
+}
+.k-grid tbody tr.k-master-row:hover {
+  background: rgba(175, 212, 230, .6)
 }
 .k-grid tbody tr:hover.k-master-row td {
   background: transparent;
 }
 
 .k-grid tr.k-master-row td {
-  background: #c2c2c2;
+  background: #b9b9b9;
   font-weight: bold;
   color: black;
   padding: 15px 0 15px 12px;
   font-size: 16px;
   position: relative;
   border-left: 1px solid #999;
+  border-top: 3px solid black;
 }
 .k-grid tr.k-alt.k-master-row td {
-  background: #f2f2f2;
+  background: #9f9f9f;
+  border-top: 3px solid black;
 }
 .k-grid tbody tr.k-alt.k-master-row:hover td,
 .k-grid tbody tr.k-master-row:hover td {
