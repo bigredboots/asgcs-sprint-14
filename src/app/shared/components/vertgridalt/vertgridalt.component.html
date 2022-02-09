@@ -134,7 +134,7 @@
     <kendo-grid-column field="OutsideWindow" [width]="80"></kendo-grid-column>
 
     <ng-template kendoGridDetailTemplate let-dataItem>
-      <kendo-grid [data]="dataItem.secondLevelData">
+      <kendo-grid [data]="dataItem.secondLevelData" class="secondleveldata">
         <kendo-grid-column field="EricssonPN" width="170"></kendo-grid-column>
         <kendo-grid-column field="Region" [width]="120"></kendo-grid-column>
         <kendo-grid-column field="Suppliers" [width]="120"></kendo-grid-column>
@@ -158,11 +158,7 @@
           [width]="80"
         ></kendo-grid-column>
         <ng-template kendoGridDetailTemplate let-dataItem>
-          <kendo-grid [data]="dataItem.thirdLevelData">
-            <kendo-grid-column
-              field="EricssonPN"
-              width="170"
-            ></kendo-grid-column>
+          <kendo-grid [data]="dataItem.thirdLevelData" class="thirdleveldata">
             <kendo-grid-column
               field="ArrowPN"
               [width]="120"

@@ -62,15 +62,15 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.k-grid tbody tr:hover,
-.k-grid tbody tr:hover td,
-.k-grid .k-grid-content-locked tr:hover td,
-.k-grid .k-grid-content-locked tr.subtotalrow:hover td,
-.k-grid tr.k-alt.subtotalrow:hover td,
-.k-grid tr.subtotalrow:hover td {
-  background-color: $table-hover;
-  border-top: 1px solid $grey-light;
-}
+// .k-grid tbody tr:hover,
+// .k-grid tbody tr:hover td,
+// .k-grid .k-grid-content-locked tr:hover td,
+// .k-grid .k-grid-content-locked tr.subtotalrow:hover td,
+// .k-grid tr.k-alt.subtotalrow:hover td,
+// .k-grid tr.subtotalrow:hover td {
+//   background-color: $table-hover;
+//   border-top: 1px solid $grey-light;
+// }
 
 #vertical-grid.k-grid tr:nth-child(2n + 1) {
   background-color: rgba(255, 255, 255, 0.05);
@@ -144,7 +144,6 @@
   opacity: 1;
 }
 
-
 .k-grid .k-hierarchy-cell > .k-icon.k-i-plus,
 .k-grid .k-hierarchy-cell > .k-icon.k-i-minus {
   position: absolute;
@@ -155,8 +154,8 @@
   top: 20px;
 }
 .k-icon.k-i-plus:before,
-.k-icon.k-i-minus:before  {
-  content: "\e005";
+.k-icon.k-i-minus:before {
+  content: '\e005';
   transform: rotate(0deg);
   transition: $default-transition;
   font-size: 32px;
@@ -169,8 +168,7 @@
   margin-top: -7px;
 }
 
-
-.k-grid .k-grid-content td[data-kendo-grid-column-index="0"] {
+.k-grid .k-grid-content td[data-kendo-grid-column-index='0'] {
   border-left: 0px;
   margin-left: -10px;
   padding-left: 0px;
@@ -181,8 +179,11 @@
   display: table;
   padding: 0px 0px 0px 12px;
 }
-.k-detail-row div.k-grid-header {
+.k-grid .k-detail-row div.k-grid-header {
   display: none;
+}
+.k-grid .k-detail-row .k-detail-row div.k-grid-header {
+  display: initial;
 }
 
 .k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-plus,
@@ -191,22 +192,20 @@
   right: 0px;
   top: 5px;
 }
-.k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-plus,
-.k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-minus {
+.k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-plus::before,
+.k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-minus::before {
   color: white;
   font-size: 24px;
 }
 
-
-.k-grid .k-detail-row .k-grid-content td[data-kendo-grid-column-index="0"] {
+.k-grid .k-detail-row .k-grid-content td[data-kendo-grid-column-index='0'] {
   margin-left: 0px;
   padding-left: 10px;
   display: table-cell;
 }
-.k-grid .k-grid-content td[data-kendo-grid-column-index="1"] {
+.k-grid .k-grid-content td[data-kendo-grid-column-index='1'] {
   border-left: 2px solid black;
 }
-
 
 #vertical-grid-alt .k-grid-header .k-header {
   border-bottom: 1px solid #ccc;
@@ -220,20 +219,28 @@
   color: black;
   font-size: 16px;
 }
-.k-grid .k-detail-row tr.k-master-row {
+
+.k-grid .k-detail-row tbody tr.k-master-row {
   background: #525252;
   font-weight: bold;
   color: white;
   font-size: 14px;
 }
 .k-grid tbody tr.k-master-row:hover {
-  background: rgba(175, 212, 230, .7)
-}
-.k-grid tbody tr.k-master-row:hover {
-  background: rgba(175, 212, 230, .6)
+  background: rgba(175, 212, 230, 0.6);
+  border-top: 3px solid black;
 }
 .k-grid tbody tr:hover.k-master-row td {
   background: transparent;
+}
+.k-grid .k-detail-row tbody tr.k-master-row:hover {
+  background: rgba(175, 212, 230, 0.3);
+  border-top: 3px solid black;
+}
+.k-grid .k-detail-row tbody tr.k-alt.k-master-row:hover td,
+.k-grid .k-detail-row tbody tr.k-master-row:hover td {
+  background: rgba(175, 212, 230, 0.3);
+  border-top: 1px solid black;
 }
 
 .k-grid tr.k-master-row td {
@@ -253,14 +260,21 @@
 .k-grid tbody tr.k-alt.k-master-row:hover td,
 .k-grid tbody tr.k-master-row:hover td {
   background: transparent;
+  border-top: 3px solid black;
 }
+
 .k-grid .k-detail-row tr.k-master-row td {
   background: #525252;
   font-weight: bold;
   color: white;
-  padding: 5px 0 5px 5px;
+  padding: 5px 0 5px 12px;
   font-size: 14px;
   position: relative;
+  border-top: 1px solid black;
+  border-left-color: #404040;
+}
+.k-grid .k-detail-row tr.k-master-row:hover {
+  border-top: 0px;
 }
 
 .k-grid tr.k-detail-row {
@@ -269,10 +283,13 @@
   padding: 10px 0 10px 11px;
 }
 .k-grid tbody tr.k-detail-row:hover {
-  background: rgba(182, 182, 182, .7);
+  background: rgba(182, 182, 182, 0.7);
 }
-
-th.k-header[aria-colindex="2"] {
+.k-grid tbody tr.k-detail-row td {
+  border-top: 0px;
+  border-bottom: 0px;
+}
+th.k-header[aria-colindex='2'] {
   border-left: 0px;
   padding-left: 0;
   text-indent: -10px;
