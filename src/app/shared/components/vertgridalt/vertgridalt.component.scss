@@ -281,6 +281,9 @@
   // background: #919191;
   font-size: 14px;
   padding: 10px 0 10px 11px;
+  overflow: clip support;
+  overflow: clip;
+  
 }
 // .k-grid tbody tr.k-detail-row:hover {
 //   background: rgba(182, 182, 182, 0.7);
@@ -302,10 +305,14 @@ th.k-header[aria-colindex='2'] {
   font-weight: normal;
   background: #333;
 }
+.thirdlevel-block {
+margin: 0px 15px 10px 15px;
+border-radius: 0px 0px 8px 8px;
+border-width: 7px 2px 2px 2px;
+border-color: #525252;
+}
 .thirdleveldata.k-widget.k-grid {
-  border: 2px solid white;
-  margin: 30px 20px;
-  border-radius: 5px;
+  
 }
 .thirdleveldata.k-widget.k-grid .k-grid-header .k-header {
   font-size: 14px;
