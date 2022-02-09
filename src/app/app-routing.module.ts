@@ -26,11 +26,6 @@ import { SettingsComponent } from './pages/settings/settings/settings.component'
 
 const routes: Routes = [
   {
-    path: 'dashboard',
-    component: DashboardComponent,
-    data: { title: '88Main Page', breadcrumb: 'Dashboard', filter: false, },
-  },
-  {
     path: 'demandOverview',
     component: DemandOverviewComponent,
     data: { title: '1Main Page', breadcrumb: 'Overview' },
@@ -48,6 +43,11 @@ const routes: Routes = [
       breadcrumb: 'Reports',
       filter: false,
     },
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    data: { title: '88Main Page', breadcrumb: 'Dashboard', filter: false, },
   },
   {
     path: 'demandReportsWavechart',
@@ -168,7 +168,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'dashboard',
+    redirectTo: 'demandOverview',
     pathMatch: 'full',
   },
 ];
