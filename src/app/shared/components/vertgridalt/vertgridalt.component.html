@@ -158,6 +158,7 @@
           [width]="80"
         ></kendo-grid-column>
         <ng-template kendoGridDetailTemplate let-dataItem>
+          <div class="thirdlevel-block">
           <kendo-grid [data]="dataItem.thirdLevelData" class="thirdleveldata">
             <kendo-grid-column
               field="ArrowPN"
@@ -214,6 +215,7 @@
               [width]="80"
             ></kendo-grid-column>
           </kendo-grid>
+          </div>
         </ng-template>
       </kendo-grid>
     </ng-template>
