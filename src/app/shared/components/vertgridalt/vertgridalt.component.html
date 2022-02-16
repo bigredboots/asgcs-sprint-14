@@ -136,6 +136,7 @@
     <ng-template kendoGridDetailTemplate let-dataItem>
       <kendo-grid [data]="dataItem.secondLevelData" 
       class="secondleveldata"
+      [isDetailExpanded]="expandInStockProducts"
       [kendoGridExpandDetailsBy]="expandDetailsBy"
       [(expandedDetailKeys)]="expandedDetailKeys"
       >

@@ -231,11 +231,16 @@
   font-size: 14px;
 }
 .k-grid tbody tr.k-master-row:hover {
-  background: rgba(175, 212, 230, 0.6);
+  background: #0f1f26 !important;
+  color: #CCC;
   border-top: 3px solid black;
 }
 .k-grid tbody tr:hover.k-master-row td {
   background: transparent;
+  transition: $default-transition;
+}
+.k-grid tbody tr.k-master-row:hover td {
+  color: #CCC
 }
 .k-grid .k-detail-row tbody tr.k-master-row:hover {
   background: rgba(175, 212, 230, 0.3);
