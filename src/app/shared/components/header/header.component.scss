@@ -314,6 +314,14 @@ button.search-submit {
       transition: $default-transition;
     }
   }
+  &.expanded.filter-active {
+    position: absolute;
+    width: calc(100% - 340px);
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 0px 4px black;
+    height: 350px;
+    z-index: 2;
+  }
   &.d-none {
     display: none;
   }
@@ -376,6 +384,13 @@ button.search-submit {
 }
 .block-filterbuttons {
   margin-top: 18px;
+}
+.expand-filters {
+  font-size: 13px;
+  margin-top: 14px;
+  margin-left: 10px;
+  height: 100%;
+  text-decoration: underline;
 }
 .datepicker {
   display: flex;
