@@ -49,12 +49,7 @@
 .filter-block {
   display: none;
 }
-.block-filters {
-  display: flex;
-  gap: 12px;
-  flex-flow: nowrap;
-  margin-top: 3px;
-}
+
 .fullscreened {
   .filter-block {
     display: flex;

@@ -296,7 +296,7 @@ button.search-submit {
   transition: $default-transition;
 
   &.filter-active {
-    width: calc(100% - 10px);
+    width: calc(100% - 340px);
   }
   &.filter-active .overview-filters {
     max-width: 100%;
@@ -374,22 +374,31 @@ button.search-submit {
   overflow: hidden;
   transition: none;
 }
-
-.block-filterbuttons {
-  margin-top: 18px;
-  margin-top: -10px;
-display: flex;
-gap: 12px;
-align-content: space-evenly;
-
+.block-filters {
+  display: grid;
+  gap: 12px;
+  margin-top: 3px;
 }
-.expand-filters {
+.block-filterbuttons {
+  display: flex;
+  gap: 12px;
+  align-content: space-evenly;
+  margin-top: 17px;
+}
+.expand-filters,
+.collapse-filters {
   font-size: 13px;
   margin-top: 14px;
   margin-left: 10px;
   height: 100%;
   text-decoration: underline;
   white-space: nowrap;
+  cursor: pointer;
+}
+.collapse-filters {
+  grid-row: 3;
+  margin-top: 0px;
+  text-align: right;
 }
 .filter-expanded-row {
   display: flex;
@@ -434,7 +443,7 @@ align-content: space-evenly;
 .filter-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 .filter-label {
   font-size: $smallest-font;

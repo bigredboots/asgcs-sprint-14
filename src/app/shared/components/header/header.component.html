@@ -34,22 +34,20 @@
         >
           <span>{{ this.myBreadCrumb }}</span>
           <app-breadcrumb></app-breadcrumb>
-          
         </nav>
 
         <div class="dates-block">
-        <!-- <div class="dates-title">Time Frame</div> -->
-        <kendo-dropdownlist
-        [data]="listItems"
-        [defaultItem]="defaultItem"
-        textField="text"
-      >
-      </kendo-dropdownlist>
-      <div class="refresh-date">
-      <span class="title">Updated: </span>
-      <span>01 Jan 2022 | 21:00PM</span>
-    </div>
-
+          <!-- <div class="dates-title">Time Frame</div> -->
+          <kendo-dropdownlist
+            [data]="listItems"
+            [defaultItem]="defaultItem"
+            textField="text"
+          >
+          </kendo-dropdownlist>
+          <div class="refresh-date">
+            <span class="title">Updated: </span>
+            <span>01 Jan 2022 | 21:00PM</span>
+          </div>
         </div>
 
         <div class="search-block">
@@ -352,7 +350,9 @@
                 </span>
               </div>
               <div class="filter-item">
-                <div class="expand-filters" (click)="toggleExpandedFilters()">More Filters</div>
+                <div class="expand-filters" (click)="toggleExpandedFilters()">
+                  More Filters
+                </div>
               </div>
             </div>
             <div class="filter-expanded-row">
@@ -412,9 +412,9 @@
                     ><span class="k-icon k-i-arrow-s"></span></span
                 ></span>
               </div>
-              <div class="collapse-filters" (click)="toggleExpandedFilters()">
-                Less filters
-              </div>
+            </div>
+            <div class="collapse-filters" (click)="toggleExpandedFilters()">
+              Less filters
             </div>
           </div>
 
