@@ -323,36 +323,37 @@
       <div class="overview-filters">
         <div class="filter-container">
           <div class="block-filters">
-            <div class="filter-item">
-              <div class="filter-label">Field 1</div>
-              <span class="k-dropdown-wrap">
-                <span class="k-input">Select</span>
-                <span class="k-select">
-                  <span class="k-icon k-i-arrow-s"></span>
+            <div class="main-filter-buttons">
+              <div class="filter-item">
+                <div class="filter-label">Field 1</div>
+                <span class="k-dropdown-wrap">
+                  <span class="k-input">Select</span>
+                  <span class="k-select">
+                    <span class="k-icon k-i-arrow-s"></span>
+                  </span>
                 </span>
-              </span>
-            </div>
-            <div class="filter-item">
-              <div class="filter-label">Field 2</div>
-              <span class="k-dropdown-wrap">
-                <span class="k-input">Select</span>
-                <span class="k-select">
-                  <span class="k-icon k-i-arrow-s"></span>
+              </div>
+              <div class="filter-item">
+                <div class="filter-label">Field 2</div>
+                <span class="k-dropdown-wrap">
+                  <span class="k-input">Select</span>
+                  <span class="k-select">
+                    <span class="k-icon k-i-arrow-s"></span>
+                  </span>
                 </span>
-              </span>
-            </div>
-
-            <div class="filter-item">
-              <div class="filter-label">Field 3</div>
-              <span class="k-dropdown-wrap">
-                <span class="k-input">Select</span>
-                <span class="k-select"
-                  ><span class="k-icon k-i-arrow-s"></span
-                ></span>
-              </span>
-            </div>
-            <div class="filter-item">
-              <div class="expand-filters">More Filters</div>
+              </div>
+              <div class="filter-item">
+                <div class="filter-label">Field 3</div>
+                <span class="k-dropdown-wrap">
+                  <span class="k-input">Select</span>
+                  <span class="k-select"
+                    ><span class="k-icon k-i-arrow-s"></span
+                  ></span>
+                </span>
+              </div>
+              <div class="filter-item">
+                <div class="expand-filters" (click)="toggleExpandedFilters()">More Filters</div>
+              </div>
             </div>
             <div class="filter-expanded-row">
               <div class="filter-item">
@@ -411,7 +412,7 @@
                     ><span class="k-icon k-i-arrow-s"></span></span
                 ></span>
               </div>
-              <div class="collapse-filters">
+              <div class="collapse-filters" (click)="toggleExpandedFilters()">
                 Less filters
               </div>
             </div>

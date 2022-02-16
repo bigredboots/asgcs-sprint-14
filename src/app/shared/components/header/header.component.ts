@@ -46,6 +46,7 @@ export class HeaderComponent implements OnInit {
   
 
   @ViewChild('overview') overview: ElementRef;
+  @ViewChild('expandedfilters') expandedfilters: ElementRef;
   @ViewChild('filters') filters: ElementRef;
   @ViewChild('hubfilters') hubfilters: ElementRef;
   @ViewChild('outboundfilters') outboundfilters: ElementRef;
@@ -76,6 +77,10 @@ export class HeaderComponent implements OnInit {
   toggleReportFilters() {
     this.reportfilters.nativeElement.classList.toggle('filter-active');
     this.overview.nativeElement.classList.toggle('filter-active');
+  }
+  toggleExpandedFilters() {
+    this.reportfilters.nativeElement.classList.toggle('expanded');
+    // this.overview.nativeElement.classList.toggle('filter-active');
   }
 
   myBreadCrumb = this.breadCrumb;

@@ -288,10 +288,11 @@ button.search-submit {
   color: $white;
   display: flex;
   padding-top: 3px;
+  box-shadow: 0px 0px 0px 0px black;
   border-radius: 10px;
-  width: 126px;
+  position: absolute;
+    width: calc(100% - 340px);
   height: 50px;
-  position: relative;
   transition: $default-transition;
 
   &.filter-active {
@@ -315,8 +316,7 @@ button.search-submit {
     }
   }
   &.expanded.filter-active {
-    position: absolute;
-    width: calc(100% - 340px);
+    
     border: 1px solid #ccc;
     box-shadow: 0px 0px 0px 4px black;
     height: 140px;
@@ -375,15 +375,13 @@ button.search-submit {
   transition: none;
 }
 
-.block-filters,
-.block-filterbuttons {
-  display: flex;
-  gap: 12px;
-  flex-flow: nowrap;
-  margin-top: 3px;
-}
 .block-filterbuttons {
   margin-top: 18px;
+  margin-top: -10px;
+display: flex;
+gap: 12px;
+align-content: space-evenly;
+
 }
 .expand-filters {
   font-size: 13px;
@@ -396,6 +394,12 @@ button.search-submit {
 .filter-expanded-row {
   display: flex;
   gap: 12px;
+  grid-row: 2;
+}
+.main-filter-buttons {
+  display: flex;
+  gap: 12px;
+  grid-row: 1;
 }
 .datepicker {
   display: flex;
