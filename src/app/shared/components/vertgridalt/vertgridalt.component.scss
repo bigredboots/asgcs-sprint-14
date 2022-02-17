@@ -197,7 +197,7 @@ justify-content: right;
 }
 .k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-plus::before,
 .k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-minus::before {
-  color: p;
+  color: purple;
   font-size: 24px;
 }
 
@@ -294,7 +294,7 @@ justify-content: right;
 }
 .k-grid tbody tr.k-alt.k-master-row:hover td[data-kendo-grid-column-index='1'],
 .k-grid tbody tr.k-master-row:hover td[data-kendo-grid-column-index='1'] {
-  border-left: 2px;
+  border-left-width: 2px;
 }
 
 
