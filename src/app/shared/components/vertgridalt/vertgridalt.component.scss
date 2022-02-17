@@ -192,12 +192,14 @@ justify-content: right;
 .k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-plus,
 .k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-minus {
   position: relative;
-  right: 0px;
-  top: 5px;
+right: 0px;
+height: 25px;
+justify-content: left;
+  top: 1px;
 }
 .k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-plus::before,
 .k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-minus::before {
-  color: purple;
+  color: white;
   font-size: 24px;
 }
 
@@ -295,6 +297,7 @@ justify-content: right;
 .k-grid tbody tr.k-alt.k-master-row:hover td[data-kendo-grid-column-index='1'],
 .k-grid tbody tr.k-master-row:hover td[data-kendo-grid-column-index='1'] {
   border-left-width: 2px;
+  border-color: black;
 }
 
 
