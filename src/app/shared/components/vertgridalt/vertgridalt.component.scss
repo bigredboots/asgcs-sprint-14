@@ -147,11 +147,15 @@
 .k-grid .k-hierarchy-cell > .k-icon.k-i-plus,
 .k-grid .k-hierarchy-cell > .k-icon.k-i-minus {
   position: absolute;
-  right: -155px;
+  right: -170px;
   z-index: 6;
-  width: 20px;
-  height: 10px;
-  top: 20px;
+  width: 200px;
+  height: 53px;
+  top: 0px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+justify-content: right;
 }
 .k-icon.k-i-plus:before,
 .k-icon.k-i-minus:before {
@@ -165,7 +169,6 @@
 }
 .k-icon.k-i-minus:before {
   transform: rotate(90deg);
-  margin-top: -7px;
 }
 
 .k-grid .k-grid-content td[data-kendo-grid-column-index='0'] {
@@ -192,12 +195,9 @@
   right: 0px;
   top: 5px;
 }
-.k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-minus {
-  top: 12px;
-}
 .k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-plus::before,
 .k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-minus::before {
-  color: white;
+  color: p;
   font-size: 24px;
 }
 
@@ -236,7 +236,7 @@
 }
 .k-grid tbody tr:hover.k-master-row td {
   background: transparent;
-  transition: $default-transition;
+  transition: $fast-transition;
 }
 
 .k-grid .k-detail-row tbody tr.k-master-row:hover {
@@ -248,6 +248,7 @@
   background: rgba(194, 194, 194, 0.7);
   border-top: 1px solid black;
 }
+
 
 .k-grid tr.k-master-row td {
   background: #b9b9b9;
@@ -263,11 +264,7 @@
   background: #9f9f9f;
   border-top: 3px solid black;
 }
-.k-grid tbody tr.k-alt.k-master-row:hover td,
-.k-grid tbody tr.k-master-row:hover td {
-  background: rgba(194, 194, 194, 0.7);
-  border-top: 3px solid black;
-}
+
 
 .k-grid .k-detail-row tr.k-master-row td {
   background: #525252;
@@ -282,6 +279,25 @@
 .k-grid .k-detail-row tr.k-master-row:hover {
   border-top: 0px;
 }
+
+.k-grid tbody tr.k-alt.k-master-row:hover td,
+.k-grid tbody tr.k-master-row:hover td {
+  background: rgba(194, 194, 194, 0.7);
+  border-top: 3px solid black;
+  border-left: 1px solid #42a0c9;
+  margin-left: 0px;
+}
+
+.k-grid tbody tr.k-alt.k-master-row:hover td[data-kendo-grid-column-index='0'],
+.k-grid tbody tr.k-master-row:hover td[data-kendo-grid-column-index='0'] {
+  border-left: 0px;
+}
+.k-grid tbody tr.k-alt.k-master-row:hover td[data-kendo-grid-column-index='1'],
+.k-grid tbody tr.k-master-row:hover td[data-kendo-grid-column-index='1'] {
+  border-left: 2px;
+}
+
+
 
 .k-grid tr.k-detail-row {
   // background: #919191;
