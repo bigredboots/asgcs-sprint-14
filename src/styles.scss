@@ -442,12 +442,8 @@ h4 {
   }
 }
 #vertical-grid-alt .secondleveldata .k-grid-content.k-virtual-content {
-  background-color: #151515;
-  background-image: linear-gradient(to right, black, #151515),linear-gradient(to right, #151515, black),linear-gradient(to right, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.5)),linear-gradient(to left, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.5));
-  background-position: left center, right center, left center, right center;
-  background-repeat: no-repeat;
-  background-size: 40px 100%, 60px 100%, 40px 100%, 60px 100%;
-  background-attachment: local, local, scroll, scroll;
+  background-color: $black;
+  background-image: none;
 }
 #vertical-grid-alt .thirdleveldata .k-grid-content.k-virtual-content {
   background-color: #151515;

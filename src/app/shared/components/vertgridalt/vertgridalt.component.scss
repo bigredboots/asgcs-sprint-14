@@ -1,4 +1,7 @@
 @import '../../../scss/global';
+.k-grid {
+  border: none;
+}
 .k-grid tr.k-alt {
   background-color: rgba(0,0,0,.15);
 }
@@ -239,7 +242,7 @@
 }
 .k-grid tbody tr:hover.k-master-row td {
   background: transparent;
-  transition: $fast-transition;
+  transition: $default-transition;
 }
 
 .k-grid .k-detail-row tbody tr.k-master-row:hover {
