@@ -438,34 +438,35 @@ h4 {
   background-repeat: no-repeat;
   background-size: 40px 100%, 60px 100%, 40px 100%, 60px 100%;
   background-attachment: local, local, scroll, scroll;
-  // &::-webkit-scrollbar-button:horizontal {
-  //   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-  //   -webkit-border-radius: 10px;
-  //   border-radius: 10px;
-  // }
-  // &::-webkit-scrollbar-thumb {
-  //   -webkit-border-radius: 10px;
-  //   border-radius: 10px;
-  //   background: rgba(255,0,0,0.8); 
-  //   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-  // }
-  // &::-webkit-scrollbar-thumb:window-inactive {
-  //   background: rgba(255,100,0,0.4); 
-  // }
-  // &::-webkit-scrollbar-track {
-  //   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8); 
-  //   -webkit-border-radius: 10px;
-  //   border-radius: 10px;
-  // }
-  // &::-webkit-scrollbar-track-piece:start {
-  //   -webkit-box-shadow: inset 0 0 16px rgba(100,0,0,0.3); 
-  //   -webkit-border-radius: 10px;
-  //   border-radius: 10px;
-  // }
+  &::-webkit-scrollbar-button:horizontal {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+  }
+  &::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255,100,0,0.4); 
+  }
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track-piece:start {
+    -webkit-box-shadow: inset 0 0 16px rgba(100,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
 }
 #vertical-grid-alt .secondleveldata .k-grid-content.k-virtual-content {
   background-color: $black;
   background-image: none;
+  overflow-x: hidden;;
 }
 #vertical-grid-alt .thirdleveldata .k-grid-content.k-virtual-content {
   background-color: #000000;
