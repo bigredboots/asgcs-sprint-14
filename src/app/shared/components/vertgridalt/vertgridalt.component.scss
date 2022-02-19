@@ -329,10 +329,12 @@
   overflow: clip support;
   overflow: clip;
 }
-
+.k-grid tbody .k-grid-header tr:hover, .k-grid tbody .k-grid-header tr.k-state-hover {
+  background-color: transparent;
+}
 .thirdleveldata {
   border: 2px solid #222;
-  border-radius: 10px;
+  border-radius: 15px 0px 0px 0px;
 }
 
 .k-grid tbody tr.k-detail-row td {
@@ -359,6 +361,10 @@ th.k-header[aria-colindex='2'] {
   border-color: #525252;
   border-style: solid;
   padding: 3px 5px 5px;
+}
+.thirdlevel-block .k-grid tbody tr:hover td{
+background-color: #0f1f26;
+color: #fff;
 }
 .thirdleveldata.k-widget.k-grid .k-grid-header .k-header {
   font-size: 14px;
