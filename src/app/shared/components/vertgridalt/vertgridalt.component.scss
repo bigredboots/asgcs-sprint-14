@@ -2,8 +2,11 @@
 .k-grid {
   border: none;
 }
+.k-grid tr {
+  background-color: rgba(0, 0, 0, 0.05);
+}
 .k-grid tr.k-alt {
-  background-color: rgba(0,0,0,.15);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .k-grid td.k-state-selected,
 .k-grid tr.k-state-selected > td {
@@ -147,7 +150,7 @@
 .k-grid .k-hierarchy-cell > .k-icon.k-i-plus,
 .k-grid .k-hierarchy-cell > .k-icon.k-i-minus {
   position: absolute;
-  right: -170px;
+  right: -160px;
   z-index: 6;
   width: 200px;
   height: 53px;
@@ -162,10 +165,16 @@
   content: '\e005';
   transform: rotate(0deg);
   transition: $default-transition;
-  font-size: 32px;
-  color: black;
+  font-size: 26px;
+  color: $blue-color;
   line-height: 0px;
   display: block;
+  text-shadow: 3px 0px 0px black, 0px 2px 0px black, -2px 0px 0px black,
+    0px -2px 0px black, -2px -3px 0px black, -2px 3px 0px black;
+}
+.secondleveldata .k-icon.k-i-plus:before,
+.secondleveldata .k-icon.k-i-minus:before {
+  text-shadow: none;
 }
 .k-icon.k-i-minus:before {
   transform: rotate(90deg);
@@ -242,7 +251,7 @@
 }
 .k-grid tbody tr:hover.k-master-row td {
   background: transparent;
-  transition: $default-transition;
+  transition: $fast-transition;
 }
 
 .k-grid .k-detail-row tbody tr.k-master-row:hover {
@@ -366,6 +375,13 @@ th.k-header[aria-colindex='2'] {
   border-style: solid;
   padding: 3px 5px 5px;
 }
+.thirdlevel-block .k-grid tr {
+  background-color: #0d0d0d;
+}
+.thirdlevel-block .k-grid tr.k-alt {
+  background-color: #141414;
+}
+
 .thirdlevel-block .k-grid tbody tr:hover td {
   background-color: #0f1f26;
   color: #fff;
@@ -376,4 +392,12 @@ th.k-header[aria-colindex='2'] {
 }
 .thirdleveldata.k-widget.k-grid td {
   font-size: 13px;
+}
+.thirdlevel-block .k-grid .k-grid-header tr {
+  background: transparent;
+}
+
+.k-grid-content table,
+.k-grid-content-locked table {
+  margin-right: 1px;
 }
