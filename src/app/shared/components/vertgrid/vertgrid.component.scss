@@ -2,7 +2,9 @@
 
 // Overrides of the Kendo Dark theme
 .k-grid .k-grid-content-locked .k-state-selected.k-alt td,
-.k-grid .k-grid-content-locked .k-state-selected td {
+.k-grid .k-grid-content-locked .k-state-selected td,
+.k-grid td.k-state-selected,
+.k-grid tr.k-state-selected > td {
   background-color: transparent;
 }
 .k-grid .k-grid-content-locked .k-state-selected:hover td,

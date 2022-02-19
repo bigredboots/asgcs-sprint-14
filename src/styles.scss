@@ -431,7 +431,12 @@ h4 {
   background-size: 40px 100%, 60px 100%, 40px 100%, 60px 100%;
   background-attachment: local, local, scroll, scroll;
 }
-
+#vertical-grid-alt {
+  .k-grid-content.k-virtual-content {
+    background-image: linear-gradient(to right, #c2c2c2, #c2c2c2),linear-gradient(to right, #c2c2c2, black),linear-gradient(to left, rgba(194, 194, 194, 0.25), rgba(0, 0, 0, 0.5)),linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(194, 194, 194, 0.5));
+    background-color: #c2c2c2;
+  }
+}
 .k-grid .k-grid-content td,
 .k-grid .k-grid-content-locked td {
   white-space: nowrap;

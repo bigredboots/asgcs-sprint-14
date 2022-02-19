@@ -1,9 +1,10 @@
 @import '../../../scss/global';
 .k-grid tr.k-alt {
-  background: transparent;
+  background-color: rgba(0,0,0,.15);
 }
-.k-grid tr.totalrow.k-state-selected td {
-  color: $white;
+.k-grid td.k-state-selected,
+.k-grid tr.k-state-selected > td {
+  background-color: transparent;
 }
 #alt-vertical-grid
   .k-grid-container
@@ -219,10 +220,14 @@
   overflow: visible;
 }
 .k-grid tr.k-master-row {
-  background: #c2c2c2;
+  // background: #c2c2c2;
   font-weight: bold;
   color: black;
   font-size: 16px;
+}
+
+.k-hierarchy-cell .k-grid tr.k-alt {
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 .k-grid .k-detail-row tbody tr.k-master-row {
@@ -253,8 +258,7 @@
 .k-grid .k-detail-row .secondleveldata tbody tr.k-master-row,
 .k-grid .k-detail-row .secondleveldata tbody tr.k-alt.k-master-row,
 .k-grid .k-detail-row .secondleveldata tbody tr.k-detail-row,
-.k-grid .k-detail-row .secondleveldata tbody tr.k-alt.k-detail-row
- {
+.k-grid .k-detail-row .secondleveldata tbody tr.k-alt.k-detail-row {
   background: transparent;
 }
 .k-grid .k-detail-row .secondleveldata tr.k-master-row td[aria-colindex='1'] {
@@ -277,7 +281,7 @@
 }
 
 .k-grid tr.k-master-row td {
-  background: #b9b9b9;
+  // background: #b9b9b9;
   color: #29272a;
   padding: 15px 0 15px 12px;
   font-size: 16px;
@@ -286,7 +290,7 @@
   border-top: 3px solid black;
 }
 .k-grid tr.k-alt.k-master-row td {
-  background: #9f9f9f;
+  // background: #9f9f9f;
   border-top: 3px solid black;
 }
 
@@ -329,7 +333,8 @@
   overflow: clip support;
   overflow: clip;
 }
-.k-grid tbody .k-grid-header tr:hover, .k-grid tbody .k-grid-header tr.k-state-hover {
+.k-grid tbody .k-grid-header tr:hover,
+.k-grid tbody .k-grid-header tr.k-state-hover {
   background-color: transparent;
 }
 .thirdleveldata {
@@ -362,9 +367,9 @@ th.k-header[aria-colindex='2'] {
   border-style: solid;
   padding: 3px 5px 5px;
 }
-.thirdlevel-block .k-grid tbody tr:hover td{
-background-color: #0f1f26;
-color: #fff;
+.thirdlevel-block .k-grid tbody tr:hover td {
+  background-color: #0f1f26;
+  color: #fff;
 }
 .thirdleveldata.k-widget.k-grid .k-grid-header .k-header {
   font-size: 14px;
