@@ -40,20 +40,13 @@ h2 {
 my-app {
   padding: 0px;
 }
-// /* Scrollbar on Firefox */
-* {
-  scrollbar-width: 17px;
-  scrollbar-color: yellow;
-  scrollbar-arrow-color: green;
-  scrollbar-track-color: blue;
-  scrollbar-base-color: red;
-  scrollbar-darkshadow-color: purple;
-  scrollbar-3dlight-color: orange;
-  scrollbar-face-color: magenta;
-  scrollbar-highlight-color: violet;
-  scrollbar-shadow-color: white;
-}
+
 //scrollbar code
+// Scrollbar on Firefox
+* {
+  scrollbar-color: #ccc black;
+}
+// scrollbar in chromium
 ::-webkit-scrollbar {
   width: 17px;
   height: 25px;
