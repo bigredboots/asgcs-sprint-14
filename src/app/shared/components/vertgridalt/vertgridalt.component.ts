@@ -24,6 +24,43 @@ export class VertgridaltComponent {
 
   public mySelection: string[] = [];
 
+  // public expandedDetailKeys: any[] = [1];
+  // public expandDetailsBy = (dataItem: any): any => {
+  //   return dataItem.secondLevelData.EricssonPN;
+  // };
+
+  public expandInStockProducts({ dataItem, index }: any): boolean {
+    return true;
+  }
+
+  public collapseAll(topGrid) {
+    this.collapsed.nativeElement.classList.toggle('expanded');
+    this.data.forEach((item, idx) => {
+      topGrid.collapseRow(idx);
+    });
+  }
+
+  public expandAll(topGrid) {
+    this.collapsed.nativeElement.classList.toggle('expanded');
+    this.data.forEach((item, idx) => {
+      topGrid.expandRow(idx);
+    });
+
+    setTimeout(() => {
+      this.grids.toArray().forEach((grid) => {
+        if ((<any[]>grid.data).length) {
+          (<any[]>grid.data).forEach((item, idx) => {
+            grid.expandRow(idx);
+          });
+        } else {
+          (<GridDataResult>grid.data).data.forEach((item, idx) => {
+            grid.expandRow(idx);
+          });
+        }
+      });
+    });
+  }
+
   public data = [
     {
       EricssonPN: '00001-0001',
@@ -527,42 +564,476 @@ export class VertgridaltComponent {
         },
       ],
     },
+    {
+      EricssonPN: '00004-0004',
+      Region: 'United States',
+      Suppliers: 'XILINX',
+      SupplierPNs: 'XC4S1500-11FG456C',
+      Stdlead: '42',
+      2204: '564',
+      2205: '123',
+      2206: '322',
+      2207: '344',
+      2208: '211',
+      2209: '256',
+      2210: '335',
+      2211: '266',
+      2212: '342',
+      Uncomfirmed: '1',
+      OutsideWindow: '0',
+      secondLevelData: [
+        {
+          EricssonPN: '00004-0004',
+          Region: 'United States',
+          Suppliers: 'XILINX',
+          SupplierPNs: 'XC3S2200-3BGG456C',
+          Stdlead: '52',
+          2204: '664',
+          2205: '222',
+          2206: '111',
+          2207: '222',
+          2208: '232',
+          2209: '100',
+          2210: '222',
+          2211: '224',
+          2212: '101',
+          Uncomfirmed: '0',
+          OutsideWindow: '0',
+          thirdLevelData: [
+            {
+              ArrowPN: 'XC3S1500-4FGG456C',
+              SupplierPN: 'XC3S1500-4FGG456C',
+              Logistic: 'SPMI',
+              Region: 'Europe',
+              Supplier: 'XILINX',
+              Suppliers: 'XILINX',
+              SupplierPNs: 'XC3S1500-4FGG456C',
+              Inventory: 'inventory',
+              Customer: '-',
+              Stdlead: '52',
+              2204: '664',
+              2205: '-',
+              2206: '-',
+              2207: '-',
+              2208: '-',
+              2209: '-',
+              2210: '-',
+              2211: '-',
+              2212: '-',
+              Uncomfirmed: '0',
+              OutsideWindow: '0',
+            },
+            {
+              ArrowPN: 'XC3S1500-4FGG456C',
+              SupplierPN: 'XC3S1500-4FGG456C',
+              Logistic: 'SPMI',
+              Region: 'Europe',
+              Supplier: 'XILINX',
+              Suppliers: 'XILINX',
+              SupplierPNs: 'XC3S1500-4FGG456C',
+              Inventory: 'inventory',
+              Customer: '-',
+              Stdlead: '52',
+              2204: '664',
+              2205: '-',
+              2206: '-',
+              2207: '-',
+              2208: '-',
+              2209: '-',
+              2210: '-',
+              2211: '-',
+              2212: '-',
+              Uncomfirmed: '0',
+              OutsideWindow: '0',
+            },
+            {
+              ArrowPN: 'XC3S1500-4FGG456C',
+              SupplierPN: 'XC3S1500-4FGG456C',
+              Logistic: 'SPMI',
+              Region: 'Europe',
+              Supplier: 'XILINX',
+              Suppliers: 'XILINX',
+              SupplierPNs: 'XC3S1500-4FGG456C',
+              Inventory: 'inventory',
+              Customer: '-',
+              Stdlead: '52',
+              2204: '664',
+              2205: '-',
+              2206: '-',
+              2207: '-',
+              2208: '-',
+              2209: '-',
+              2210: '-',
+              2211: '-',
+              2212: '-',
+              Uncomfirmed: '0',
+              OutsideWindow: '0',
+            },
+            {
+              ArrowPN: 'PC3S1501-4FGG456C',
+              SupplierPN: 'XC3S1500-4FGG456C',
+              Logistic: 'SPMI',
+              Region: 'Europe',
+              Supplier: 'XILINX',
+              Suppliers: 'XILINX',
+              SupplierPNs: 'XC3S1500-4FGG456C',
+              Inventory: 'inventory',
+              Customer: '-',
+              Stdlead: '52',
+              2204: '664',
+              2205: '-',
+              2206: '-',
+              2207: '-',
+              2208: '-',
+              2209: '-',
+              2210: '-',
+              2211: '-',
+              2212: '-',
+              Uncomfirmed: '0',
+              OutsideWindow: '0',
+            },
+          ],
+        },
+        {
+          EricssonPN: '00004-0004',
+          Region: 'Europe',
+          Suppliers: 'XILINX',
+          SupplierPNs: 'XC3S1500-4FGG456C',
+          Stdlead: '52',
+          2204: '664',
+          2205: '222',
+          2206: '111',
+          2207: '222',
+          2208: '232',
+          2209: '100',
+          2210: '222',
+          2211: '224',
+          2212: '101',
+          Uncomfirmed: '0',
+          OutsideWindow: '0',
+          thirdLevelData: [
+            {
+              ArrowPN: 'XC3S1500-4FGG456C',
+              SupplierPN: 'XC3S1500-4FGG456C',
+              Logistic: 'SPMI',
+              Region: 'Europe',
+              Supplier: 'XILINX',
+              Suppliers: 'XILINX',
+              SupplierPNs: 'XC3S1500-4FGG456C',
+              Inventory: 'inventory',
+              Customer: '-',
+              Stdlead: '52',
+              2204: '664',
+              2205: '-',
+              2206: '-',
+              2207: '-',
+              2208: '-',
+              2209: '-',
+              2210: '-',
+              2211: '-',
+              2212: '-',
+              Uncomfirmed: '0',
+              OutsideWindow: '0',
+            },
+            {
+              ArrowPN: 'XC3S1500-4FGG456C',
+              SupplierPN: 'XC3S1500-4FGG456C',
+              Logistic: 'SPMI',
+              Region: 'Europe',
+              Supplier: 'XILINX',
+              Suppliers: 'XILINX',
+              SupplierPNs: 'XC3S1500-4FGG456C',
+              Inventory: 'inventory',
+              Customer: '-',
+              Stdlead: '52',
+              2204: '664',
+              2205: '-',
+              2206: '-',
+              2207: '-',
+              2208: '-',
+              2209: '-',
+              2210: '-',
+              2211: '-',
+              2212: '-',
+              Uncomfirmed: '0',
+              OutsideWindow: '0',
+            },
+            {
+              ArrowPN: 'XC3S1500-4FGG456C',
+              SupplierPN: 'XC3S1500-4FGG456C',
+              Logistic: 'SPMI',
+              Region: 'Europe',
+              Supplier: 'XILINX',
+              Suppliers: 'XILINX',
+              SupplierPNs: 'XC3S1500-4FGG456C',
+              Inventory: 'inventory',
+              Customer: '-',
+              Stdlead: '52',
+              2204: '664',
+              2205: '-',
+              2206: '-',
+              2207: '-',
+              2208: '-',
+              2209: '-',
+              2210: '-',
+              2211: '-',
+              2212: '-',
+              Uncomfirmed: '0',
+              OutsideWindow: '0',
+            },
+            {
+              ArrowPN: 'XC3S1500-4FGG456C',
+              SupplierPN: 'XC3S1500-4FGG456C',
+              Logistic: 'SPMI',
+              Region: 'Europe',
+              Supplier: 'XILINX',
+              Suppliers: 'XILINX',
+              SupplierPNs: 'XC3S1500-4FGG456C',
+              Inventory: 'inventory',
+              Customer: '-',
+              Stdlead: '52',
+              2204: '664',
+              2205: '-',
+              2206: '-',
+              2207: '-',
+              2208: '-',
+              2209: '-',
+              2210: '-',
+              2211: '-',
+              2212: '-',
+              Uncomfirmed: '0',
+              OutsideWindow: '0',
+            },
+          ],
+        },
+        {
+          EricssonPN: '00004-0004',
+          Region: 'Europe',
+          Suppliers: 'XILINX',
+          SupplierPNs: 'XC3S1500-4FGG456C',
+          Stdlead: '52',
+          2204: '664',
+          2205: '222',
+          2206: '111',
+          2207: '222',
+          2208: '232',
+          2209: '100',
+          2210: '222',
+          2211: '224',
+          2212: '101',
+          Uncomfirmed: '0',
+          OutsideWindow: '0',
+          thirdLevelData: [
+            {
+              ArrowPN: 'XC3S1500-4FGG456C',
+              SupplierPN: 'XC3S1500-4FGG456C',
+              Logistic: 'SPMI',
+              Region: 'Europe',
+              Supplier: 'XILINX',
+              Suppliers: 'XILINX',
+              SupplierPNs: 'XC3S1500-4FGG456C',
+              Inventory: 'inventory',
+              Customer: '-',
+              Stdlead: '52',
+              2204: '664',
+              2205: '-',
+              2206: '-',
+              2207: '-',
+              2208: '-',
+              2209: '-',
+              2210: '-',
+              2211: '-',
+              2212: '-',
+              Uncomfirmed: '0',
+              OutsideWindow: '0',
+            },
+            {
+              ArrowPN: 'XC3S1500-4FGG456C',
+              SupplierPN: 'XC3S1500-4FGG456C',
+              Logistic: 'SPMI',
+              Region: 'Europe',
+              Supplier: 'XILINX',
+              Suppliers: 'XILINX',
+              SupplierPNs: 'XC3S1500-4FGG456C',
+              Inventory: 'inventory',
+              Customer: '-',
+              Stdlead: '52',
+              2204: '664',
+              2205: '-',
+              2206: '-',
+              2207: '-',
+              2208: '-',
+              2209: '-',
+              2210: '-',
+              2211: '-',
+              2212: '-',
+              Uncomfirmed: '0',
+              OutsideWindow: '0',
+            },
+            {
+              ArrowPN: 'XC3S1500-4FGG456C',
+              SupplierPN: 'XC3S1500-4FGG456C',
+              Logistic: 'SPMI',
+              Region: 'Europe',
+              Supplier: 'XILINX',
+              Suppliers: 'XILINX',
+              SupplierPNs: 'XC3S1500-4FGG456C',
+              Inventory: 'inventory',
+              Customer: '-',
+              Stdlead: '52',
+              2204: '664',
+              2205: '-',
+              2206: '-',
+              2207: '-',
+              2208: '-',
+              2209: '-',
+              2210: '-',
+              2211: '-',
+              2212: '-',
+              Uncomfirmed: '0',
+              OutsideWindow: '0',
+            },
+            {
+              ArrowPN: 'XC3S1500-4FGG456C',
+              SupplierPN: 'XC3S1500-4FGG456C',
+              Logistic: 'SPMI',
+              Region: 'Europe',
+              Supplier: 'XILINX',
+              Suppliers: 'XILINX',
+              SupplierPNs: 'XC3S1500-4FGG456C',
+              Inventory: 'inventory',
+              Customer: '-',
+              Stdlead: '52',
+              2204: '664',
+              2205: '-',
+              2206: '-',
+              2207: '-',
+              2208: '-',
+              2209: '-',
+              2210: '-',
+              2211: '-',
+              2212: '-',
+              Uncomfirmed: '0',
+              OutsideWindow: '0',
+            },
+          ],
+        },
+        {
+          EricssonPN: '00004-0004',
+          Region: 'Europe',
+          Suppliers: 'XILINX',
+          SupplierPNs: 'XC3S1500-4FGG456C',
+          Stdlead: '52',
+          2204: '664',
+          2205: '222',
+          2206: '111',
+          2207: '222',
+          2208: '232',
+          2209: '100',
+          2210: '222',
+          2211: '224',
+          2212: '101',
+          Uncomfirmed: '0',
+          OutsideWindow: '0',
+          thirdLevelData: [
+            {
+              ArrowPN: 'XC3S1500-4FGG456C',
+              SupplierPN: 'XC3S1500-4FGG456C',
+              Logistic: 'SPMI',
+              Region: 'Europe',
+              Supplier: 'XILINX',
+              Suppliers: 'XILINX',
+              SupplierPNs: 'XC3S1500-4FGG456C',
+              Inventory: 'inventory',
+              Customer: '-',
+              Stdlead: '52',
+              2204: '664',
+              2205: '-',
+              2206: '-',
+              2207: '-',
+              2208: '-',
+              2209: '-',
+              2210: '-',
+              2211: '-',
+              2212: '-',
+              Uncomfirmed: '0',
+              OutsideWindow: '0',
+            },
+            {
+              ArrowPN: 'XC3S1500-4FGG456C',
+              SupplierPN: 'XC3S1500-4FGG456C',
+              Logistic: 'SPMI',
+              Region: 'Europe',
+              Supplier: 'XILINX',
+              Suppliers: 'XILINX',
+              SupplierPNs: 'XC3S1500-4FGG456C',
+              Inventory: 'inventory',
+              Customer: '-',
+              Stdlead: '52',
+              2204: '664',
+              2205: '-',
+              2206: '-',
+              2207: '-',
+              2208: '-',
+              2209: '-',
+              2210: '-',
+              2211: '-',
+              2212: '-',
+              Uncomfirmed: '0',
+              OutsideWindow: '0',
+            },
+            {
+              ArrowPN: 'XC3S1500-4FGG456C',
+              SupplierPN: 'XC3S1500-4FGG456C',
+              Logistic: 'SPMI',
+              Region: 'Europe',
+              Supplier: 'XILINX',
+              Suppliers: 'XILINX',
+              SupplierPNs: 'XC3S1500-4FGG456C',
+              Inventory: 'inventory',
+              Customer: '-',
+              Stdlead: '52',
+              2204: '664',
+              2205: '-',
+              2206: '-',
+              2207: '-',
+              2208: '-',
+              2209: '-',
+              2210: '-',
+              2211: '-',
+              2212: '-',
+              Uncomfirmed: '0',
+              OutsideWindow: '0',
+            },
+            {
+              ArrowPN: 'XC3S1500-4FGG456C',
+              SupplierPN: 'XC3S1500-4FGG456C',
+              Logistic: 'SPMI',
+              Region: 'Europe',
+              Supplier: 'XILINX',
+              Suppliers: 'XILINX',
+              SupplierPNs: 'XC3S1500-4FGG456C',
+              Inventory: 'inventory',
+              Customer: '-',
+              Stdlead: '52',
+              2204: '664',
+              2205: '-',
+              2206: '-',
+              2207: '-',
+              2208: '-',
+              2209: '-',
+              2210: '-',
+              2211: '-',
+              2212: '-',
+              Uncomfirmed: '0',
+              OutsideWindow: '0',
+            },
+          ],
+        },
+      ],
+    },
+    
   ];
 
-  // public expandedDetailKeys: any[] = [1];
-  // public expandDetailsBy = (dataItem: any): any => {
-  //   return dataItem.secondLevelData.EricssonPN;
-  // };
-
-  public expandInStockProducts({ dataItem, index }: any): boolean {
-    return true;
-  }
-
-  public collapseAll(topGrid) {
-    this.collapsed.nativeElement.classList.toggle('expanded');
-    this.data.forEach((item, idx) => {
-      topGrid.collapseRow(idx);
-    });
-  }
-
-  public expandAll(topGrid) {
-    this.collapsed.nativeElement.classList.toggle('expanded');
-    this.data.forEach((item, idx) => {
-      topGrid.expandRow(idx);
-    });
-
-    setTimeout(() => {
-      this.grids.toArray().forEach((grid) => {
-        if ((<any[]>grid.data).length) {
-          (<any[]>grid.data).forEach((item, idx) => {
-            grid.expandRow(idx);
-          });
-        } else {
-          (<GridDataResult>grid.data).data.forEach((item, idx) => {
-            grid.expandRow(idx);
-          });
-        }
-      });
-    });
-  }
+  
 }
