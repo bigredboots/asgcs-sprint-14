@@ -33,7 +33,18 @@
     (pageChange)="pageChange($event)"
   >
     <ng-template kendoGridToolbarTemplate>
-      <div class="card-title-text">Reg Vertical Grid Title</div>
+      
+    <div class="left-side-content">
+    <div class="card-title-text">Reg Vertical Grid Title</div>
+    <div class="filter-item">
+      <span class="k-dropdown-wrap">
+        <span class="k-input">Display<span>$USD</span></span>
+        <span class="k-select">
+          <span class="k-icon k-i-arrow-s"></span>
+        </span>
+      </span>
+    </div>
+  </div>
 
       <div class="filter-block vertgrid">
         <div class="filters">
@@ -98,6 +109,7 @@
         </div>
       </div>
 
+
       <div class="card-title-buttons">
         <div class="opened full-screen" (click)="openFullscreen($event)">
           <span></span>Full Screen
@@ -137,7 +149,7 @@
       media="(min-width: 501px)"
       field="gender"
       title="Order Type"
-      [width]="220"
+      [width]="190"
       [locked]="true"
     >
       <ng-template kendoGridCellTemplate let-dataItem>
@@ -148,7 +160,7 @@
       media="(min-width: 501px)"
       field="id"
       title="CPN"
-      [width]="220"
+      [width]="190"
       [locked]="true"
     >
       <ng-template kendoGridCellTemplate let-dataItem>
