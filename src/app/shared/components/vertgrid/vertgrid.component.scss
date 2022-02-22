@@ -44,13 +44,6 @@
 .late {
   background: #e31b23;
 }
-.text-bold {
-  font-weight: 600;
-}
-
-.filter-block {
-  display: none;
-}
 
 .fullscreened {
   .filter-block {
@@ -67,6 +60,12 @@
     font-size: 24px;
     color: white;
   }
+  .k-select {
+    padding: 3px 0px;
+  }
+  .k-input {
+    padding: 3px 6px;
+  }
   .k-grid-toolbar {
     display: grid;
     align-items: center;
@@ -81,15 +80,6 @@
     > div {
       padding: 20px;
     }
-  }
-  // #vertical-grid .k-select {
-  //   border-radius: 0 5px 5px 0;
-  // }
-  .fullscreened #vertical-grid .k-select {
-    padding: 3px 0px;
-  }
-  .fullscreened #vertical-grid .k-input {
-    padding: 3px 6px;
   }
 }
 

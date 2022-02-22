@@ -1,73 +1,72 @@
 @import '../../../scss/global';
-.k-grid {
-  border: none;
-}
-.k-grid tr {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-.k-grid tr.k-alt {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.k-grid td.k-state-selected,
-.k-grid tr.k-state-selected > td {
-  background-color: transparent;
-}
-#alt-vertical-grid
-  .k-grid-container
-  div:nth-child(1)
-  .k-grid-table-wrap
-  .k-grid-table {
-  .totalrow td:nth-child(1)::after {
-    content: '';
-    width: 10px;
-    height: 10px;
-    background-color: #a2a2a2; //one-off color not used anywhere else
-    display: block;
-    position: absolute;
-    bottom: -10px;
-    left: -10px;
-    border-radius: 0px 0px 0px 20px;
-    border: 10px solid $black;
-    border-width: 0px 0px 10px 10px;
-    transition: $fast-transition;
-  }
-  .totalrow:hover td:nth-child(1)::after {
-    background-color: $table-hover;
-  }
-  .totalrow.k-state-selected td:nth-child(1)::after {
-    background-color: #6f7c82; //one-off color not used anywhere else
-  }
-}
 
-.k-grid tr.subtotalrow {
-  background: $grey-darker;
+#vertical-grid-alt {
+  &.k-grid {
+    border: none;
 
-  td {
-    border-top: 1px dashed $grey-darker;
-    border-bottom: 1px dashed $grey-light;
+    tr {
+      background-color: rgba(0, 0, 0, 0.05);
+      &.k-alt {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
   }
 }
+// .k-grid td.k-state-selected,
+// .k-grid tr.k-state-selected > td {
+//   background-color: transparent;
+// }
+// #alt-vertical-grid .k-grid-container div:nth-child(1)  .k-grid-table-wrap  .k-grid-table {  .totalrow td:nth-child(1)::after {
+//     content: '';
+//     width: 10px;
+//     height: 10px;
+//     background-color: #a2a2a2; //one-off color not used anywhere else
+//     display: block;
+//     position: absolute;
+//     bottom: -10px;
+//     left: -10px;
+//     border-radius: 0px 0px 0px 20px;
+//     border: 10px solid $black;
+//     border-width: 0px 0px 10px 10px;
+//     transition: $fast-transition;
+//   }
+//   .totalrow:hover td:nth-child(1)::after {
+//     background-color: $table-hover;
+//   }
+//   .totalrow.k-state-selected td:nth-child(1)::after {
+//     background-color: #6f7c82; //one-off color not used anywhere else
+//   }
+// }
 
-.k-grid tr.totalrow {
-  background-color: $grey-light;
-  color: $black;
+// .k-grid tr.subtotalrow {
+//   background: $grey-darker;
 
-  td {
-    color: $black;
-    font-weight: bold;
-    border-top: 0px;
-    border-bottom: 30px solid $black;
-    border-left: 0px;
-    position: relative;
-  }
-  &:hover td {
-    color: $white;
-  }
-}
-.k-grid .k-grid-content-locked tr.subtotalrow td,
-.k-grid .k-grid-content-locked tr.totalrow td {
-  background-color: rgba(255, 255, 255, 0.2);
-}
+//   td {
+//     border-top: 1px dashed $grey-darker;
+//     border-bottom: 1px dashed $grey-light;
+//   }
+// }
+
+// .k-grid tr.totalrow {
+//   background-color: $grey-light;
+//   color: $black;
+
+//   td {
+//     color: $black;
+//     font-weight: bold;
+//     border-top: 0px;
+//     border-bottom: 30px solid $black;
+//     border-left: 0px;
+//     position: relative;
+//   }
+//   &:hover td {
+//     color: $white;
+//   }
+// }
+// .k-grid .k-grid-content-locked tr.subtotalrow td,
+// .k-grid .k-grid-content-locked tr.totalrow td {
+//   background-color: rgba(255, 255, 255, 0.2);
+// }
 
 // .k-grid tbody tr:hover,
 // .k-grid tbody tr:hover td,
@@ -78,19 +77,6 @@
 //   background-color: $table-hover;
 //   border-top: 1px solid $grey-light;
 // }
-
-#vertical-grid.k-grid tr:nth-child(2n + 1) {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-/* new stuff */
-
-.filter-block.vertgrid {
-  display: none;
-}
-
-#vertical-grid-alt.k-grid {
-  border: 0px;
-}
 .expand-button-container {
   border-left: 1px solid #fff;
   display: block;
@@ -101,51 +87,55 @@
   margin-top: 3px;
   overflow: hidden;
   position: relative;
-}
-.expand-button-container::before {
-  content: '';
-  background-image: url('/assets/icons/expandall-blue.svg');
-  width: 15px;
-  height: 15px;
-  background-color: transparent;
-  display: inline-block;
-  opacity: 1;
-  background-size: contain;
-  margin-right: 3px;
-  cursor: pointer;
-  position: absolute;
-  transition: $default-transition;
-}
 
-.expanded .expand-button-container::before {
-  transform: rotate(180deg);
+  &::before {
+    content: '';
+    background-image: url('/assets/icons/expandall-blue.svg');
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    display: inline-block;
+    opacity: 1;
+    background-size: contain;
+    margin-right: 3px;
+    cursor: pointer;
+    position: absolute;
+    transition: $default-transition;
+  }
+  #expandall,
+  #collapseall {
+    background-color: transparent;
+    color: $blue-color;
+    padding: 0px;
+    margin-left: 17px;
+    position: relative;
+    font-size: $smallest-font;
+    transition: $fast-transition;
+  }
+  #expandall {
+    top: -3px;
+    opacity: 1;
+  }
+  #collapseall {
+    top: 0px;
+    opacity: 0;
+  }
 }
-#expandall,
-#collapseall {
-  background-color: transparent;
-  color: $blue-color;
-  padding: 0px;
-  margin-left: 17px;
-  position: relative;
-  font-size: $smallest-font;
-  transition: $fast-transition;
-}
-#expandall {
-  top: -3px;
-  opacity: 1;
-}
-#collapseall {
-  top: 0px;
-  opacity: 0;
-}
-.expanded #expandall {
-  top: -20px;
-  opacity: 0;
-}
-.expanded #collapseall {
-  top: -25px;
-  opacity: 1;
-}
+.expanded {
+  .expand-button-container {
+    &::before {
+      transform: rotate(180deg);
+    }
+    #expandall {
+      top: -20px;
+      opacity: 0;
+    }
+    #collapseall {
+      top: -25px;
+      opacity: 1;
+    }
+  } 
+} 
 
 .k-grid .k-hierarchy-cell > .k-icon.k-i-plus,
 .k-grid .k-hierarchy-cell > .k-icon.k-i-minus {
