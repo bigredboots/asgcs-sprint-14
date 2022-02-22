@@ -29,6 +29,8 @@ export class VertgridaltComponent {
   //   return dataItem.secondLevelData.EricssonPN;
   // };
 
+  public pageSize = 1;
+
   public expandInStockProducts({ dataItem, index }: any): boolean {
     return true;
   }
@@ -1942,8 +1944,5 @@ export class VertgridaltComponent {
         },
       ],
     },
-    
   ];
-
-  
 }

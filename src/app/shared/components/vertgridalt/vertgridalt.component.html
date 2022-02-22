@@ -14,18 +14,21 @@
     kendoGridSelectBy="id"
     [selectedKeys]="mySelection"
     id="vertical-grid-alt"
-    [pageSize]="30"
+    [pageSize]="5" 
+    [pageable]="true"
     [columnMenu]="{ columnChooser: false }"
     [skip]="skip"
-    [pageable]="{
-      buttonCount: buttonCount,
-      info: info,
-      type: type,
-      pageSizes: pageSizes,
-      previousNext: previousNext,
-      position: position
-    }"
+    
+    
   >
+  <!-- [pageable]="{
+    buttonCount: buttonCount,
+    info: info,
+    type: type,
+    pageSizes: pageSizes,
+    previousNext: previousNext,
+    position: position
+  }" -->
     <ng-template kendoGridToolbarTemplate>
       <div class="card-title left" #collapsed>
         <div class="card-title-text">Expanded Vertical Grid Title</div>
