@@ -3,80 +3,15 @@
 #vertical-grid-alt {
   &.k-grid {
     border: none;
-
-    tr {
-      background-color: rgba(0, 0, 0, 0.05);
-      &.k-alt {
-        background-color: rgba(0, 0, 0, 0.2);
-      }
-    }
   }
 }
-// .k-grid td.k-state-selected,
-// .k-grid tr.k-state-selected > td {
-//   background-color: transparent;
-// }
-// #alt-vertical-grid .k-grid-container div:nth-child(1)  .k-grid-table-wrap  .k-grid-table {  .totalrow td:nth-child(1)::after {
-//     content: '';
-//     width: 10px;
-//     height: 10px;
-//     background-color: #a2a2a2; //one-off color not used anywhere else
-//     display: block;
-//     position: absolute;
-//     bottom: -10px;
-//     left: -10px;
-//     border-radius: 0px 0px 0px 20px;
-//     border: 10px solid $black;
-//     border-width: 0px 0px 10px 10px;
-//     transition: $fast-transition;
-//   }
-//   .totalrow:hover td:nth-child(1)::after {
-//     background-color: $table-hover;
-//   }
-//   .totalrow.k-state-selected td:nth-child(1)::after {
-//     background-color: #6f7c82; //one-off color not used anywhere else
-//   }
-// }
-
-// .k-grid tr.subtotalrow {
-//   background: $grey-darker;
-
-//   td {
-//     border-top: 1px dashed $grey-darker;
-//     border-bottom: 1px dashed $grey-light;
-//   }
-// }
-
-// .k-grid tr.totalrow {
-//   background-color: $grey-light;
-//   color: $black;
-
-//   td {
-//     color: $black;
-//     font-weight: bold;
-//     border-top: 0px;
-//     border-bottom: 30px solid $black;
-//     border-left: 0px;
-//     position: relative;
-//   }
-//   &:hover td {
-//     color: $white;
-//   }
-// }
-// .k-grid .k-grid-content-locked tr.subtotalrow td,
-// .k-grid .k-grid-content-locked tr.totalrow td {
-//   background-color: rgba(255, 255, 255, 0.2);
-// }
-
-// .k-grid tbody tr:hover,
-// .k-grid tbody tr:hover td,
-// .k-grid .k-grid-content-locked tr:hover td,
-// .k-grid .k-grid-content-locked tr.subtotalrow:hover td,
-// .k-grid tr.k-alt.subtotalrow:hover td,
-// .k-grid tr.subtotalrow:hover td {
-//   background-color: $table-hover;
-//   border-top: 1px solid $grey-light;
-// }
+.k-grid td.k-state-selected,
+.k-grid tr.k-state-selected > td {
+  background-color: transparent;
+}
+#vertical-grid-alt .k-grid-header .k-header {
+  border-bottom: 1px solid #ccc;
+}
 .expand-button-container {
   border-left: 1px solid #fff;
   display: block;
@@ -134,21 +69,17 @@
       top: -25px;
       opacity: 1;
     }
-  } 
-} 
+  }
+}
 
 .k-grid .k-hierarchy-cell > .k-icon.k-i-plus,
 .k-grid .k-hierarchy-cell > .k-icon.k-i-minus {
   position: absolute;
   right: -160px;
   z-index: 6;
-  width: 200px;
-  height: 53px;
   top: 0px;
   padding: 0;
-  margin: 0;
   display: flex;
-  justify-content: right;
 }
 .k-icon.k-i-plus:before,
 .k-icon.k-i-minus:before {
@@ -157,37 +88,18 @@
   transition: $default-transition;
   font-size: 26px;
   color: $blue-color;
-  line-height: 0px;
-  display: block;
   text-shadow: 3px 0px 0px black, 0px 2px 0px black, -2px 0px 0px black,
     0px -2px 0px black, -2px -3px 0px black, -2px 3px 0px black;
 }
 .secondleveldata .k-icon.k-i-plus:before,
 .secondleveldata .k-icon.k-i-minus:before {
   text-shadow: none;
+  color: white;
+  font-size: 24px;
 }
 .k-icon.k-i-minus:before {
   transform: rotate(90deg);
 }
-
-.k-grid .k-grid-content td[data-kendo-grid-column-index='0'] {
-  border-left: 0px;
-  margin-left: -10px;
-  padding-left: 0px;
-  display: block;
-}
-.k-detail-row .k-detail-cell {
-  margin-left: -45px;
-  display: table;
-  padding: 0px 0px 0px 12px;
-}
-.k-grid .k-detail-row div.k-grid-header {
-  display: none;
-}
-.k-grid .k-detail-row .k-detail-row div.k-grid-header {
-  display: initial;
-}
-
 .k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-plus,
 .k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-minus {
   position: relative;
@@ -196,49 +108,61 @@
   justify-content: left;
   top: 1px;
 }
-.k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-plus::before,
-.k-grid .k-detail-row .k-hierarchy-cell > .k-icon.k-i-minus::before {
-  color: white;
-  font-size: 24px;
+
+.k-grid .k-grid-content td[data-kendo-grid-column-index='0'] {
+  border-left: 0px;
+  margin-left: -10px;
+  padding-left: 0px;
+  display: block;
 }
 
-.k-grid .k-detail-row .k-grid-content td[data-kendo-grid-column-index='0'] {
-  margin-left: 0px;
-  padding-left: 10px;
-  display: table-cell;
-}
-.k-grid .k-grid-content td[data-kendo-grid-column-index='1'] {
-  border-left: 2px solid black;
-}
-
-#vertical-grid-alt .k-grid-header .k-header {
-  border-bottom: 1px solid #ccc;
-}
-.k-grid tr.k-master-row td.k-hierarchy-cell {
-  overflow: visible;
-}
 .k-grid tr.k-master-row {
   // background: #c2c2c2;
   font-weight: bold;
   color: black;
   font-size: 16px;
+
+  .k-hierarchy-cell {
+    overflow: visible;
+  }
 }
 
-.k-hierarchy-cell .k-grid tr.k-alt {
-  background-color: rgba(0, 0, 0, 0.15);
+.k-grid .k-grid-content td[data-kendo-grid-column-index='1'] {
+  border-left: 2px solid black;
 }
+.k-grid .k-detail-row {
+  .k-detail-cell {
+    margin-left: -45px;
+    display: table;
+    padding: 0px 0px 0px 12px;
+  }
+  .k-grid-header {
+    display: none;
+  }
+  .k-detail-row .k-grid-header {
+    display: initial;
+  }
+  
+  .k-grid-content td[data-kendo-grid-column-index='0'] {
+    margin-left: 0px;
+    padding-left: 10px;
+    display: table-cell;
+  }
+} 
 
 .k-grid .k-detail-row tbody tr.k-master-row {
   background: #525252;
   font-weight: bold;
   color: white;
   font-size: 14px;
+  
+  &:hover {
+    background: #42a0c9;
+    color: #ccc;
+    border-top: 3px solid black;
+  }
 }
-.k-grid tbody tr.k-master-row:hover {
-  background: #42a0c9;
-  color: #ccc;
-  border-top: 3px solid black;
-}
+
 .k-grid tbody tr:hover.k-master-row td {
   background: transparent;
   transition: $fast-transition;
@@ -279,7 +203,6 @@
 }
 
 .k-grid tr.k-master-row td {
-  // background: #b9b9b9;
   color: #29272a;
   padding: 15px 0 15px 12px;
   font-size: 16px;
@@ -288,7 +211,6 @@
   border-top: 3px solid black;
 }
 .k-grid tr.k-alt.k-master-row td {
-  // background: #9f9f9f;
   border-top: 3px solid black;
 }
 
@@ -331,10 +253,7 @@
   overflow: clip support;
   overflow: clip;
 }
-.k-grid tbody .k-grid-header tr:hover,
-.k-grid tbody .k-grid-header tr.k-state-hover {
-  background-color: transparent;
-}
+
 .thirdleveldata {
   border: 2px solid #222;
   border-radius: 15px 0px 0px 0px;
