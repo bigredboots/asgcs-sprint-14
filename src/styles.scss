@@ -523,51 +523,14 @@ h4 {
   background-size: 40px 100%, 60px 100%, 40px 100%, 60px 100%;
   background-attachment: local, local, scroll, scroll;
 }
-#vertical-grid-alt .k-grid-content.k-virtual-content {
-  background-image: linear-gradient(to right, #c2c2c2, #c2c2c2),
-    linear-gradient(to right, #c2c2c2, #c2c2c2),
-    linear-gradient(to left, rgba(194, 194, 194, 0.25), rgba(0, 0, 0, 0.5)),
-    linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(194, 194, 194, 0.5));
-  background-color: #c2c2c2;
-  background-position: left center, right center, left center, right center;
-  background-repeat: no-repeat;
-  background-size: 40px 100%, 60px 100%, 40px 100%, 60px 100%;
-  background-attachment: local, local, scroll, scroll;
-  overflow-y: hidden;
-}
-#vertical-grid-alt .secondleveldata .k-grid-content.k-virtual-content {
-  background-color: $black;
-  background-image: none;
-  overflow-x: hidden;
-}
-#vertical-grid-alt .thirdleveldata .k-grid-content.k-virtual-content {
-  background-color: #000000;
-  background-image: linear-gradient(to right, black, black),
-    linear-gradient(to right, black, black),
-    linear-gradient(to right, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.5)),
-    linear-gradient(to left, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.5));
-  background-position: left center, right center, left center, right center;
-  background-repeat: no-repeat;
-  background-size: 40px 100%, 60px 100%, 40px 100%, 60px 100%;
-  background-attachment: local, local, scroll, scroll;
-}
+
+
+
 .k-grid .k-grid-content td,
 .k-grid .k-grid-content-locked td {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.k-grid td {
-  color: #ccc;
-  font-size: 14px;
-  border-top: 1px solid #151515;
-  border-bottom: 1px solid #151515;
-}
-.k-grid-header .k-header,
-.k-grid .k-grid-header-locked .k-header {
-  font-size: 16px;
-  border-bottom: 2px solid white;
 }
 
 .full-screen {
@@ -606,17 +569,7 @@ h4 {
   background-repeat: no-repeat;
   background-size: 5px 5px;
 }
-// }
 
-// .k-link {
-//   margin: -8px -12px;
-//   padding: 8px 12px;
-//   line-height: inherit;
-//   display: block;
-//   overflow: hidden;
-//   text-overflow: ellipsis;
-//   outline: 0;
-// }
 .k-button-flat::before,
 .k-button.k-flat::before,
 .k-button.k-bare::before {
