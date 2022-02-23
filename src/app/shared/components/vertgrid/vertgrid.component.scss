@@ -1,6 +1,18 @@
 @import '../../../scss/global';
 
 // Overrides of the Kendo Dark theme
+.k-grid-content.k-virtual-content {
+  background-color: black;
+  background-image: linear-gradient(to right, black, black),
+    linear-gradient(to right, black, black),
+    linear-gradient(to right, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.5)),
+    linear-gradient(to left, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.5));
+  background-position: left center, right center, left center, right center;
+  background-repeat: no-repeat;
+  background-size: 40px 100%, 60px 100%, 40px 100%, 60px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+
 .k-grid .k-grid-content-locked .k-state-selected.k-alt td,
 .k-grid .k-grid-content-locked .k-state-selected td,
 .k-grid td.k-state-selected,
