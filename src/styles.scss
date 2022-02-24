@@ -158,10 +158,7 @@ my-app {
 .collapse:not(.show) {
   display: block;
 }
-.left-column.collapse .hamburger span {
-  transform: rotate(-135deg) !important;
-  left: 8px !important;
-}
+
 //Temporary theme for Kendo UI drop downs
 .k-input {
   padding: 0px 5px;
@@ -509,12 +506,6 @@ h4 {
   width: calc(100% - 40px);
   transition: 0.3s ease-in all;
 }
-.left-column.collapse #main-sidebar {
-  width: 0px;
-}
-
-
-
 
 .k-grid .k-grid-content td,
 .k-grid .k-grid-content-locked td {
@@ -593,8 +584,10 @@ h4 {
   line-height: 8px;
 }
 .k-dropdown .k-dropdown-wrap {
-  border-bottom: 2px solid grey;
+  border-width: 0px 0px 2px 0px;
+  border-bottom-color: grey;
   margin-bottom: 5px;
+  border-bottom-style: solid;
 }
 .dates-block .k-dropdown .k-dropdown-wrap .k-select span {
   border-top: 6px solid $blue-color;

@@ -58,7 +58,9 @@
 .late {
   background: #e31b23;
 }
-
+.filter-block {
+  display: none;
+}
 .fullscreened {
   .filter-block {
     display: flex;
