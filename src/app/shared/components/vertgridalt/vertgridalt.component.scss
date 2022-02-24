@@ -15,11 +15,6 @@
     background-attachment: local, local, scroll, scroll;
     overflow-y: hidden;
   }
-  .secondleveldata .k-grid-content.k-virtual-content {
-    background-color: $black;
-    background-image: none;
-    overflow-x: hidden;
-  }
 
   &.k-grid {
     border: none;
@@ -230,30 +225,41 @@
 }
 
 //second level grid data
-.k-grid .k-detail-row .secondleveldata .k-master-row {
-  td {
-    background: #525252;
-    font-weight: bold;
-    color: #ccc;
-    padding: 5px 0 5px 12px;
-    font-size: 14px;
-    position: relative;
-    border-left-color: #404040;
+.k-grid .k-detail-row .secondleveldata {
+  margin-bottom: 10px;
+  border-bottom: 0px;
+
+  .k-master-row {
+    td {
+      background: #525252;
+      font-weight: bold;
+      color: #ccc;
+      padding: 5px 0 5px 12px;
+      font-size: 14px;
+      position: relative;
+      border-left-color: #404040;
+    }
+    td[aria-colindex='1'] {
+      border-radius: 0px 0px 0px 5px;
+    }
+    &:hover,
+    &:hover td {
+      background-color: #121f25;
+      color: #fff;
+      border-left-color: black;
+      //  border-top-width: 1px;
+    }
+    &:hover + .k-detail-row .thirdlevel-block {
+      border-color: #121f25;
+    }
   }
-  td[aria-colindex='1'] {
-    border-radius: 0px 0px 0px 5px;
-  }
-  &:hover,
-  &:hover td {
-    background-color: #121f25;
-    color: #fff;
-    border-left-color: black;
-    //  border-top-width: 1px;
-  }
-  &:hover + .k-detail-row .thirdlevel-block {
-    border-color: #121f25;
+  .k-grid-content.k-virtual-content {
+    background-color: $black;
+    background-image: none;
+    overflow-x: hidden;
   }
 }
+
 
 //third level
 .thirdleveldata {
@@ -261,7 +267,7 @@
   border-radius: 15px 0px 0px 0px;
 }
 .k-grid tbody .thirdlevel-block {
-  margin: 0px 15px 10px 15px;
+  margin: 0px 15px;
   border-radius: 0px 0px 8px 8px;
   border-width: 7px 2px 2px 2px;
   border-color: #525252;
