@@ -20,11 +20,11 @@
     background-image: none;
     overflow-x: hidden;
   }
-  
+
   &.k-grid {
     border: none;
-    border-top: 1px solid #151515;
-    border-bottom: 1px solid #151515;
+    // border-top: 1px solid #151515;
+    // border-bottom: 1px solid #151515;
 
     &td.k-state-selected,
     &tr.k-state-selected > td {
@@ -111,7 +111,7 @@
 .k-grid .k-hierarchy-cell > .k-icon.k-i-minus {
   position: absolute;
   right: -170px;
-  z-index: 6;
+  z-index: 1;
   top: 0px;
   padding: 0px 10px;
   display: flex;
