@@ -388,12 +388,15 @@ button.search-submit {
 .expand-filters,
 .collapse-filters {
   font-size: 13px;
-  margin-top: 14px;
+  margin-top: 16px;
   margin-left: 10px;
-  height: 100%;
-  text-decoration: underline;
-  white-space: nowrap;
+  padding: 0px 7px;
+  display: flex;
   cursor: pointer;
+  border: 1px solid white;
+  height: 22px;
+  border-radius: 5px;
+  align-items: center;
 }
 .collapse-filters {
   grid-row: 3;
