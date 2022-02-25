@@ -155,6 +155,7 @@
       background: rgba(194, 194, 194, 0.7);
       border-left: 1px solid #42a0c9;
       margin-left: 0px;
+      
     }
   }
   .k-hierarchy-cell {
@@ -168,6 +169,7 @@
     border-left: 1px solid #999;
     border-top: 3px solid black;
     transition: $fast-transition;
+    border-top: 2px solid #000;
 
     &[data-kendo-grid-column-index='0'] {
       border-left: 0px;
@@ -225,13 +227,9 @@
 }
 
 //second level grid data
-#vertical-grid-alt .k-grid .k-detail-row .secondleveldata {
-  margin-bottom: 10px;
-  border-bottom: 0px;
-
+.k-grid .k-detail-row .secondleveldata {
   .k-master-row {
     td {
-      background: #525252;
       font-weight: bold;
       color: #ccc;
       padding: 5px 0 5px 12px;
@@ -253,21 +251,27 @@
       border-color: #121f25;
     }
   }
-  .k-grid-content.k-virtual-content {
-    background-color: $black;
-    background-image: none;
-    overflow-x: hidden;
-  }
 }
-
+#vertical-grid-alt .secondleveldata .k-grid-content.k-virtual-content {
+  background-color: #525252;
+  background-image: linear-gradient(to right, #525252, #525252),
+      linear-gradient(to right, #525252, #525252),
+      linear-gradient(to left, rgba(92, 92, 92, 0.25), rgba(0, 0, 0, 0.5)),
+      linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(92, 92, 92, 0.5));
+  overflow-x: hidden;
+  margin-bottom: 5px;
+}
 
 //third level
 .thirdleveldata {
   border: 2px solid #222;
   border-radius: 15px 0px 0px 0px;
 }
+#vertical-grid-alt .thirdleveldata .k-grid-content.k-virtual-content {
+  margin-bottom: 0px;
+}
 .k-grid tbody .thirdlevel-block {
-  margin: 0px 15px;
+  margin: 0px 15px 10px 15px;
   border-radius: 0px 0px 8px 8px;
   border-width: 7px 2px 2px 2px;
   border-color: #525252;
