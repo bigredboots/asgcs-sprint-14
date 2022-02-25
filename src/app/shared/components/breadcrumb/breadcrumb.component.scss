@@ -4,7 +4,8 @@
   text-decoration: none;
   list-style: none;
 }
-span ~ app-breadcrumb .breadcrumb-label::before {
+// span ~ app-breadcrumb .breadcrumb-label::before
+.breadcrumb-label::before {
   content: '';
   border-left: 2px solid $grey-lighter;
   border-bottom: 2px solid $grey-lighter;
