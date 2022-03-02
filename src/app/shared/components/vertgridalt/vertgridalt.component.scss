@@ -21,8 +21,8 @@
     // border-top: 1px solid #151515;
     // border-bottom: 1px solid #151515;
 
-    &td.k-state-selected,
-    &tr.k-state-selected > td {
+    td.k-state-selected,
+    tr.k-state-selected > td {
       background-color: transparent;
     }
   }
@@ -38,6 +38,28 @@
     text-indent: -10px;
     overflow: visible;
   }
+}
+.k-header.caldate {
+  white-space: break-spaces;
+  padding: 0px 13px;
+  text-align: center;
+  line-height: 17px;
+  vertical-align: middle;
+}
+.k-header.caldate::first-line {
+  font-size: 10px;
+  line-height: 8px;
+}
+.k-header.smcaldate {
+  white-space: break-spaces;
+  padding: 0px 13px;
+  text-align: center;
+  line-height: 17px;
+  vertical-align: middle;
+}
+.k-header.smcaldate::first-line {
+  font-size: 10px;
+  line-height: 8px;
 }
 
 //expand and contract button
@@ -155,7 +177,6 @@
       background: rgba(194, 194, 194, 0.7);
       border-left: 1px solid #42a0c9;
       margin-left: 0px;
-      
     }
   }
   .k-hierarchy-cell {
@@ -167,9 +188,8 @@
     font-size: 16px;
     position: relative;
     border-left: 1px solid #999;
-    border-top: 3px solid black;
-    transition: $fast-transition;
     border-top: 2px solid #000;
+    transition: $fast-transition;
 
     &[data-kendo-grid-column-index='0'] {
       border-left: 0px;
@@ -255,9 +275,9 @@
 #vertical-grid-alt .secondleveldata .k-grid-content.k-virtual-content {
   background-color: #525252;
   background-image: linear-gradient(to right, #525252, #525252),
-      linear-gradient(to right, #525252, #525252),
-      linear-gradient(to left, rgba(92, 92, 92, 0.25), rgba(0, 0, 0, 0.5)),
-      linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(92, 92, 92, 0.5));
+    linear-gradient(to right, #525252, #525252),
+    linear-gradient(to left, rgba(92, 92, 92, 0.25), rgba(0, 0, 0, 0.5)),
+    linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(92, 92, 92, 0.5));
   overflow-x: hidden;
   margin-bottom: 5px;
 }

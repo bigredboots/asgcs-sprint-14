@@ -122,17 +122,60 @@
     <kendo-grid-column field="Suppliers" [width]="120"></kendo-grid-column>
     <kendo-grid-column field="SupplierPNs" [width]="170"></kendo-grid-column>
     <kendo-grid-column field="Stdlead" [width]="120"></kendo-grid-column>
-    <kendo-grid-column field="2204" [width]="80"
-      ><span>Jan-21</span></kendo-grid-column
-    >
-    <kendo-grid-column field="2205" [width]="80"></kendo-grid-column>
-    <kendo-grid-column field="2206" [width]="80"></kendo-grid-column>
-    <kendo-grid-column field="2207" [width]="80"></kendo-grid-column>
-    <kendo-grid-column field="2208" [width]="80"></kendo-grid-column>
-    <kendo-grid-column field="2209" [width]="80"></kendo-grid-column>
-    <kendo-grid-column field="2210" [width]="80"></kendo-grid-column>
-    <kendo-grid-column field="2211" [width]="80"></kendo-grid-column>
-    <kendo-grid-column field="2212" [width]="80"></kendo-grid-column>
+    <kendo-grid-column
+      field="2204"
+      [headerClass]="'caldate'"
+      title="Jan-22 2204"
+      [width]="75"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="2205"
+      [headerClass]="'caldate'"
+      title="Feb-01  2205"
+      [width]="75"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="2206"
+      [headerClass]="'caldate'"
+      title="Feb-8  2206"
+      [width]="75"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="2207"
+      [headerClass]="'caldate'"
+      title="Feb-15 2207"
+      [width]="75"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="2208"
+      [headerClass]="'caldate'"
+      title="Feb-27 2208"
+      [width]="75"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="2209"
+      [headerClass]="'caldate'"
+      title="Mar-03 2209"
+      [width]="75"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="2210"
+      [headerClass]="'caldate'"
+      title="Mar-09 2210"
+      [width]="75"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="2211"
+      [headerClass]="'caldate'"
+      title="Mar-17 2211"
+      [width]="75"
+    ></kendo-grid-column>
+    <kendo-grid-column
+      field="2212"
+      [headerClass]="'caldate'"
+      title="Mar-24 2212"
+      [width]="75"
+    ></kendo-grid-column>
     <kendo-grid-column field="Uncomfirmed" [width]="180"></kendo-grid-column>
     <kendo-grid-column field="OutsideWindow" [width]="180"></kendo-grid-column>
 
@@ -206,15 +249,24 @@
                 field="Stdlead"
                 [width]="70"
               ></kendo-grid-column>
-              <kendo-grid-column field="2204" [width]="60"></kendo-grid-column>
-              <kendo-grid-column field="2205" [width]="60"></kendo-grid-column>
-              <kendo-grid-column field="2206" [width]="60"></kendo-grid-column>
-              <kendo-grid-column field="2207" [width]="60"></kendo-grid-column>
-              <kendo-grid-column field="2208" [width]="60"></kendo-grid-column>
-              <kendo-grid-column field="2209" [width]="60"></kendo-grid-column>
-              <kendo-grid-column field="2210" [width]="60"></kendo-grid-column>
-              <kendo-grid-column field="2211" [width]="60"></kendo-grid-column>
-              <kendo-grid-column field="2212" [width]="60"></kendo-grid-column>
+              <kendo-grid-column field="2204" [headerClass]="'smcaldate'"
+              title="Feb-01 2204" [width]="60"></kendo-grid-column>
+              <kendo-grid-column field="2205" [headerClass]="'smcaldate'"
+              title="Feb-09 2205" [width]="60"></kendo-grid-column>
+              <kendo-grid-column field="2206" [headerClass]="'smcaldate'"
+              title="Feb-22 2206" [width]="60"></kendo-grid-column>
+              <kendo-grid-column field="2207" [headerClass]="'smcaldate'"
+              title="Feb-22 2207" [width]="60"></kendo-grid-column>
+              <kendo-grid-column field="2208" [headerClass]="'smcaldate'"
+              title="Mar-02 2208" [width]="60"></kendo-grid-column>
+              <kendo-grid-column field="2209" [headerClass]="'smcaldate'"
+              title="Mar-12 2209" [width]="60"></kendo-grid-column>
+              <kendo-grid-column field="2210" [headerClass]="'smcaldate'"
+              title="Mar-22 2210" [width]="60"></kendo-grid-column>
+              <kendo-grid-column field="2211" [headerClass]="'smcaldate'"
+              title="Mar-20 2211" [width]="60"></kendo-grid-column>
+              <kendo-grid-column field="2212" [headerClass]="'smcaldate'"
+              title="Apr-02 2212" [width]="60"></kendo-grid-column>
               <kendo-grid-column
                 field="Uncomfirmed"
                 [width]="130"
