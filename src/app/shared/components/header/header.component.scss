@@ -291,7 +291,7 @@ button.search-submit {
   box-shadow: 0px 0px 0px 0px black;
   border-radius: 10px;
   position: absolute;
-    width: calc(100% - 340px);
+  width: calc(100% - 340px);
   height: 50px;
   transition: $default-transition;
 
@@ -314,9 +314,11 @@ button.search-submit {
       color: $black;
       transition: $default-transition;
     }
+    .filterblock {
+      display: block;
+    }
   }
   &.expanded.filter-active {
-    
     border: 1px solid #ccc;
     box-shadow: 0px 0px 0px 4px black;
     height: 140px;
