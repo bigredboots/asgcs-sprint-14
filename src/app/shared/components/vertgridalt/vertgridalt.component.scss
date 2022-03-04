@@ -25,6 +25,9 @@
     tr.k-state-selected > td {
       background-color: transparent;
     }
+    // tr.k-state-selected > td {
+    //   background-color: transparent;
+    // }
   }
 }
 
@@ -54,12 +57,12 @@
   white-space: break-spaces;
   padding: 0px 13px;
   text-align: center;
-  line-height: 17px;
-  vertical-align: middle;
+  line-height: 14px;
+  vertical-align: top;
 }
 .k-header.smcaldate::first-line {
-  font-size: 10px;
-  line-height: 8px;
+  font-size: 9px;
+  line-height: 12px;
 }
 
 //expand and contract button
@@ -230,7 +233,7 @@
   .k-detail-cell {
     margin-left: -45px;
     display: table;
-    padding: 0px 0px 0px 12px;
+    padding: 0px 15px 0px 12px;
     background-color: black;
   }
   .k-grid-header {
@@ -248,6 +251,7 @@
 
 //second level grid data
 .k-grid .k-detail-row .secondleveldata {
+  background: black;
   .k-master-row {
     td {
       font-weight: bold;
@@ -257,8 +261,11 @@
       position: relative;
       border-left-color: #404040;
     }
-    td[aria-colindex='1'] {
+    td:nth-child(1) {
       border-radius: 0px 0px 0px 5px;
+    }
+    td:nth-last-child(1) {
+      border-radius: 0px 0px 10px 0px;
     }
     &:hover,
     &:hover td {
@@ -272,14 +279,18 @@
     }
   }
 }
+
+
 #vertical-grid-alt .secondleveldata .k-grid-content.k-virtual-content {
+  background-color: black;
+  background-image: none;
+  margin-bottom: 3px;
+}
+#vertical-grid-alt .secondleveldata .k-grid-content.k-virtual-content tr.k-master-row td {
   background-color: #525252;
-  background-image: linear-gradient(to right, #525252, #525252),
-    linear-gradient(to right, #525252, #525252),
-    linear-gradient(to left, rgba(92, 92, 92, 0.25), rgba(0, 0, 0, 0.5)),
-    linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(92, 92, 92, 0.5));
-  overflow-x: hidden;
-  margin-bottom: 5px;
+}
+#vertical-grid-alt .secondleveldata .k-grid-content.k-virtual-content tr.k-master-row:hover td {
+  background-color: #0f1f26;
 }
 
 //third level
@@ -289,6 +300,7 @@
 }
 #vertical-grid-alt .thirdleveldata .k-grid-content.k-virtual-content {
   margin-bottom: 0px;
+  background-color: #151515;
 }
 .k-grid tbody .thirdlevel-block {
   margin: 0px 15px 10px 15px;
@@ -303,7 +315,7 @@
     background-color: transparent;
 
     &.k-alt {
-      background-color: rgba(4, 4, 4, 0.3);
+      background-color: rgba(0, 0, 0, 0.3);
     }
     &:hover td {
       background-color: #0f1f26;
