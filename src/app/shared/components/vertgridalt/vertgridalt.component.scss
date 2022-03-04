@@ -184,6 +184,7 @@
   }
   .k-hierarchy-cell {
     overflow: visible;
+    pointer-events: all;
   }
   td {
     color: #29272a;
@@ -193,6 +194,7 @@
     border-left: 1px solid #999;
     border-top: 2px solid #000;
     transition: $fast-transition;
+    pointer-events: none;
 
     &[data-kendo-grid-column-index='0'] {
       border-left: 0px;
