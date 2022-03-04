@@ -310,8 +310,8 @@ button.search-submit {
     transition: $default-transition;
 
     span {
-      max-width: 0px;
-      color: $black;
+      // max-width: 0px;
+      // color: $black;
       transition: $default-transition;
     }
     .filterblock {
@@ -404,6 +404,13 @@ button.search-submit {
   grid-row: 3;
   margin-top: 0px;
   text-align: right;
+}
+.expand-filters:before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .filter-expanded-row {
   display: flex;
