@@ -583,16 +583,17 @@ h4 {
   padding: 0;
   line-height: 8px;
 }
-.k-dropdown .k-dropdown-wrap {
+.dates-block .k-dropdown .k-dropdown-wrap {
   border-width: 0px 0px 2px 0px;
   border-bottom-color: grey;
   margin-bottom: 5px;
   border-bottom-style: solid;
+  .k-select span {
+    border-top: 6px solid $blue-color;
+    margin-top: 9px;
+  }
 }
-.dates-block .k-dropdown .k-dropdown-wrap .k-select span {
-  border-top: 6px solid $blue-color;
-  margin-top: 9px;
-}
+
 @media (max-width: 500px) {
   .card-title-buttons {
     display: none;

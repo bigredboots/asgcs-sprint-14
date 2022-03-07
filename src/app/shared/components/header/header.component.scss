@@ -406,11 +406,12 @@ button.search-submit {
   text-align: right;
 }
 .expand-filters:before {
-  content: '';
-  width: 16px;
-  height: 16px;
-  background-size: cover;
-  background-repeat: no-repeat;
+  content: "";
+width: 12px;
+height: 12px;
+background-size: cover;
+background-repeat: no-repeat;
+margin-right: 4px;
 }
 .filter-expanded-row {
   display: flex;

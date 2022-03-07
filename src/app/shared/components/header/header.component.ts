@@ -42,7 +42,16 @@ export class HeaderComponent implements OnInit {
   public defaultItem: { text: string } = {
     text: "Last Fiscal Year to Present"
   };
-
+  public BasicDropdown: Array<string> = [
+    'Option One',
+    'Option Two',
+    'Option Three',
+    'Option Four',
+    'Option Five'
+  ];
+  public selectText: { text: string } = {
+    text: "Select"
+  };
   
 
   @ViewChild('overview') overview: ElementRef;

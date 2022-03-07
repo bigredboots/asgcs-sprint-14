@@ -323,25 +323,25 @@
           <div class="block-filters">
             <div class="main-filter-buttons">
               <div class="filter-item">
-                <div class="filter-label">Generic Filter Choice</div>
+                <div class="filter-label">Most Important Filter</div>
+                <kendo-dropdownlist
+                  [data]="BasicDropdown"
+                  [defaultItem]="selectText"
+                  textField="text"
+                >
+          </kendo-dropdownlist>
+              </div>
+              <div class="filter-item">
+                <div class="filter-label">Secondary Filter</div>
                 <span class="k-dropdown-wrap">
-                  <span class="k-input">Samplelong field name</span>
+                  <span class="k-input">Select </span>
                   <span class="k-select">
                     <span class="k-icon k-i-arrow-s"></span>
                   </span>
                 </span>
               </div>
               <div class="filter-item">
-                <div class="filter-label">Another Generic Filter</div>
-                <span class="k-dropdown-wrap">
-                  <span class="k-input">Select Filter</span>
-                  <span class="k-select">
-                    <span class="k-icon k-i-arrow-s"></span>
-                  </span>
-                </span>
-              </div>
-              <div class="filter-item">
-                <div class="filter-label">Filtering on Fields</div>
+                <div class="filter-label">Tertiary Filter</div>
                 <span class="k-dropdown-wrap">
                   <span class="k-input">Select</span>
                   <span class="k-select"
