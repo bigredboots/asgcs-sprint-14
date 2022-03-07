@@ -72,7 +72,8 @@
 
 ::ng-deep {
   .sidebar-active .overlayer,
-  .mobile-open .overlayer-navigation {
+  .mobile-open .overlayer-navigation,
+  .filter-expanded .overlayer-filter {
     display: block !important;
   }
 
@@ -155,7 +156,7 @@
           left: 34px;
           position: absolute;
           top: 10px;
-        } 
+        }
         &:hover .navigation-links ul {
           max-height: 80px;
         }
@@ -172,7 +173,7 @@
       ul ul li:hover::after {
         content: none;
       }
-    } 
+    }
   }
   .left-column.open .home-logo .company-logo {
     width: calc(100% - 35px) !important;
@@ -181,7 +182,6 @@
     min-width: 110px !important;
     max-width: 110px !important;
   }
-  
 
   .user-block {
     display: flex;

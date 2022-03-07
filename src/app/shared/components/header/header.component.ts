@@ -134,7 +134,7 @@ export class HeaderComponent implements OnInit {
   }
   toggleExpandedFilters() {
     this.reportfilters.nativeElement.classList.toggle('expanded');
-    // this.overview.nativeElement.classList.toggle('filter-active');
+    this.overview.nativeElement.classList.toggle('filter-expanded');
   }
 
   myBreadCrumb = this.breadCrumb;
