@@ -324,29 +324,99 @@
             <div class="main-filter-buttons">
               <div class="filter-item">
                 <div class="filter-label">Most Important Filter</div>
-                <kendo-dropdownlist
-                  [data]="BasicDropdown"
-                  [defaultItem]="selectText"
-                  textField="text"
+
+                <span
+                  #multiselectContainer
+                  class="k-dropdown-wrap"
+                  [class.active]="value && value.length > 0"
                 >
-          </kendo-dropdownlist>
+                  <kendo-multiselect
+                    #multiselect
+                    kendoMultiSelectSummaryTag
+                    placeholder="Select"
+                    [data]="BasicDropdown"
+                    [valueField]="valueField"
+                    [textField]="textField"
+                    [autoClose]="false"
+                    [clearButton]="false"
+                    [checkboxes]="true"
+                    (open)="openMultiselect()"
+                    (opened)="openedMultiselect()"
+                    (close)="closeMultiselect()"
+                    (closed)="closedMultiselect()"
+                  >
+                  </kendo-multiselect>
+                  <span
+                    class="k-select"
+                    (mousedown)="$event.preventDefault()"
+                    (click)="handleToggleClick(multiselect)"
+                  >
+                    <span class="k-icon k-i-arrow-s"></span>
+                  </span>
+                </span>
               </div>
               <div class="filter-item">
                 <div class="filter-label">Secondary Filter</div>
-                <span class="k-dropdown-wrap">
-                  <span class="k-input">Select </span>
-                  <span class="k-select">
+                <span
+                  #multiselectContainer
+                  class="k-dropdown-wrap"
+                  [class.active]="value && value.length > 0"
+                >
+                  <kendo-multiselect
+                    #multiselect
+                    kendoMultiSelectSummaryTag
+                    placeholder="Select"
+                    [data]="BasicDropdown"
+                    [valueField]="valueField"
+                    [textField]="textField"
+                    [autoClose]="false"
+                    [clearButton]="false"
+                    [checkboxes]="true"
+                    (open)="openMultiselect()"
+                    (opened)="openedMultiselect()"
+                    (close)="closeMultiselect()"
+                    (closed)="closedMultiselect()"
+                  >
+                  </kendo-multiselect>
+                  <span
+                    class="k-select"
+                    (mousedown)="$event.preventDefault()"
+                    (click)="handleToggleClick(multiselect)"
+                  >
                     <span class="k-icon k-i-arrow-s"></span>
                   </span>
                 </span>
               </div>
               <div class="filter-item">
                 <div class="filter-label">Tertiary Filter</div>
-                <span class="k-dropdown-wrap">
-                  <span class="k-input">Select</span>
-                  <span class="k-select"
-                    ><span class="k-icon k-i-arrow-s"></span
-                  ></span>
+                <span
+                  #multiselectContainer
+                  class="k-dropdown-wrap"
+                  [class.active]="value && value.length > 0"
+                >
+                  <kendo-multiselect
+                    #multiselect
+                    kendoMultiSelectSummaryTag
+                    placeholder="Select"
+                    [data]="BasicDropdown"
+                    [valueField]="valueField"
+                    [textField]="textField"
+                    [autoClose]="false"
+                    [clearButton]="false"
+                    [checkboxes]="true"
+                    (open)="openMultiselect()"
+                    (opened)="openedMultiselect()"
+                    (close)="closeMultiselect()"
+                    (closed)="closedMultiselect()"
+                  >
+                  </kendo-multiselect>
+                  <span
+                    class="k-select"
+                    (mousedown)="$event.preventDefault()"
+                    (click)="handleToggleClick(multiselect)"
+                  >
+                    <span class="k-icon k-i-arrow-s"></span>
+                  </span>
                 </span>
               </div>
               <div class="filter-item">
@@ -397,7 +467,7 @@
                 ></span>
               </div>
               <div class="filter-item">
-                <div class="filter-label">Filter Field  nine</div>
+                <div class="filter-label">Filter Field nine</div>
                 <span class="k-dropdown-wrap"
                   ><span class="k-input">Select</span>
                   <span class="k-select"

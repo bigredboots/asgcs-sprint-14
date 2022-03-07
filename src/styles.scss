@@ -227,6 +227,7 @@ my-app {
   background: $blue-color;
   background-color: transparent;
   background-image: none;
+  pointer-events: none;
 }
 .k-select .k-icon {
   width: 0px;
@@ -592,6 +593,133 @@ h4 {
     border-top: 6px solid $blue-color;
     margin-top: 9px;
   }
+}
+
+
+// .k-multiselect-wrap.k-floatwrap {
+//   background-color: #dcdcdc;
+//   padding: 0;
+//   border: 0;
+//   border-radius: 5px 0 0 5px;
+// }
+// .k-multiselect .k-multiselect-wrap .k-searchbar input {
+//   width: 100%;
+//   margin-top: 4px;
+// }
+// .k-multiselect .k-multiselect-wrap .k-searchbar input::placeholder {
+//   color: #999;
+// }
+// .k-multiselect .k-multiselect-wrap::before {
+//   height: auto;
+// }
+.k-dropdown-wrap {
+  padding: 0px;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  box-sizing: border-box;
+  position: relative;
+  transition: $fast-transition;
+  cursor: pointer;
+  outline: 0;
+  background: $blue-color;
+  background-color: transparent;
+  background-image: none;
+  border-radius: 5px;
+  height: 24px;
+
+  .k-multiselect-wrap.k-floatwrap {
+    background-color: $grey-lightest;
+    padding: 0;
+    border: 0;
+    border-radius: 5px 0px 0px 5px;
+
+    .k-select {
+      display: none !important;
+    }
+
+    .k-searchbar {
+      .k-input {
+        margin-top: 4px;
+      }
+
+      .k-input[placeholder=''] {
+        height: 0;
+      }
+    }
+
+    .k-button,
+    .k-button:active {
+      background-color: #fff;
+      border: 0;
+      margin: 0;
+      min-height: auto;
+      border-radius: 5px 0px 0px 5px;
+      color: $black;
+      font-size: $smaller-font;
+    }
+  }
+
+  .k-icon {
+    width: 0px;
+    height: 0px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid $grey-darker;
+    font-size: 1px !important;
+    margin: 5px;
+  }
+
+  &.active {
+    .k-select {
+      background-color: #fff;
+      border-top: 2px solid #009ddc;
+      border-right: 2px solid #009ddc;
+      border-bottom: 2px solid #009ddc;
+      border-left: 0px !important;
+    }
+
+    .k-multiselect-wrap.k-floatwrap {
+      background-color: #fff;
+      border-top: 2px solid #009ddc;
+      border-left: 2px solid #009ddc;
+      border-bottom: 2px solid #009ddc;
+
+      .k-button {
+        padding-top: 2px;
+      }
+    }
+  }
+  &.opened {
+    z-index: 5;
+
+    .k-multiselect-wrap.k-floatwrap,
+    .k-select {
+      // height: 30px;
+      border-top: 2px solid #009ddc;
+      border-bottom: 0px;
+      box-shadow: 0px 0px;
+    }
+    .k-multiselect-wrap.k-floatwrap {
+      border-left: 2px solid #009ddc;
+      border-radius: 5px 0px 0px 0px;
+
+      .k-button {
+        padding-top: 2px;
+      }
+    }
+    .k-select {
+      border-right: 2px solid #009ddc;
+      border-left: 0px !important;
+      border-radius: 0px 5px 0px 0px !important;
+      // .k-icon.k-i-arrow-s {
+      //   margin-top: -2px;
+      // }
+    }
+  }
+   .k-multiselect-wrap.k-floatwrap ::placeholder {
+   color: $black;
+   }
 }
 
 @media (max-width: 500px) {

@@ -1,5 +1,5 @@
 import { BreadcrumbService } from './../../../services/breadcrumb.service';
-import { NgModule } from '@angular/core';
+import { NgModule, Input } from '@angular/core';
 
 import {
   Component,
@@ -22,6 +22,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  @ViewChild('multiselectContainer') multiselectContainer: ElementRef;
+  @Input() data: any;
+  @Input() textField: any;
+  @Input() valueField: any;
+  @Input() value: any;
+  @Output() valueChange = new EventEmitter<any>();
+  
   private _subscriptionsSubject$: Subject<void>;
   public currentPanelState: SidePanelState;
   constructor(
@@ -52,7 +59,45 @@ export class HeaderComponent implements OnInit {
   public selectText: { text: string } = {
     text: "Select"
   };
-  
+ 
+
+  public openMultiselect(): void {
+    this.multiselectContainer.nativeElement.classList.add('opened');
+  }
+
+  // public openedMultiselect(): void {
+  //   if (this.data.length > 5) {
+  //     this.addSelectAllToList();
+  //   }
+  // }
+
+  public closeMultiselect(): void {
+    this.multiselectContainer.nativeElement.classList.remove('opened');
+  }
+
+  // public closedMultiselect(): void {
+  //   this.value = this.removeSelectAllFromList(this.value);
+  //   this.valueChange.emit(this.value);
+  // }
+
+  // public handleToggleClick(multiselect: MultiSelectComponent): void {
+  //   this.multiselectContainer.nativeElement.classList.toggle('opened');
+
+  //   multiselect.focus();
+  //   multiselect.toggle();
+  // }
+
+  // private addSelectAllToList() {
+  //   const selectAllElement = this.createSelectAllElement();
+
+  //   if (this.value?.length === this.data.length - 1) {
+  //     this.value.unshift(selectAllElement);
+  //   }
+
+  //   if (!this.getSelectAllElement(this.data)) {
+  //     this.data.unshift(selectAllElement);
+  //   }
+  // }
 
   @ViewChild('overview') overview: ElementRef;
   @ViewChild('expandedfilters') expandedfilters: ElementRef;
