@@ -102,7 +102,7 @@
     grid-column: 1;
     grid-row: 1;
     align-items: center;
-    margin: 10px 0px 0px 20px;
+    margin: 0px 0px 0px 20px;
   }
   .filter-block {
     display: flex;
@@ -110,12 +110,13 @@
     grid-column: 1 / 4;
     grid-row: 2;
     justify-content: start;
-    margin: 0px 0px 20px 20px;
+    margin: 2px 0px 20px 20px;
   }
   &#vertical-grid-container .dates-block {
     display: block;
     grid-column: 2;
-    grid-row: 1
+    grid-row: 1;
+    margin: 20px 0px 0px 0px;
   }
   .filter-title {
     font-size: 20px;
@@ -126,7 +127,7 @@
   .card-title-buttons {
     grid-row: 1;
     grid-column: 3;
-    margin: 20px 20px 0px 0px;
+    margin: 0px 20px 0px 0px;
   }
   .card-title-text {
     font-size: 24px;
@@ -138,6 +139,10 @@
   .k-input {
     padding: 3px 6px;
   }
+  .dates-block .k-dropdown .k-dropdown-wrap {
+    margin-bottom: 0px;
+  }
+
   #vertical-grid .dates-block .k-input {
     background: transparent;
     padding: 0px;
@@ -147,7 +152,9 @@
   #vertical-grid .dates-block .k-dropdown .k-dropdown-wrap .k-select {
     background: transparent;
   }
-  
+  .refresh-date .title {
+    font-size: $smallest-font;
+  }
 }
 #vertical-grid.k-grid tr:nth-child(2n + 1) {
   background-color: rgba(255, 255, 255, 0.05);
