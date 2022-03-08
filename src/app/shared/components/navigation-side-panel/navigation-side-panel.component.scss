@@ -43,18 +43,24 @@
     &:hover {
       a.no-child {
         color: $white;
-        text-shadow: 0px 0px 1px$white;
+        text-shadow: 0px 0px 1px $white;
       }
       .icon:before {
         filter: brightness(2);
+        background-color: $grey-color;
+      }
+      .parent {
+        color: $white;
+        text-shadow: 0px 0px 1px $white;
       }
     }
     &.activated:hover {
       a.no-child {
         text-shadow: none;
       }
-      .icon {
-        filter: none;
+      .icon:before {
+        filter: brightness(1) invert(100%);
+        background-color: unset;
       }
     }
   }
