@@ -51,7 +51,6 @@ my-app {
   width: 17px;
   height: 25px;
 }
-
 ::-webkit-scrollbar-button {
   color: rgb(255, 255, 255);
   background: black;
@@ -107,7 +106,6 @@ my-app {
   border-radius: 0px;
   background-position: -1px 1px;
 }
-
 ::-webkit-scrollbar-track {
   border-image: initial;
 }
@@ -127,11 +125,9 @@ my-app {
     rgba(41, 39, 42, 1) 76%
   );
 }
-
 ::-webkit-scrollbar-corner {
   background: rgb(41, 39, 42);
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: rgb(204, 204, 204);
   border-width: 1px;
@@ -589,12 +585,12 @@ h4 {
   border-bottom-color: grey;
   margin-bottom: 5px;
   border-bottom-style: solid;
+  pointer-events: all;
   .k-select span {
     border-top: 6px solid $blue-color;
     margin-top: 9px;
   }
 }
-
 
 // .k-multiselect-wrap.k-floatwrap {
 //   background-color: #dcdcdc;
@@ -717,9 +713,9 @@ h4 {
       // }
     }
   }
-   .k-multiselect-wrap.k-floatwrap ::placeholder {
-   color: $black;
-   }
+  .k-multiselect-wrap.k-floatwrap ::placeholder {
+    color: $black;
+  }
 }
 
 @media (max-width: 500px) {
