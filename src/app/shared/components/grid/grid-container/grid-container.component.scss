@@ -192,21 +192,21 @@
     transform: scale(1);
     transition: $default-transition;
 
-    &::before {
-      display: block;
-      content: '+';
-      color: #000;
-      font-size: 0px;
-      border-left: 0px solid #ccc;
-      transform: rotate(0deg);
-      position: absolute;
-      left: 5px;
-      top: 1px;
-      transition: 0.15s ease-in-out all;
-      width: 0px;
-      height: 0px;
-      line-height: 0px;
-    }
+    // &::before {
+    //   display: block;
+    //   content: '+';
+    //   color: #000;
+    //   font-size: 0px;
+    //   border-left: 0px solid #ccc;
+    //   transform: rotate(0deg);
+    //   position: absolute;
+    //   left: 5px;
+    //   top: 1px;
+    //   transition: 0.15s ease-in-out all;
+    //   width: 0px;
+    //   height: 0px;
+    //   line-height: 0px;
+    // }
   }
   .moreinfo-icon:hover {
     transform: scale(1.2);
@@ -462,11 +462,17 @@
       margin-top: 10px;
       height: calc(100% - 35px);
     }
+    &:hover .moreinfo-icon {
+      animation-name: pulse;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      // animation-fill-mode: both;
+    }
   }
 }
 
 //:host ::ng-deep .vertgrid {
- // display: none !important;
+// display: none !important;
 //}
 
 :host ::ng-deep .card-items {
@@ -598,4 +604,19 @@
   right: -30px;
   top: 38px;
   z-index: 1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter:brightness(1);
+  }
+  50% {
+    transform: scale(1.2);
+    filter:brightness(1.5);
+  }
+  100% {
+    transform: scale(1);
+    filter:brightness(1);
+  }
 }
