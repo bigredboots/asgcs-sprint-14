@@ -1,6 +1,6 @@
 <nav role="navigation" class="main-navigation">
   <ul>
-    <li class="dashboard" [routerLinkActive]="['status-good']">
+    <li class="dashboard" [routerLinkActive]="['activated]">
       <a
         class="icon"
         [routerLink]="['/dashboard']"
@@ -18,7 +18,7 @@
     <li
       class="demand"
       [class.open]="demandOpen"
-      [routerLinkActive]="['status-good']"
+      [routerLinkActive]="['activated']"
     >
       <div class="icon"></div>
       <div class="navigation-links" [routerLinkActive]="['is-active']">
@@ -51,7 +51,7 @@
     <li
       class="outbound"
       [class.open]="outboundOpen"
-      [routerLinkActive]="['status-good']"
+      [routerLinkActive]="['activated']"
     >
       <div class="icon"></div>
       <div class="navigation-links">
@@ -83,17 +83,17 @@
         </ul>
       </div>
     </li>
-    <li class="hubs" [routerLinkActive]="['status-good']">
+    <li class="hubs" [routerLinkActive]="['activated']">
       <div class="icon" [routerLink]="['/hubs']"></div>
       <div class="navigation-links">
-        <a class="no-child" [routerLink]="['/hubs']">Hubs</a>
+        <a class="no-child" [routerLink]="['/hubs']">Inventory</a>
       </div>
     </li>
     <!-- <li class="inbound status-disabled">
       <div class="icon"></div>
       <div class="navigation-links"><span>Inbound Shipments</span></div>
     </li> -->
-    <li class="supply" [routerLinkActive]="['status-good']">
+    <li class="supply" [routerLinkActive]="['activated']">
       <div class="icon" [routerLink]="['/supply']"></div>
       <div class="navigation-links">
         <a
@@ -104,7 +104,7 @@
         >
       </div>
     </li>
-    <li class="reports" [routerLinkActive]="['status-good']">
+    <li class="reports" [routerLinkActive]="['activated']">
       <div class="icon" [routerLink]="['/reports']"></div>
       <div class="navigation-links">
         <a
@@ -119,7 +119,7 @@
     <li
       class="settings"
       (click)="toggleSidebar()"
-      [routerLinkActive]="['status-good']"
+      [routerLinkActive]="['activated']"
     >
       <div class="icon" [routerLink]="['/settings']"></div>
       <div class="navigation-links">
