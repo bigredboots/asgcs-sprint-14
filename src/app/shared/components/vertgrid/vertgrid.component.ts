@@ -30,6 +30,16 @@ export class VertgridComponent implements OnInit {
     this.gridView = this.gridData;
     this.elem = document.getElementById('vertical-grid-container');
   }
+  public listItems: Array<string> = [
+    'Last Year',
+    'Last Quarter',
+    'This Calendar year',
+    'Long explanation of time range',
+    'Custom Range'
+  ];
+  public defaultItem: { text: string } = {
+    text: "Last Fiscal Year to Present"
+  };
 
   openFullscreen(event) {
     this.elem.classList.add('fullscreened');
