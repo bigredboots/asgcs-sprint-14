@@ -192,21 +192,21 @@
     transform: scale(1);
     transition: $default-transition;
 
-    // &::before {
-    //   display: block;
-    //   content: '+';
-    //   color: #000;
-    //   font-size: 0px;
-    //   border-left: 0px solid #ccc;
-    //   transform: rotate(0deg);
-    //   position: absolute;
-    //   left: 5px;
-    //   top: 1px;
-    //   transition: 0.15s ease-in-out all;
-    //   width: 0px;
-    //   height: 0px;
-    //   line-height: 0px;
-    // }
+    &::before {
+      display: block;
+      content: '+';
+      color: #000;
+      font-size: 0px;
+      border-left: 0px solid #ccc;
+      transform: rotate(0deg);
+      position: absolute;
+      left: 5px;
+      top: 1px;
+      transition: 0.15s ease-in-out all;
+      width: 0px;
+      height: 0px;
+      line-height: 0px;
+    }
   }
   .moreinfo-icon:hover {
     transform: scale(1.2);
@@ -468,6 +468,9 @@
       animation-iteration-count: infinite;
       // animation-fill-mode: both;
     }
+    &:hover .moreinfo-active .moreinfo-icon {
+      animation: none;
+    }
   }
 }
 
@@ -609,14 +612,14 @@
 @keyframes pulse {
   0% {
     transform: scale(1);
-    filter:brightness(1);
+    filter: brightness(1);
   }
   50% {
     transform: scale(1.2);
-    filter:brightness(1.5);
+    filter: brightness(1.5);
   }
   100% {
     transform: scale(1);
-    filter:brightness(1);
+    filter: brightness(1);
   }
 }
