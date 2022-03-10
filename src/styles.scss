@@ -1,5 +1,6 @@
 @import './app/scss/icons';
 @import './app/scss/global';
+@import './app/scss/fonts';
 
 *,
 ::after,
@@ -17,7 +18,7 @@ body {
   padding: 0px;
   background: $grey-color;
   color: $grey-lighter;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-family: 'Arrow Display', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-size: $base-font;
   line-height: unset;
 }
