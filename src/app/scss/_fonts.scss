@@ -1,20 +1,30 @@
+// @font-face {
+//   font-family: "Arrow Display";
+//   src: url("/assets/fonts/arrowdisplay_w_rg.woff2") format("woff2");
+//   font-weight: 400;
+//   font-style: normal
+// }
+
+// @font-face {
+//   font-family: "Arrow Display";
+//   src: url("/assets/fonts/arrowdisplay_w_md.woff2") format("woff2");
+//   font-weight: 500;
+//   font-style: normal
+// }
+
+// @font-face {
+//   font-family: "Arrow Display";
+//   src: url("/assets/fonts/arrowdisplay_w_bd.woff2") format("woff2");
+//   font-weight: 700;
+//   font-style: normal
+// }
 @font-face {
-  font-family: "Arrow Display";
-  src: url("/assets/fonts/arrowdisplay_w_rg.woff2") format("woff2"),url("/assets/fonts/arrowdisplay_w_rg.woff") format("woff");
+  font-family: "slick";
   font-weight: 400;
-  font-style: normal
+  src: url('https://raw.githubusercontent.com/bigredboots/asgcs-sprint-14/master/src/assets/fonts/slick.woff') format("woff");
 }
-
 @font-face {
-  font-family: "Arrow Display";
-  src: url("/assets/fonts/arrowdisplay_w_md.woff2") format("woff2"),url("/assets/fonts/arrowdisplay_w_md.woff") format("woff");
-  font-weight: 500;
-  font-style: normal
-}
-
-@font-face {
-  font-family: "Arrow Display";
-  src: url("/assets/fonts/arrowdisplay_w_bd.woff2") format("woff2"),url("/assets/fonts/arrowdisplay_w_bd.woff") format("woff");
-  font-weight: 700;
-  font-style: normal
+  font-family: "slock";
+  font-weight: 400;
+  src: url("https://raw.githubusercontent.com/bigredboots/asgcs-sprint-14/master/src/assets/fonts/slock.woff") format("woff");
 }
