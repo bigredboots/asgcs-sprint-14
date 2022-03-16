@@ -2,7 +2,10 @@
   <app-sidebar (onToggleSidebar)="toggleSidebar()"></app-sidebar>
   <div class="overlayer" (click)="toggleSidebar()"></div>
   <div class="overlayer" (click)="toggleSidebar()"></div>
-  <div class="overlayer overlayer-filter" (click)="toggleExpandedFilters()"></div>
+  <div
+    class="overlayer overlayer-filter"
+    (click)="toggleExpandedFilters()"
+  ></div>
   <div
     class="overlayer-navigation"
     singleDoubleClick
@@ -21,13 +24,16 @@
       >
         <span></span>
       </div>
-      <div class="company-logo ciena"></div>
+      <div class="home-logo">
+        <div class="company-logo"></div>
+      </div>
       <div class="breadcrumb mobile-breadcrumb">
         <span>{{ this.myBreadCrumb }}</span>
         <app-breadcrumb></app-breadcrumb>
       </div>
       <input type="checkbox" id="toggle-search" />
       <div class="top-fields">
+        <div class="company-logo"></div>
         <nav
           aria-label="breadcrumb"
           role="navigation"
@@ -90,12 +96,9 @@
       </div>
     </div>
   </div>
- 
+
   <ng-container *ngIf="breadcrumbService.currentModule$ | async as module">
-    <div
-      class="filter-block filter-active"
-      #reportfilters
-    >
+    <div class="filter-block filter-active" #reportfilters>
       <div class="filters" (click)="toggleReportFilters()">
         <span class="filter-title">Filters</span>
         <span class="filter-close">+</span>
