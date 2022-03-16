@@ -13,7 +13,6 @@ import { NavigationLink } from './shared';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-
   breadCrumb = GlobalConstants.breadCrumb;
 
   public configuration: DashboardLayoutConfiguration;
@@ -26,10 +25,10 @@ export class AppComponent implements OnInit {
     );
   }
 
-  onActivate(event) {
-    window.scroll(0, 0);
-    document.querySelector('main-content').scrollTo(0, 0);
-  }
+  // onActivate(event) {
+  //   window.scroll(0, 0);
+  //   document.querySelector('main-content').scrollTo(0, 0);
+  // }
 
   ngOnInit() {
     window.scroll(0, 0);
