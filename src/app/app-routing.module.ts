@@ -47,7 +47,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    data: { title: '88Main Page', breadcrumb: 'Dashboard', filter: false, },
+    data: { title: '88Main Page', breadcrumb: 'Dashboard', filter: false },
   },
   {
     path: 'demandReportsWavechart',
@@ -159,7 +159,7 @@ const routes: Routes = [
   {
     path: 'expandedreports',
     component: ExpandedReportsComponent,
-    data: { title: '18Main Page', breadcrumb: '' },
+    data: { title: '18Main Page', breadcrumb: 'CEW/Gap' },
   },
   {
     path: 'settings',
