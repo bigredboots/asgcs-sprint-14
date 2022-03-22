@@ -220,6 +220,8 @@
     background-color: #4c4c4c;
     transform: scale(1.5);
     right: 3px;
+    display: flex;
+    justify-content: center;
 
     &::before {
       content: '+';

@@ -632,6 +632,9 @@ margin-right: 4px;
       top: 6px;
       left: 0px;
     }
+    &:hover {
+      filter: brightness(1.2);
+    }
   }
   .breadcrumb {
     display: none;
