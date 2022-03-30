@@ -458,6 +458,7 @@
       animation-name: pulse;
       animation-duration: 1.5s;
       animation-iteration-count: 1;
+      animation-fill-mode: forwards;
     }
     &:hover .moreinfo-active .moreinfo-icon {
       animation: none;
