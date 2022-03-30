@@ -1,6 +1,12 @@
 <div class="page-container">
   <app-grid-container>
-    <div gridCell gcColSpan="2" gcRowSpan="2" class="card card-body">
+    <div
+      gridCell
+      gcColSpan="2"
+      gcRowSpan="2"
+      class="card card-body"
+      (mouseleave)="FMapMoreInfoClose()"
+    >
       <div class="card-title">
         <div class="left-side-content">
           <div class="card-title-text">Demand locations</div>

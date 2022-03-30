@@ -21,6 +21,10 @@ export class DemandDiscoverComponent {
     this.mapmoreinfo.nativeElement.classList.toggle('moreinfo-active');
     this.imapmoreinfo.nativeElement.classList.toggle('moreinfo-active');
   }
+  FMapMoreInfoClose() {
+    this.mapmoreinfo.nativeElement.classList.close('moreinfo-active');
+    this.imapmoreinfo.nativeElement.classList.close('moreinfo-active');
+  }
   TreeMapMoreInfo() {
     this.treemapmoreinfo.nativeElement.classList.toggle('moreinfo-active');
     this.itreemapmoreinfo.nativeElement.classList.toggle('moreinfo-active');

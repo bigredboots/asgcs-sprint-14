@@ -193,19 +193,9 @@
     transition: $default-transition;
 
     &::before {
-      display: block;
-      content: '+';
-      color: #000;
-      font-size: 0px;
-      border-left: 0px solid #ccc;
-      transform: rotate(0deg);
-      position: absolute;
-      left: 5px;
-      top: 1px;
       transition: 0.15s ease-in-out all;
-      width: 0px;
-      height: 0px;
-      line-height: 0px;
+      display: flex;
+      align-self: center;
     }
   }
   .moreinfo-icon:hover {
