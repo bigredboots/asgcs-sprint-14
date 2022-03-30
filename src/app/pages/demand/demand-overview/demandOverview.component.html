@@ -1,6 +1,6 @@
 <div class="page-container">
   <app-grid-container>
-    <div gridCell class="card card-body">
+    <div gridCell class="card card-body" (mouseleave)="focusOutDonutOne()">
       <div class="card-title">
         <div class="card-title-text">Demand Donut One</div>
         <div class="card-icons" #partoverview>
@@ -13,7 +13,7 @@
       <div class="card-items charting">
         <app-donut-chart></app-donut-chart>
       </div>
-      <div class="moreinfo-block" #ipartoverview >
+      <div class="moreinfo-block" #ipartoverview>
         <div class="moreinfo-header">
           The content is related to the Master set of filters on the top.<br /><br />
           AFTER YOU SEARCH INSIDE THE GRID (drill down inside the grid), the
@@ -36,10 +36,10 @@
       <div class="card-title">
         <div class="card-title-text">Demand Donut Two</div>
         <div class="card-icons" #fsiteoverview>
-          <div class="moreinfo-icon" (click)="FsitetoggleMoreInfo()"></div>
+          <!-- <div class="moreinfo-icon" (click)="FsitetoggleMoreInfo()"></div> -->
         </div>
       </div>
-      <div class="moreinfo-block" #ifsiteoverview>
+      <!-- <div class="moreinfo-block" #ifsiteoverview>
         <div class="moreinfo-header">
           The content is related to Master set of filters on the top.<br /><br />
           AFTER YOU SEARCH INSIDE THE GRID (drill down inside the grid), the
@@ -47,7 +47,7 @@
           Master Top Filters, this grid will reset and start over. "Saved
           Preferences" is a feature coming soon.
         </div> 
-      </div>
+      </div> -->
       <div class="card-items charting">
         <app-donut-chart></app-donut-chart>
       </div>
@@ -75,7 +75,12 @@
         </div>
       </div>
     </div>
-    <div gridCell gcColSpan="3" class="card card-body">
+    <div
+      gridCell
+      gcColSpan="3"
+      class="card card-body"
+      (mouseleave)="focusOutMap()"
+    >
       <div class="card-title">
         <div class="left-side-content">
           <div class="card-title-text">Demand Locations</div>

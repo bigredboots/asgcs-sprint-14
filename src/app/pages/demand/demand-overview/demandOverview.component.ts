@@ -31,15 +31,24 @@ export class DemandOverviewComponent implements OnInit {
 
   PartOverviewtoggleMoreInfo() {
     this.partoverview.nativeElement.classList.toggle('moreinfo-active');
-    this.ipartoverview.nativeElement.classList.toggle('moreinfo-active');
+    this.ipartoverview.nativeElement.classList.toggle('moreinfo-active-block');
+  }
+  focusOutDonutOne() {
+    this.partoverview.nativeElement.classList.remove('moreinfo-active');
+    this.ipartoverview.nativeElement.classList.remove('moreinfo-active-block');
   }
   FsitetoggleMoreInfo() {
     this.fsiteoverview.nativeElement.classList.toggle('moreinfo-active');
     this.ifsiteoverview.nativeElement.classList.toggle('moreinfo-active');
   }
+
   FLocationsMoreInfo() {
     this.flocationsoverview.nativeElement.classList.toggle('moreinfo-active');
     this.iflocationsoverview.nativeElement.classList.toggle('moreinfo-active');
+  }
+  focusOutMap(){
+    this.flocationsoverview.nativeElement.classList.remove('moreinfo-active');
+    this.iflocationsoverview.nativeElement.classList.remove('moreinfo-active-block');
   }
   ngOnInit(): void {}
 }
