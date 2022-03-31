@@ -92,6 +92,10 @@
     .buffer {
       background-color: $tertiary-color-c;
     }
+    .firm:hover, .forecast:hover, .buffer:hover {
+      filter: brightness(1.2);
+      transition: $fast-transition;
+    }
   }
   .legend {
     font-size: 12px;
@@ -421,6 +425,10 @@
   }
   .menu-list ul li.active {
     background-color: $blue-color;
+
+    &:hover {
+      background: $blue-hover-color;
+    }
 
     a {
       font-weight: bold;

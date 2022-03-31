@@ -357,6 +357,10 @@ button.k-button-icontext.k-button.k-grid-excel {
   border-width: 0px;
   height: 24px;
 }
+button.k-button-icontext.k-button.k-grid-excel:hover {
+  background: #00b6ff;
+  transition: .1s ease-in all;
+}
 button.k-button.k-bare.k-button-icon {
   background: #009ddb !important;
   height: 24px;
@@ -365,6 +369,10 @@ button.k-button.k-bare.k-button-icon {
   width: 85px;
   display: flex;
   justify-content: space-between;
+}
+button.k-button.k-bare.k-button-icon:hover {
+  background: #00b6ff;
+  transition: .1s ease-in all;
 }
 button.k-button.k-bare.k-button-icon:after {
   content: 'Columns';
@@ -732,6 +740,21 @@ h4 {
 }
 .mobile-breadcrumb .company-logo {
   width: 100%;
+}
+
+
+.reports-header {
+  justify-content: space-between;
+  width: 100%;
+}
+.card-title-buttons {
+  display: flex;
+}
+.k-button.full-screen {
+  display: inline-flex;
+}
+.k-button.full-screen.closed {
+  display: none;
 }
 
 @media (max-width: 500px) {

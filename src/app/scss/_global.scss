@@ -20,5 +20,9 @@ button {
     background: $blue-color;
     color: $white;
     border-color: $blue-color;
+
+    &:hover {
+      background: $blue-hover-color;
+    }
   }
 }

@@ -35,6 +35,11 @@
   position: relative;
   right: 0px;
   top: 10px;
+  
+  &:hover {
+    background: $blue-hover-color;
+    transition: $fast-transition;
+  }
 
   span {
     left: 12px;

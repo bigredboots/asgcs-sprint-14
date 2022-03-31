@@ -167,6 +167,9 @@ button.search-submit {
     .icon.active:after {
       background: $blue-color;
     }
+    .icon.active:hover:after{
+      background: $blue-hover-color;
+    }
     .notifications-popup {
       right: 20px;
       position: absolute;
@@ -600,6 +603,10 @@ margin-right: 4px;
     position: relative;
     right: 0px;
     top: 10px;
+
+    &:hover {
+      background: $blue-hover-color;
+    }
 
     span {
       left: 8px;

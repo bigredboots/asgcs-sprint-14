@@ -33,109 +33,116 @@
     (pageChange)="pageChange($event)"
   >
     <ng-template kendoGridToolbarTemplate>
-      
-    <div class="left-side-content">
-    <div class="card-title-text">Reg Vertical Grid Title</div>
-    <div class="filter-item">
-      <span class="k-dropdown-wrap">
-        <span class="k-input">Display<span>$USD</span></span>
-        <span class="k-select">
-          <span class="k-icon k-i-arrow-s"></span>
-        </span>
-      </span>
-    </div>
-  </div>
-  <div class="dates-block">
-    <kendo-dropdownlist
-      [data]="listItems"
-      [defaultItem]="defaultItem"
-      textField="text"
-    >
-    </kendo-dropdownlist>
-    <div class="refresh-date">
-      <span class="title">Updated: </span>
-      <span>01 Jan 2022 | 21:00PM</span>
-    </div>
-  </div>
-
-      <div class="filter-block vertgrid">
-        <div class="filters">
-          <span class="filter-title">Filters: </span>
+      <div class="reports-header">
+        <div class="left-side-content">
+          <div class="card-title-text">Reg Vertical Grid Title</div>
+          <div class="filter-item">
+            <span class="k-dropdown-wrap">
+              <span class="k-input">Display<span>$USD</span></span>
+              <span class="k-select">
+                <span class="k-icon k-i-arrow-s"></span>
+              </span>
+            </span>
+          </div>
         </div>
-        <div class="overview-filters">
-          <div class="filter-container">
-            <div class="block-filters">
-              <div class="filter-item">
-                <div class="filter-label">Status</div>
-                <span class="k-dropdown-wrap">
-                  <span class="k-input">Select</span>
-                  <span class="k-select">
-                    <span class="k-icon k-i-arrow-s"></span>
+        <div class="dates-block">
+          <kendo-dropdownlist
+            [data]="listItems"
+            [defaultItem]="defaultItem"
+            textField="text"
+          >
+          </kendo-dropdownlist>
+          <div class="refresh-date">
+            <span class="title">Updated: </span>
+            <span>01 Jan 2022 | 21:00PM</span>
+          </div>
+        </div>
+
+        <div class="filter-block vertgrid">
+          <div class="filters">
+            <span class="filter-title">Filters: </span>
+          </div>
+          <div class="overview-filters">
+            <div class="filter-container">
+              <div class="block-filters">
+                <div class="filter-item">
+                  <div class="filter-label">Status</div>
+                  <span class="k-dropdown-wrap">
+                    <span class="k-input">Select</span>
+                    <span class="k-select">
+                      <span class="k-icon k-i-arrow-s"></span>
+                    </span>
                   </span>
-                </span>
-              </div>
-              <div class="filter-item">
-                <div class="filter-label">Dates</div>
-                <span class="k-dropdown-wrap">
-                  <span class="k-input">Select</span>
-                  <span class="k-select"
-                    ><span class="k-icon k-i-arrow-s"></span
-                  ></span>
-                </span>
-              </div>
+                </div>
+                <div class="filter-item">
+                  <div class="filter-label">Dates</div>
+                  <span class="k-dropdown-wrap">
+                    <span class="k-input">Select</span>
+                    <span class="k-select"
+                      ><span class="k-icon k-i-arrow-s"></span
+                    ></span>
+                  </span>
+                </div>
 
-              <div class="filter-item">
-                <div class="filter-label">Type</div>
-                <span class="k-dropdown-wrap">
-                  <span class="k-input">Select</span>
-                  <span class="k-select"
-                    ><span class="k-icon k-i-arrow-s"></span
-                  ></span>
-                </span>
-              </div>
+                <div class="filter-item">
+                  <div class="filter-label">Type</div>
+                  <span class="k-dropdown-wrap">
+                    <span class="k-input">Select</span>
+                    <span class="k-select"
+                      ><span class="k-icon k-i-arrow-s"></span
+                    ></span>
+                  </span>
+                </div>
 
-              <div class="filter-item">
-                <div class="filter-label">Sites</div>
-                <span class="k-dropdown-wrap"
-                  ><span class="k-input">Select</span>
-                  <span class="k-select"
-                    ><span class="k-icon k-i-arrow-s"></span></span
-                ></span>
-              </div>
-
-              <div class="filter-item">
-                <div class="filter-label">Supplier</div>
-                <span class="k-dropdown-wrap">
-                  <span class="k-input">Select</span>
-                  <span class="k-select"
-                    ><span class="k-icon k-i-arrow-s"></span
+                <div class="filter-item">
+                  <div class="filter-label">Sites</div>
+                  <span class="k-dropdown-wrap"
+                    ><span class="k-input">Select</span>
+                    <span class="k-select"
+                      ><span class="k-icon k-i-arrow-s"></span></span
                   ></span>
-                </span>
+                </div>
+
+                <div class="filter-item">
+                  <div class="filter-label">Supplier</div>
+                  <span class="k-dropdown-wrap">
+                    <span class="k-input">Select</span>
+                    <span class="k-select"
+                      ><span class="k-icon k-i-arrow-s"></span
+                    ></span>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
+          <div class="block-filterbuttons">
+            <button kendobutton="" class="secondary">Reset</button>
+            <button kendobutton="" class="blue">Apply</button>
+          </div>
         </div>
-        <div class="block-filterbuttons">
-          <button kendobutton="" class="secondary">Reset</button>
-          <button kendobutton="" class="blue">Apply</button>
-        </div>
-      </div>
 
-
-      <div class="card-title-buttons">
-        <div class="opened full-screen" (click)="openFullscreen($event)">
-          <span></span>Full Screen
+        <div class="card-title-buttons">
+          <div
+            class="opened full-screen k-button"
+            (click)="openFullscreen($event)"
+          >
+            <span></span>Full Screen
+          </div>
+          <div
+            class="closed full-screen k-button"
+            (click)="closeFullscreen($event)"
+          >
+            <span></span>Exit Full Screen
+          </div>
+          <kendo-grid-column-chooser></kendo-grid-column-chooser>
+          <button kendoGridExcelCommand type="button" icon="file-excel">
+            Export to Excel
+          </button>
         </div>
-        <div class="closed full-screen" (click)="closeFullscreen($event)">
-          <span></span>Exit Full Screen
-        </div>
-        <kendo-grid-column-chooser></kendo-grid-column-chooser>
-        <button kendoGridExcelCommand type="button" icon="file-excel">
-          Export to Excel
-        </button>
       </div>
     </ng-template>
-    <kendo-grid-column media="(max-width: 500px)" title="Items" [width]="300">
+
+    <!-- <kendo-grid-column media="(max-width: 500px)" title="Items" [width]="300">
       <ng-template kendoGridCellTemplate let-dataItem>
         <h4>CPN: {{ dataItem.id }}</h4>
         <dl>
@@ -155,7 +162,7 @@
           <dd>{{ dataItem.budget | currency }}</dd>
         </dl>
       </ng-template>
-    </kendo-grid-column>
+    </kendo-grid-column> -->
 
     <kendo-grid-column
       media="(min-width: 501px)"
@@ -284,6 +291,20 @@
       [repeatHeaders]="true"
     ></kendo-grid-pdf>
     <kendo-grid-excel fileName="Employees.xlsx"></kendo-grid-excel>
+    <ng-template
+      kendoPagerTemplate
+      position="both"
+      let-totalPages="totalPages"
+      let-currentPage="currentPage"
+    >
+      <kendo-pager-prev-buttons></kendo-pager-prev-buttons>
+      <kendo-pager-numeric-buttons
+        [buttonCount]="10"
+      ></kendo-pager-numeric-buttons>
+      <kendo-pager-next-buttons></kendo-pager-next-buttons>
+      <kendo-pager-info></kendo-pager-info>
+      Current page: {{ currentPage }}
+    </ng-template>
   </kendo-grid>
   <!-- </div> -->
 </div>

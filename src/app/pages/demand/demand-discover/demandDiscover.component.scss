@@ -12,6 +12,10 @@
   overflow: hidden;
   transition: max-height 0.5s ease-out, max-width 0.3s ease-out 0.2s;
 
+  &:hover {
+    background: $blue-color-hover;
+  }
+  
   &.open {
     max-height: 200px;
     max-width: 160px;
