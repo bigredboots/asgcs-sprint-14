@@ -23,10 +23,10 @@ export class DemandOverviewComponent implements OnInit {
   };
 
   @ViewChild('partoverview') partoverview: ElementRef;
-  @ViewChild('fsiteoverview') fsiteoverview: ElementRef;
+  // @ViewChild('fsiteoverview') fsiteoverview: ElementRef;
+  // @ViewChild('ifsiteoverview') ifsiteoverview: ElementRef;
   @ViewChild('flocationsoverview') flocationsoverview: ElementRef;
   @ViewChild('ipartoverview') ipartoverview: ElementRef;
-  @ViewChild('ifsiteoverview') ifsiteoverview: ElementRef;
   @ViewChild('iflocationsoverview') iflocationsoverview: ElementRef;
 
   PartOverviewtoggleMoreInfo() {
@@ -37,14 +37,14 @@ export class DemandOverviewComponent implements OnInit {
     this.partoverview.nativeElement.classList.remove('moreinfo-active');
     this.ipartoverview.nativeElement.classList.remove('moreinfo-active-block');
   }
-  FsitetoggleMoreInfo() {
-    this.fsiteoverview.nativeElement.classList.toggle('moreinfo-active');
-    this.ifsiteoverview.nativeElement.classList.toggle('moreinfo-active');
-  }
+  // FsitetoggleMoreInfo() {
+  //   this.fsiteoverview.nativeElement.classList.toggle('moreinfo-active');
+  //   this.ifsiteoverview.nativeElement.classList.toggle('moreinfo-active');
+  // }
 
   FLocationsMoreInfo() {
     this.flocationsoverview.nativeElement.classList.toggle('moreinfo-active');
-    this.iflocationsoverview.nativeElement.classList.toggle('moreinfo-active');
+    this.iflocationsoverview.nativeElement.classList.toggle('moreinfo-active-block');
   }
   focusOutMap(){
     this.flocationsoverview.nativeElement.classList.remove('moreinfo-active');
