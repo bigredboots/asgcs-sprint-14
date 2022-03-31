@@ -13,7 +13,7 @@
   transition: max-height 0.5s ease-out, max-width 0.3s ease-out 0.2s;
 
   &:hover {
-    background: $blue-color-hover;
+    background: $blue-hover-color;
   }
   
   &.open {
