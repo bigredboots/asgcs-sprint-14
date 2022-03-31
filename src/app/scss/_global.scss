@@ -26,6 +26,7 @@ button {
 
     &:hover {
       background: $blue-hover-color;
+      border-width: 2px;
     }
   }
 }

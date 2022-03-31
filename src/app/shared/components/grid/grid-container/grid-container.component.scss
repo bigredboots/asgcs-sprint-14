@@ -15,21 +15,6 @@
   position: relative;
   overflow: hidden;
 
-  &.reportcell {
-    padding: 0px;
-    display: grid;
-    grid-template-columns: auto 360px;
-    gap: 20px;
-    border-radius: 0;
-    transition: $default-transition;
-
-    &.nochart {
-      grid-template-columns: auto 0px;
-      gap: 0px;
-      border-radius: 10px;
-    }
-  }
-
   .card-title {
     display: flex;
     justify-content: space-between;
@@ -356,8 +341,8 @@
   }
   .menu-list {
     .title-row {
-      font-weight: 800;
-      padding: 10px 10px;
+      font-weight: 600;
+      padding: 10px 6px;
       font-size: 16px;
       cursor: pointer;
       transition: $default-transition;
@@ -380,7 +365,7 @@
     .bucket-row {
       padding: 0px;
       border: 1px solid #333;
-      height: 240px;
+      height: 210px;
       overflow-x: hidden;
       overflow-y: auto;
       border-radius: 10px 0px 0px 10px;
