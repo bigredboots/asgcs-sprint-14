@@ -600,9 +600,13 @@ h4 {
   margin-bottom: 5px;
   border-bottom-style: solid;
   pointer-events: all;
+
   .k-select span {
     border-top: 6px solid $blue-color;
     margin-top: 9px;
+  }
+  &:hover .k-select span {
+    border-top-color: $blue-hover-color;
   }
 }
 
