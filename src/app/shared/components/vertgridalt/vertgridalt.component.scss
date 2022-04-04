@@ -45,7 +45,7 @@
 .k-header.caldate {
   white-space: break-spaces;
   padding: 0px 13px;
-  text-align: center;
+  text-align: left;
   line-height: 17px;
   vertical-align: middle;
 }
@@ -282,16 +282,23 @@
   }
 }
 
-
 #vertical-grid-alt .secondleveldata .k-grid-content.k-virtual-content {
   background-color: black;
   background-image: none;
   margin-bottom: 3px;
 }
-#vertical-grid-alt .secondleveldata .k-grid-content.k-virtual-content tr.k-master-row td {
+#vertical-grid-alt
+  .secondleveldata
+  .k-grid-content.k-virtual-content
+  tr.k-master-row
+  td {
   background-color: #525252;
 }
-#vertical-grid-alt .secondleveldata .k-grid-content.k-virtual-content tr.k-master-row:hover td {
+#vertical-grid-alt
+  .secondleveldata
+  .k-grid-content.k-virtual-content
+  tr.k-master-row:hover
+  td {
   background-color: #0f1f26;
 }
 
