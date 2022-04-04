@@ -33,10 +33,14 @@ export class NavigationSidePanelComponent implements OnInit, OnDestroy {
   }
 
   demandOpen = true;
+  healthOpen = false;
   outboundOpen = false;
 
   toggleDemandClass() {
     this.demandOpen = !this.demandOpen;
+  }
+  togglehealthClass() {
+    this.healthOpen = !this.healthOpen;
   }
   toggleOutboundClass() {
     this.outboundOpen = !this.outboundOpen;

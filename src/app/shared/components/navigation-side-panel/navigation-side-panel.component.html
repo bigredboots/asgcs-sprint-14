@@ -16,6 +16,27 @@
       </div>
     </li>
     <li
+      class="health"
+      [class.open]="healthOpen"
+      [routerLinkActive]="['activated']"
+    >
+      <div class="icon"></div>
+      <div class="navigation-links" [routerLinkActive]="['is-active']">
+        <span class="parent" (click)="togglehealthClass()">Supply Chain Health</span>
+        <ul>
+          <li>
+            <a>Network</a>
+          </li>
+          <li>
+            <a>Footprint</a>
+          </li>
+          <li>
+            <a>Products</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li
       class="demand"
       [class.open]="demandOpen"
       [routerLinkActive]="['activated']"
