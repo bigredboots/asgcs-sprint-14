@@ -35,10 +35,10 @@ export class VertgridComponent implements OnInit {
     'Last Quarter',
     'This Calendar year',
     'Long explanation of time range',
-    'Custom Range'
+    'Custom Range',
   ];
   public defaultItem: { text: string } = {
-    text: "Last Fiscal Year to Present"
+    text: 'Last Fiscal Year to Present',
   };
 
   openFullscreen(event) {
@@ -72,6 +72,10 @@ export class VertgridComponent implements OnInit {
       /* IE/Edge */
       this.document.msExitFullscreen();
     }
+  }
+
+  openModal(event) {
+    document.body.classList.add('modal-open');
   }
 
   @HostListener('document:fullscreenchange', ['$event']) onKeydownHandler(

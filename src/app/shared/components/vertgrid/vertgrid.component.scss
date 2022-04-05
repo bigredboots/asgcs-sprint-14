@@ -97,6 +97,14 @@
       gap: 13px;
       margin-left: 30px;
     }
+    .reports-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      button {
+        padding: 0px 5px;
+      }
+    }
   }
   .left-side-content {
     grid-column: 1;
@@ -165,4 +173,11 @@
 #vertical-grid.k-grid tbody tr:hover td {
   background-color: #0f1f26;
   color: white;
+}
+.modal-window {
+  display: none;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: green;
 }

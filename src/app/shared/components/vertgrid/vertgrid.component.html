@@ -135,8 +135,8 @@
             <span></span>Exit Full Screen
           </div>
           <kendo-grid-column-chooser></kendo-grid-column-chooser>
-          <button kendoGridExcelCommand type="button" icon="file-excel">
-            Export to Excel
+          <button (click)="openModal($event)" class="blue excelbutton">
+          <span></span>Export to Excel
           </button>
         </div>
       </div>
@@ -307,4 +307,7 @@
     </ng-template>
   </kendo-grid>
   <!-- </div> -->
+</div>
+<div class="modal-window">We are Processing your request .  Your file will be automatically downloaded after processing.
+  <div>(OK)</div>
 </div>
