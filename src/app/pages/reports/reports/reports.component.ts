@@ -14,6 +14,10 @@ export class ReportsComponent {
 
   @ViewChild('reloadnumbers') reloadnumbers: ElementRef;
 
+  closeOverlayer() {
+    document.body.classList.remove('modal-open');
+  }
+
   FDemandMoreInfo() {
     this.fdemandoverview.nativeElement.classList.toggle('drop-active');
   }
