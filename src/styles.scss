@@ -749,6 +749,14 @@ h4 {
 .reports-header {
   justify-content: space-between;
   width: 100%;
+
+  button {
+    padding: 0px 5px;
+
+    &:hover {
+      border-width: 0px;
+    }
+  }
 }
 .card-title-buttons {
   display: flex;
