@@ -14,8 +14,13 @@ export class ReportsComponent {
 
   @ViewChild('reloadnumbers') reloadnumbers: ElementRef;
 
+
   closeOverlayer() {
     document.body.classList.remove('modal-open');
+
+    setTimeout(function () {
+      this.fadebigmodal.nativeElement.classList.remove('bigmodal-fade');
+    }, 3000);
   }
 
   FDemandMoreInfo() {

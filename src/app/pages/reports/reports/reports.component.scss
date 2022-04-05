@@ -13,7 +13,6 @@
   max-height: 1000px;
 }
 .modal-window {
-  display: none;
   border-radius: 10px;
   border: 1px solid #ccc;
   position: absolute;
@@ -29,6 +28,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(0.5);
-  transition: $default-transition;
-  opacity: 0px;
+  transition: .s cubic-bezier(0.1, 1.1, 0.23, 1.01) all;
+  
+  opacity: 0;
 }

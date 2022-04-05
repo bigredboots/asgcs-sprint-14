@@ -341,8 +341,8 @@
   }
   .menu-list {
     .title-row {
-      font-weight: 600;
-      padding: 10px 6px;
+      font-weight: 500;
+      padding: 6px;
       font-size: 16px;
       cursor: pointer;
       transition: $default-transition;
@@ -365,7 +365,7 @@
     .bucket-row {
       padding: 0px;
       border: 1px solid #333;
-      height: 210px;
+      height: 180px;
       overflow-x: hidden;
       overflow-y: auto;
       border-radius: 10px 0px 0px 10px;
@@ -486,6 +486,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-content: center;
+  position: relative;
 
   .lines-value {
     display: flex;

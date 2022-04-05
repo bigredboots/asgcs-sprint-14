@@ -242,8 +242,21 @@
     <div gridCell class="card card-body">
       <div class="card-title">
         <div class="card-title-text">Summary</div>
+
       </div>
       <div class="card-element four-totals" #reloadnumbers>
+        <div class="component-loader">
+      <div class="app-loader">
+      <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+      <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+      </svg>
+      <span class="load-text">LOADING</span>
+    </div>
+    <div class="loader-text">This component is taking more than 3 seconds to show data and this helpful text appears.</div>
+        </div>
+
+
+
         <div class="lines">
           <div class="title">Order Count</div>
           <div class="numbers">9,999</div>
@@ -274,7 +287,6 @@
   </svg>
   <span class="load-text">LOADING</span>
 </div>
-  We are Processing your request. Your Excel will be automatically downloaded
-  after processing.
+  <div class="loader-text">We are Processing your request. Your Excel will be automatically downloaded after processing.</div>
   <button class="blue" (click)="closeOverlayer($event)">Close</button>
 </div>

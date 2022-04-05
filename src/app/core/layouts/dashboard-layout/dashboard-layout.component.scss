@@ -81,8 +81,9 @@
   }
   .modal-open .modal-window {
     display: flex !important;
-    opacity: 1;
+    opacity: 1 !important;
     transform: translate(-50%, -50%) scale(1) !important;
+    transition: $default-transition !important;
   }
 
   /* collapsed nav-menu */
@@ -127,7 +128,7 @@
       min-width: 0px !important;
       max-width: 0px !important;
     }
-    
+
     .main-navigation {
       > ul > li span::after {
         display: none !important;
