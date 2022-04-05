@@ -750,7 +750,7 @@ h4 {
   justify-content: space-between;
   width: 100%;
 
-  button {
+  button.blue {
     padding: 0px 5px;
 
     &:hover {
@@ -767,6 +767,8 @@ h4 {
 .k-button.full-screen.closed {
   display: none;
 }
+
+
 
 @media (max-width: 500px) {
   .card-title-buttons {

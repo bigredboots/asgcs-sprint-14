@@ -91,7 +91,9 @@
 }
 .excelbutton span {
   background-image: url(/assets/icons/excel.svg);
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   display: inline-block;
+  background-repeat: no-repeat;
+  margin-right: 2px;
 }

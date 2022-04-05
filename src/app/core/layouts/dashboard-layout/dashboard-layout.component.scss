@@ -72,9 +72,17 @@
 
 ::ng-deep {
   .sidebar-active .overlayer,
+  .modal-open .overlayer,
   .mobile-open .overlayer-navigation,
   .filter-expanded .overlayer-filter {
     display: block !important;
+    opacity: 0;
+    transition: $default-transition;
+  }
+  .modal-open .modal-window {
+    display: block !important;
+    opacity: 1;
+    transform: scale(1);
   }
 
   /* collapsed nav-menu */

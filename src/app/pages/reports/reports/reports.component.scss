@@ -1,3 +1,5 @@
+@import '../../../scss/global';
+
 .menu-label {
   position: relative;
 }
@@ -9,4 +11,19 @@
 }
 .menu-check:checked ~ ul {
   max-height: 1000px;
+}
+.modal-window {
+  display: none;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: green;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: $default-transition;
+  opacity: 0px;
 }

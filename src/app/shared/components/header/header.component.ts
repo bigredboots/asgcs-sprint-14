@@ -28,7 +28,7 @@ export class HeaderComponent implements OnInit {
   @Input() valueField: any;
   @Input() value: any;
   @Output() valueChange = new EventEmitter<any>();
-  
+
   private _subscriptionsSubject$: Subject<void>;
   public currentPanelState: SidePanelState;
   constructor(
@@ -44,22 +44,21 @@ export class HeaderComponent implements OnInit {
     'Last Quarter',
     'This Calendar year',
     'Long explanation of time range',
-    'Custom Range'
+    'Custom Range',
   ];
   public defaultItem: { text: string } = {
-    text: "Last Fiscal Year to Present"
+    text: 'Last Fiscal Year to Present',
   };
   public BasicDropdown: Array<string> = [
     'Option One',
     'Option Two',
     'Option Three',
     'Option Four',
-    'Option Five'
+    'Option Five',
   ];
   public selectText: { text: string } = {
-    text: "Select"
+    text: 'Select',
   };
- 
 
   public openMultiselect(): void {
     this.multiselectContainer.nativeElement.classList.add('opened');
@@ -135,6 +134,9 @@ export class HeaderComponent implements OnInit {
   toggleExpandedFilters() {
     this.reportfilters.nativeElement.classList.toggle('expanded');
     this.overview.nativeElement.classList.toggle('filter-expanded');
+  }
+  toggleOverlayer() {
+    document.body.classList.remove('modal-open');
   }
 
   myBreadCrumb = this.breadCrumb;

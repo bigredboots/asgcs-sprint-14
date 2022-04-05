@@ -476,6 +476,7 @@ margin-right: 4px;
   bottom: 0px;
   left: 0px;
   right: 0px;
+  opacity: 1;
   z-index: 1;
   display: none;
   backdrop-filter: blur(2px);
@@ -491,18 +492,6 @@ margin-right: 4px;
 
   .filter-container {
     display: block;
-  }
-
-  .overlayer-filter {
-    background: $overlayer;
-    position: absolute;
-    top: 0;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    z-index: 1;
-    backdrop-filter: blur(2px);
-    display: none;
   }
   .overview-filters {
     max-height: 0px;
