@@ -1,10 +1,30 @@
-{{idleState}}
+<div class="countdown">{{ countdown }}</div>
+<div class="idleState">{{ idleState }}</div>
 
-<div class="idle" *ngIf="timedOut">
-  <p><strong>{{idleState}}</strong></p>
-<button (click)="reset()">Restart</button>
+<div
+  class="idle modal-window"
+  *ngIf="idleState == 'warning' || idleState == 'timedout'"
+>
+  <div *ngIf="idleState == 'warning'">
+    <div class="loader-text">
+      This is a warning message. <br />You will see the log-in modal in
+      <div class="countdown">{{ countdown }} seconds</div>
+    </div>
+    <button class="blue" (click)="reset($event)">Restart</button>
+  </div>
+  <div *ngIf="idleState == 'timedout'">
+    <div class="loader-text">
+      <label for="username">Username</label>
+      <input type="text" />
+    </div>
+    <label for="username">Password</label>
+    <input type="password" />
+    <div class="login-buttons">
+      <button class="secondary">Log Out</button>
+      <button class="blue" (click)="reset($event)">Continue</button>
+    </div>
+  </div>
 </div>
-
 
 <app-dashboard-layout [configuration]="configuration">
   <div container="sidePanel" id="sidebar">

@@ -1,0 +1,20 @@
+.modal-window {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  position: absolute;
+  width: 300px;
+  background: #29272a;
+  padding: 10px;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: 1.3s cubic-bezier(0.1, 1.1, 0.23, 1.01) all;
+  
+  opacity: 0;
+}
