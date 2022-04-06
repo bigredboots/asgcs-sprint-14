@@ -36,10 +36,13 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0, 0);
-    // sets an idle timeout of 5 seconds, for testing purposes.
-    this.idle.setIdle(5);
-    // sets a timeout period of 5 seconds. after 10 seconds of inactivity, the user will be considered timed out.
-    this.idle.setTimeout(5);
+
+    // sets an idle timeout of 15 seconds.
+    this.idle.setIdle(15);
+
+    // sets an  timer for 30 seconds.
+    this.idle.setTimeout(60);
+
     // sets the default interrupts, in this case, things like clicks, scrolls, touches to the document
     this.idle.setInterrupts(DEFAULT_INTERRUPTSOURCES);
 
@@ -51,10 +54,20 @@ export class AppComponent implements OnInit {
     this.idle.onIdleStart.subscribe(
       () => (this.idleState = "You've gone idle!")
     );
+
+    // this.idle.onIdleStart.subscribe(() =>
+    //   document.body.classList.add('modal-open')
+    // );
+
+    // document.body.classList.add('modal-open')
     this.idle.onTimeoutWarning.subscribe(
       (countdown) =>
-        (this.idleState = 'You will time out in ' + countdown + ' seconds!')
+        (this.idleState =
+          'Are you still here? This is a timeout message.  The login screen will happen in ' +
+          countdown +
+          ' seconds.')
     );
+
     this.reset();
   }
 
