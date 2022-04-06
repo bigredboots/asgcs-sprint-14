@@ -14,13 +14,13 @@ export class ReportsComponent {
 
   @ViewChild('reloadnumbers') reloadnumbers: ElementRef;
 
-
   closeOverlayer() {
-    document.body.classList.remove('modal-open');
+    document.body.classList.remove('excel-modal-open');
 
-    setTimeout(function () {
-      this.fadebigmodal.nativeElement.classList.remove('bigmodal-fade');
-    }, 3000);
+    // setTimeout(function () {
+    //   this.fadebigmodal.nativeElement.classList.remove('bigmodal-fade');
+    // }, 3000);
+    // clearTimeout();
   }
 
   FDemandMoreInfo() {
@@ -42,5 +42,7 @@ export class ReportsComponent {
   ReloadThings() {
     this.finboundoverview.nativeElement.classList.add('twirl');
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 }

@@ -1,4 +1,4 @@
-/* tslint:disable:max-line-length */
+
 
 import {
   Component,
@@ -75,7 +75,10 @@ export class VertgridComponent implements OnInit {
   }
 
   openModal(event) {
-    document.body.classList.add('modal-open');
+    document.body.classList.add('excel-modal-open');
+    setTimeout(() => {
+      document.body.classList.remove('excel-modal-open');
+    }, 8000);
   }
 
   @HostListener('document:fullscreenchange', ['$event']) onKeydownHandler(
@@ -86,23 +89,6 @@ export class VertgridComponent implements OnInit {
     } else {
       this.elem.classList.add('fullscreened');
     }
-    // if (this.document.exitFullscreen) {
-    //   console.log('boom');
-    //   this.elem.classList.remove('fullscreened');
-    // } else
-    // if (this.document.mozCancelFullScreen) {
-    //   //   /* Firefox */
-    //   this.elem.classList.remove('fullscreened');
-    // }
-    // else if (this.document.webkitExitFullscreen) {
-    //   /* Chrome, Safari and Opera */
-    //   console.log('boom');
-    //   this.elem.classList.remove('fullscreened');
-    // } else if (this.document.msExitFullscreen) {
-    //   /* IE/Edge */
-    //   console.log('boom');
-    //   this.elem.classList.remove('fullscreened');
-    // }
   }
 
   @ViewChild(TooltipDirective) public tooltipDir: TooltipDirective;
@@ -167,19 +153,5 @@ export class VertgridComponent implements OnInit {
     }).data;
 
     this.dataBinding.skip = 0;
-  }
-
-  private photoURL(dataItem: any): string {
-    const code: string = dataItem.img_id + dataItem.gender;
-    const image: any = images;
-
-    return image[code];
-  }
-
-  private flagURL(dataItem: any): string {
-    const code: string = dataItem.country;
-    const image: any = images;
-
-    return image[code];
   }
 }

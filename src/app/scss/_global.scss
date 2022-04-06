@@ -22,11 +22,12 @@ button {
   &.blue {
     background: $blue-color;
     color: $white;
+    border-width: 1px;
     border-color: $blue-color;
 
     &:hover {
       background: $blue-hover-color;
-      border-width: 2px;
+      border-width: 1px;
     }
   }
 }

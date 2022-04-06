@@ -72,18 +72,11 @@
 
 ::ng-deep {
   .sidebar-active .overlayer,
-  .modal-open .overlayer,
-  .mobile-open .overlayer-navigation,
-  .filter-expanded .overlayer-filter {
+  .excel-modal-open .overlayer,
+  .filter-expanded .overlayer {
     display: block !important;
     opacity: 0;
     transition: $default-transition;
-  }
-  .modal-open .modal-window {
-    display: flex !important;
-    opacity: 1 !important;
-    transform: translate(-50%, -50%) scale(1) !important;
-    transition: $default-transition !important;
   }
 
   /* collapsed nav-menu */

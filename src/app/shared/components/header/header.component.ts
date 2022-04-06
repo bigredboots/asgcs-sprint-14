@@ -63,41 +63,9 @@ export class HeaderComponent implements OnInit {
   public openMultiselect(): void {
     this.multiselectContainer.nativeElement.classList.add('opened');
   }
-
-  // public openedMultiselect(): void {
-  //   if (this.data.length > 5) {
-  //     this.addSelectAllToList();
-  //   }
-  // }
-
   public closeMultiselect(): void {
     this.multiselectContainer.nativeElement.classList.remove('opened');
   }
-
-  // public closedMultiselect(): void {
-  //   this.value = this.removeSelectAllFromList(this.value);
-  //   this.valueChange.emit(this.value);
-  // }
-
-  // public handleToggleClick(multiselect: MultiSelectComponent): void {
-  //   this.multiselectContainer.nativeElement.classList.toggle('opened');
-
-  //   multiselect.focus();
-  //   multiselect.toggle();
-  // }
-
-  // private addSelectAllToList() {
-  //   const selectAllElement = this.createSelectAllElement();
-
-  //   if (this.value?.length === this.data.length - 1) {
-  //     this.value.unshift(selectAllElement);
-  //   }
-
-  //   if (!this.getSelectAllElement(this.data)) {
-  //     this.data.unshift(selectAllElement);
-  //   }
-  // }
-
   @ViewChild('overview') overview: ElementRef;
   @ViewChild('expandedfilters') expandedfilters: ElementRef;
   @ViewChild('filters') filters: ElementRef;
@@ -137,6 +105,9 @@ export class HeaderComponent implements OnInit {
   }
   toggleOverlayer() {
     document.body.classList.remove('modal-open');
+    document.body.classList.remove('timeout-modal-open');
+    document.body.classList.remove('excel-modal-open');
+    this.overview.nativeElement.classList.remove('sidebar-active');
   }
 
   myBreadCrumb = this.breadCrumb;
@@ -156,6 +127,7 @@ export class HeaderComponent implements OnInit {
   }
 
   public handleSingleClicks(): void {
+    
     const width: number = window.innerWidth;
     if (width < 769 && this.currentPanelState === SidePanelState.MOBILE) {
       this._sidePanelService.changeState(SidePanelState.MOBILEOPEN);

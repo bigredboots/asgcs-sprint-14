@@ -1,4 +1,4 @@
-import { Component, OnInit, AppplicationRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GlobalConstants } from './common/global-constants';
 import { Idle, DEFAULT_INTERRUPTSOURCES } from '@ng-idle/core';
 import {
@@ -23,35 +23,26 @@ export class AppComponent implements OnInit {
   public configuration: DashboardLayoutConfiguration;
   public links: NavigationLink[];
 
-  constructor(private appRef: ApplicationRef, private idle: Idle) {
+  constructor(private idle: Idle) {
     this.configuration = new DashboardLayoutConfiguration(
       SidePanelPosition.LEFT,
       SidePanelState.OPEN
     );
   }
 
-  // onActivate(event) {
-  //   window.scroll(0, 0);
-  //   document.querySelector('main-content').scrollTo(0, 0);
-  // }
-
   ngOnInit() {
     window.scroll(0, 0);
 
-    // sets an idle timeout of 15 seconds.
-    this.idle.setIdle(5);
+    // sets an idle timeout of 30 seconds.
+    this.idle.setIdle(15);
 
-    // sets an  timer for 30 seconds.
-    this.idle.setTimeout(90);
+    // sets an  timer for 60 seconds.
+    this.idle.setTimeout(30);
 
     // sets the default interrupts, in this case, things like clicks, scrolls, touches to the document
     this.idle.setInterrupts(DEFAULT_INTERRUPTSOURCES);
 
-    this.idle.onIdleEnd.subscribe(() => (
-      
-      this.idleState = 'No longer idle.';
-      this.appRef.tick();
-      );
+    this.idle.onIdleEnd.subscribe(() => (this.idleState = 'No longer idle.'));
     this.idle.onTimeout.subscribe(() => {
       this.idleState = 'timedout';
       this.timedOut = true;
@@ -59,21 +50,21 @@ export class AppComponent implements OnInit {
     this.idle.onIdleStart.subscribe(() => (this.idleState = 'warning'));
 
     this.idle.onIdleStart.subscribe(() =>
-      document.body.classList.add('modal-open')
+      document.body.classList.add('timeout-modal-open')
     );
 
-    // document.body.classList.add('modal-open')
     this.idle.onTimeoutWarning.subscribe(
       (countdown) => (this.countdown = countdown)
     );
 
     this.reset();
+
   }
 
   reset() {
     this.idle.watch();
     this.idleState = 'started.';
     this.timedOut = false;
-    document.body.classList.remove('modal-open');
+    document.body.classList.remove('timeout-modal-open');
   }
 }
