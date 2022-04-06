@@ -1,6 +1,7 @@
 <div class="idle">
   <p><strong>{{idleState}}</strong></p>
 <button (click)="reset()" *ngIf="timedOut">Restart</button>
+</div>
 <app-dashboard-layout [configuration]="configuration">
   <div container="sidePanel" id="sidebar">
     <app-navigation-bar></app-navigation-bar>
