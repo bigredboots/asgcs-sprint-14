@@ -15,6 +15,7 @@ import { SharedModule } from './shared/shared.module';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 import { HttpClientModule } from '@angular/common/http';
 import { HTMLEscapeUnescapeModule } from 'html-escape-unescape';
+import { NgIdleModule } from "@ng-idle/core";
 
 import { DashboardComponent } from './pages/dashboard.component';
 
@@ -57,6 +58,7 @@ import 'hammerjs';
     LabelModule,
     InputsModule,
     ButtonsModule,
+    NgIdleModule.forRoot()
   ],
   declarations: [
     AppComponent,
