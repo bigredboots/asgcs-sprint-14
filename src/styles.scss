@@ -894,7 +894,13 @@ h4 {
   animation: dash 1.8s ease-in-out infinite,
     colors (1.8s * 4) ease-in-out infinite;
 }
-
+.path {
+  stroke-dasharray: 167;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation: dash 1.8s ease-in-out infinite,
+    colors (1.8s * 4) ease-in-out infinite;
+}
 @keyframes colors {
   0% {
     stroke: #ccc;

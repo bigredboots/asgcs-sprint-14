@@ -1,5 +1,3 @@
-
-
 import {
   Component,
   Inject,
@@ -25,6 +23,7 @@ import { TooltipDirective } from '@progress/kendo-angular-tooltip';
 export class VertgridComponent implements OnInit {
   constructor(@Inject(DOCUMENT) private document: any) {}
   elem;
+  public isDisabled = false;
 
   ngOnInit() {
     this.gridView = this.gridData;
@@ -76,6 +75,7 @@ export class VertgridComponent implements OnInit {
 
   openModal(event) {
     document.body.classList.add('excel-modal-open');
+    this.isDisabled = true;
     setTimeout(() => {
       document.body.classList.remove('excel-modal-open');
     }, 8000);

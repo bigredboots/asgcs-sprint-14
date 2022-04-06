@@ -170,3 +170,24 @@
   background-color: #0f1f26;
   color: white;
 }
+//enabled/disabled excel button
+.excelbutton {
+  &.disabled {
+    background: $grey-darker;
+    color: $grey-lighter;
+    pointer-events: none;
+  }
+  .enabled-copy {
+    display: inline-block;
+  }
+  .disabled-copy {
+    display: none;
+  }
+  &.disabled .enabled-copy {
+    display: none;
+  }
+  &.disabled .disabled-copy {
+    display: flex;
+  }
+}
+

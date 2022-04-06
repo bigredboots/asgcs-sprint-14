@@ -135,8 +135,34 @@
             <span></span>Exit Full Screen
           </div>
           <kendo-grid-column-chooser></kendo-grid-column-chooser>
-          <button (click)="openModal($event)" class="blue excelbutton">
-          <span></span>Export to Excel
+          <button
+            (click)="openModal($event)"
+            [class.disabled]="isDisabled == true"
+            class="blue excelbutton"
+          >
+            <div class="enabled-copy"><span></span>Export to Excel</div>
+            <div class="disabled-copy">
+              <div class="app-loader">
+                <svg
+                  class="spinner"
+                  width="9px"
+                  height="9px"
+                  viewBox="0 0 9 9"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    class="path2"
+                    fill="none"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    cx="9"
+                    cy="9"
+                    r="9"
+                  ></circle>
+                </svg>
+              </div>
+              Processing</div
+            >
           </button>
         </div>
       </div>
