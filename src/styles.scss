@@ -892,6 +892,11 @@ h4 {
 .logout-modal-open app-dashboard-layout {
   filter: blur(4px);
 }
+.logout-modal-open app-dashboard-layout .main-content,
+.timeout-modal-open app-dashboard-layout .main-content {
+  filter: blur(4px);
+}
+
 //spinners
 .path {
   stroke-dasharray: 167;
