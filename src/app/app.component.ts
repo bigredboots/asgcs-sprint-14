@@ -46,6 +46,8 @@ export class AppComponent implements OnInit {
     this.idle.onTimeout.subscribe(() => {
       this.idleState = 'timedout';
       this.timedOut = true;
+      document.body.classList.add('logout-modal-open')
+      document.body.classList.remove('timeout-modal-open')
     });
     this.idle.onIdleStart.subscribe(() => (this.idleState = 'warning'));
 
@@ -66,5 +68,11 @@ export class AppComponent implements OnInit {
     this.idleState = 'started.';
     this.timedOut = false;
     document.body.classList.remove('timeout-modal-open');
+  }
+  logout() {
+    //this.idle.watch();
+    this.idleState = 'logout.';
+    this.timedOut = true;
+    document.body.classList.remove('logout-modal-open');
   }
 }

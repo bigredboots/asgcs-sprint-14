@@ -868,14 +868,16 @@ h4 {
   }
 }
 
-//loader for timeout
-.timeout-modal-open .idle.modal-window {
+//loader for timeouts and modals
+.timeout-modal-open .idle.modal-window,
+.logout-modal-open .idle.modal-window {
   display: flex !important;
   opacity: 1 !important;
   transform: translate(-50%, -50%) scale(1) !important;
   transition: 0.4s ease-in all;
 }
-.timeout-modal-open .overlayer {
+.timeout-modal-open .overlayer,
+.logout-modal-open .overlayer {
   display: block !important;
   opacity: 0;
   transition: 0.4s ease-in all;
@@ -886,7 +888,11 @@ h4 {
   transform: translate(-50%, -50%) scale(1) !important;
   transition: 0.4s ease-in all;
 }
-
+.timeout-modal-open app-dashboard-layout,
+.logoutou-modal-open app-dashboard-layout {
+  filter: blur(4px);
+}
+//spinners
 .path {
   stroke-dasharray: 167;
   stroke-dashoffset: 0;
@@ -895,12 +901,13 @@ h4 {
     colors (1.8s * 4) ease-in-out infinite;
 }
 .path2 {
-  stroke-dasharray: 7; 
+  stroke-dasharray: 7;
   stroke-dashoffset: 0;
   transform-origin: center;
   animation: dash 1.8s ease-in-out infinite,
     colors (1.8s * 4) ease-in-out infinite;
 }
+
 @keyframes colors {
   0% {
     stroke: #ccc;

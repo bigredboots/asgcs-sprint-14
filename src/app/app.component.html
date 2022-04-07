@@ -1,28 +1,28 @@
-<div
-  class="idle modal-window">
-  <div *ngIf="idleState == 'warning' || idleState == 'timedout'"
->
-  <div class="warning-modal" *ngIf="idleState == 'warning'">
-    <div class="loader-text">
-      This is a warning message. <br />You will see the log-in modal in
-      <div class="countdown">{{ countdown }} seconds</div>
+<div class="idle modal-window">
+  <div *ngIf="idleState == 'warning' || idleState == 'timedout'">
+    <div class="warning-modal" *ngIf="idleState == 'warning'">
+      <div class="loader-text">
+        This is a warning message. <br />You will see the log-in modal in
+        <div class="countdown">{{ countdown }} seconds</div>
+      </div>
+      <button class="blue" (click)="reset($event)">Resume your session</button>
     </div>
-    <button class="blue" (click)="reset($event)">Resume your session</button>
+    <div class="login-modal" *ngIf="idleState == 'timedout'">
+      <div class="loader-text">
+        <div class="timedout-copy">
+          Please log in to continue your working session.
+        </div>
+        <label for="username">Username: </label>
+        <input type="text" />
+      </div>
+      <label for="username">Password: </label>
+      <input type="password" />
+      <div class="login-buttons">
+        <button class="secondary">Return Home</button>
+        <button class="blue" (click)="logout($event)">Continue</button>
+      </div>
+    </div>
   </div>
-  <div class="login-modal" *ngIf="idleState == 'timedout'">
-    <div class="loader-text">
-      <div class="timedout-copy">Please log in to continue your working session.</div>
-      <label for="username">Username: </label>
-      <input type="text" />
-    </div>
-    <label for="username">Password: </label>
-    <input type="password" />
-    <div class="login-buttons">
-      <button class="secondary">Log Out</button>
-      <button class="blue" (click)="reset($event)">Continue</button>
-    </div>
-  </div> 
-  </div> 
 </div>
 
 <app-dashboard-layout [configuration]="configuration">
