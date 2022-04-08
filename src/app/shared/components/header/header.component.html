@@ -30,25 +30,33 @@
       </div>
       <input type="checkbox" id="toggle-search" />
       <div class="top-fields">
-        
         <nav
           aria-label="breadcrumb"
           role="navigation"
           class="breadcrumb {{ this.myBreadCrumb }}"
         >
-        <div class="company-logo"></div>
+          <div class="company-logo"></div>
           <span>{{ this.myBreadCrumb }}</span>
           <app-breadcrumb></app-breadcrumb>
         </nav>
 
-        <div class="dates-block">
-          <!-- <div class="dates-title">Time Frame</div> -->
-          <kendo-dropdownlist
-            [data]="listItems"
-            [defaultItem]="defaultItem"
-            textField="text"
-          >
-          </kendo-dropdownlist>
+        <div class="dates-block" #datesblock (mouseleave)="toggledatechoice()">
+          <div class="date-selector">
+            <div class="selected-choice" (click)="toggledatechoice()">
+              Last Fiscal Year to Present
+            </div>
+            <div class="select-options">
+              <div class="date-selectors">Date One</div>
+              <div class="date-selectors">Date Two</div>
+              <div class="date-selectors">Date Three</div>
+              <div class="date-selectors">Date Four</div>
+              <div class="date-selectors">Date Five</div>
+              <div class="date-selectors custom">
+                Kendo Range Slider Goes here
+              </div>
+            </div>
+          </div>
+
           <div class="refresh-date">
             <span class="title">Updated: </span>
             <span>01 Jan 2022 | 21:00PM</span>

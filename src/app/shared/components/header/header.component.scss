@@ -167,7 +167,7 @@ button.search-submit {
     .icon.active:after {
       background: $blue-color;
     }
-    .icon.active:hover:after{
+    .icon.active:hover:after {
       background: $blue-hover-color;
     }
     .notifications-popup {
@@ -234,7 +234,7 @@ button.search-submit {
     }
   }
 }
-/*refresh date block */
+/* date block */
 .refresh-date {
   font-size: $smallest-font;
   color: $grey-light;
@@ -244,6 +244,61 @@ button.search-submit {
 .refresh-date .title {
   font-weight: bold;
   font-size: $small-font;
+}
+
+.dates-block {
+  position: relative;
+}
+.selected-choice {
+  font-size: 21px;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 2px;
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  gap: 5px;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+.selected-choice:after {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid $blue-color;
+  pointer-events: pointer;
+}
+.select-options {
+  max-height: 0px;
+  font-size: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  border: 0px;
+  width: 100%;
+  transition: $default-transition;
+}
+.date-selectors {
+  padding: 3px 10px;
+  border-bottom: 1px solid rgb(51, 51, 51);
+  transition: $fast-transition;
+  &:hover {
+    background: $blue-color;
+    color: white;
+  }
+}
+.date-open .select-options {
+  max-height: 300px;
+  opacity: 1;
+  border: 1px solid #ccc;
+  background: black;
+  border-radius: 0px 0px 5px 5px;
 }
 
 /*toggle-search */
@@ -409,12 +464,12 @@ button.search-submit {
   text-align: right;
 }
 .expand-filters:before {
-  content: "";
-width: 12px;
-height: 12px;
-background-size: cover;
-background-repeat: no-repeat;
-margin-right: 4px;
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 4px;
 }
 .filter-expanded-row {
   display: flex;
@@ -426,23 +481,7 @@ margin-right: 4px;
   gap: 12px;
   grid-row: 1;
 }
-.datepicker {
-  display: flex;
-  width: auto;
-  background: $grey-lightest;
-  color: $black;
-  border-radius: 5px;
 
-  div {
-    margin: 4px 3px;
-    font-size: $small-font;
-  }
-  .text-date {
-    margin: 4px 3px;
-    font-weight: 600;
-    font-size: $smallest-font;
-  }
-}
 .close-filters {
   transform: rotate(45deg);
   font-size: $largest-font;

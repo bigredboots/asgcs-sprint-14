@@ -38,17 +38,6 @@ export class HeaderComponent implements OnInit {
   ) {
     this._subscriptionsSubject$ = new Subject<void>();
   }
-
-  public listItems: Array<string> = [
-    'Last Year',
-    'Last Quarter',
-    'This Calendar year',
-    'Long explanation of time range',
-    'Custom Range',
-  ];
-  public defaultItem: { text: string } = {
-    text: 'Last Fiscal Year to Present',
-  };
   public BasicDropdown: Array<string> = [
     'Option One',
     'Option Two',
@@ -67,6 +56,9 @@ export class HeaderComponent implements OnInit {
     this.multiselectContainer.nativeElement.classList.remove('opened');
   }
   @ViewChild('overview') overview: ElementRef;
+  @ViewChild('datesblock') datesblock: ElementRef;
+
+
   @ViewChild('expandedfilters') expandedfilters: ElementRef;
   @ViewChild('filters') filters: ElementRef;
   @ViewChild('hubfilters') hubfilters: ElementRef;
@@ -75,6 +67,10 @@ export class HeaderComponent implements OnInit {
   @ViewChild('reportfilters') reportfilters: ElementRef;
 
   breadCrumb = GlobalConstants.breadCrumb;
+
+  toggledatechoice() {
+    this.datesblock.nativeElement.classList.toggle('date-open');
+  }
 
   toggleSidebar() {
     this.overview.nativeElement.classList.toggle('sidebar-active');
