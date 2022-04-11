@@ -867,7 +867,7 @@ h4 {
     color: #ccc;
   }
 }
-  
+
 //loader for timeouts and modals
 .timeout-modal-open .idle.modal-window,
 .logout-modal-open .idle.modal-window {
@@ -877,7 +877,8 @@ h4 {
   transition: 0.4s ease-in all;
 }
 .timeout-modal-open .overlayer,
-.logout-modal-open .overlayer {
+.logout-modal-open .overlayer,
+.filter-open .overlayer {
   display: block !important;
   opacity: 0;
   transition: 0.4s ease-in all;
@@ -888,6 +889,13 @@ h4 {
   transform: translate(-50%, -50%) scale(1) !important;
   transition: 0.4s ease-in all;
 }
+.filter-open .filter-modal.modal-window {
+  display: flex !important;
+  opacity: 1 !important;
+  transform: translate(-50%, -50%) scale(1) !important;
+  transition: 0.4s ease-in all;
+}
+
 .timeout-modal-open app-dashboard-layout,
 .logout-modal-open app-dashboard-layout {
   filter: blur(4px);

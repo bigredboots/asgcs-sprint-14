@@ -77,7 +77,7 @@ export class HeaderComponent implements OnInit {
     this.datesblock.nativeElement.classList.toggle('date-open');
   }
   closedatechoice() {
-    this.datesblock.nativeElement.classList.toggle('date-open');
+    this.datesblock.nativeElement.classList.remove('date-open');
   }
   toggleSidebar() {
     this.overview.nativeElement.classList.toggle('sidebar-active');
@@ -103,10 +103,12 @@ export class HeaderComponent implements OnInit {
     this.overview.nativeElement.classList.toggle('filter-active');
   }
   toggleExpandedFilters() {
-    this.reportfilters.nativeElement.classList.toggle('expanded');
-    this.overview.nativeElement.classList.toggle('filter-expanded');
+    document.body.classList.add('filter-open');
+    // this.reportfilters.nativeElement.classList.toggle('expanded');
+    // this.overview.nativeElement.classList.toggle('filter-expanded');
   }
   toggleOverlayer() {
+    document.body.classList.remove('filter-open');
     document.body.classList.remove('modal-open');
     document.body.classList.remove('timeout-modal-open');
     document.body.classList.remove('excel-modal-open');

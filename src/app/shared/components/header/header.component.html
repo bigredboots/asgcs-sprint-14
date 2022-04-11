@@ -40,24 +40,24 @@
           <app-breadcrumb></app-breadcrumb>
         </nav>
 
-        <div class="dates-block" #datesblock (mouseleave)="closedatechoice()">
+        <div class="dates-block" #datesblock>
           <div class="date-selector">
             <div class="selected-choice" (click)="toggledatechoice()">
               Last Fiscal Year to Present
             </div>
-            <div class="select-options">
+            <div class="select-options" (mouseleave)="closedatechoice()">
               <div class="date-selectors">Date One</div>
               <div class="date-selectors">Date Two</div>
               <div class="date-selectors">Date Three</div>
               <div class="date-selectors">Date Four</div>
               <div class="date-selectors">Date Five</div>
               <div class="date-selectors custom">
-              <kendo-rangeslider
-                [(ngModel)]="slidervalue"
-                [min]="min"
-                [max]="max"
-                [smallStep]="smallStep"
-                [largeStep]="largeStep"
+                <kendo-rangeslider
+                  [(ngModel)]="slidervalue"
+                  [min]="min"
+                  [max]="max"
+                  [smallStep]="smallStep"
+                  [largeStep]="largeStep"
                 ></kendo-rangeslider>
               </div>
             </div>
