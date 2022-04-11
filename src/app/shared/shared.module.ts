@@ -34,12 +34,13 @@ import {
 
 @NgModule({
   declarations: [
+    FormsModule,
+    ReactiveFormsModule,
     GridContainerComponent,
     GridCellDirective,
     DonutComponent,
     DonutComponentAlt,
-    FormsModule,
-    ReactiveFormsModule,
+    
     VertgridComponent,
     VertgridaltComponent,
     HorizgridComponent,

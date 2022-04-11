@@ -29,7 +29,12 @@ export class HeaderComponent implements OnInit {
   @Input() value: any;
   @Output() valueChange = new EventEmitter<any>();
 
-  
+  public slidervalue: [number, number] = [50, 100];
+  public min = 0;
+  public max = 200;
+  public largeStep = 2;
+  public smallStep = 20;
+
   private _subscriptionsSubject$: Subject<void>;
   public currentPanelState: SidePanelState;
   constructor(
@@ -58,7 +63,6 @@ export class HeaderComponent implements OnInit {
   }
   @ViewChild('overview') overview: ElementRef;
   @ViewChild('datesblock') datesblock: ElementRef;
-
 
   @ViewChild('expandedfilters') expandedfilters: ElementRef;
   @ViewChild('filters') filters: ElementRef;
@@ -126,7 +130,6 @@ export class HeaderComponent implements OnInit {
   }
 
   public handleSingleClicks(): void {
-    
     const width: number = window.innerWidth;
     if (width < 769 && this.currentPanelState === SidePanelState.MOBILE) {
       this._sidePanelService.changeState(SidePanelState.MOBILEOPEN);
