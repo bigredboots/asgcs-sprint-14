@@ -29,6 +29,7 @@ export class HeaderComponent implements OnInit {
   @Input() value: any;
   @Output() valueChange = new EventEmitter<any>();
 
+  
   private _subscriptionsSubject$: Subject<void>;
   public currentPanelState: SidePanelState;
   constructor(
@@ -71,7 +72,9 @@ export class HeaderComponent implements OnInit {
   toggledatechoice() {
     this.datesblock.nativeElement.classList.toggle('date-open');
   }
-
+  closedatechoice() {
+    this.datesblock.nativeElement.classList.toggle('date-open');
+  }
   toggleSidebar() {
     this.overview.nativeElement.classList.toggle('sidebar-active');
   }

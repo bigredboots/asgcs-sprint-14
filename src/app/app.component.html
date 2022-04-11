@@ -22,6 +22,50 @@
         <button class="blue" (click)="logout($event)">Continue</button>
       </div>
     </div>
+
+    <div class="filter-modal" >
+    <div class="filters">
+    <span class="filter-title">Filters</span>
+    <span class="filter-close">+</span>
+  </div>
+    <div class="expanded-filters">
+    <div class="filter-item">
+    <div class="filter-label">Most Important Filter</div>
+
+    <span
+      #multiselectContainer
+      class="k-dropdown-wrap"
+      [class.active]="value && value.length > 0"
+    >
+      <kendo-multiselect
+        #multiselect
+        kendoMultiSelectSummaryTag
+        placeholder="Select"
+        [data]="BasicDropdown"
+        [valueField]="valueField"
+        [textField]="textField"
+        [autoClose]="false"
+        [clearButton]="false"
+        [checkboxes]="true"
+        (open)="openMultiselect()"
+        (opened)="openedMultiselect()"
+        (close)="closeMultiselect()"
+        (closed)="closedMultiselect()"
+      >
+      </kendo-multiselect>
+      <span
+        class="k-select"
+        (mousedown)="$event.preventDefault()"
+        (click)="handleToggleClick(multiselect)"
+      >
+        <span class="k-icon k-i-arrow-s"></span>
+      </span>
+    </span>
+  </div>
+    </div>
+
+  </div>
+
   </div>
 </div>
 

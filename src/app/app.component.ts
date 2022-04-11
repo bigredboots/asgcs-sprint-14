@@ -29,7 +29,6 @@ export class AppComponent implements OnInit {
       SidePanelState.OPEN
     );
   }
-
   ngOnInit() {
     window.scroll(0, 0);
 
@@ -46,8 +45,8 @@ export class AppComponent implements OnInit {
     this.idle.onTimeout.subscribe(() => {
       this.idleState = 'timedout';
       this.timedOut = true;
-      document.body.classList.add('logout-modal-open')
-      document.body.classList.remove('timeout-modal-open')
+      document.body.classList.add('logout-modal-open');
+      document.body.classList.remove('timeout-modal-open');
     });
     this.idle.onIdleStart.subscribe(() => (this.idleState = 'warning'));
 
@@ -60,7 +59,6 @@ export class AppComponent implements OnInit {
     );
 
     this.reset();
-
   }
 
   reset() {

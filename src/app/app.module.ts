@@ -8,6 +8,8 @@ import { LabelModule } from '@progress/kendo-angular-label';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 
+import { Component } from '@angular/core';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
@@ -15,7 +17,7 @@ import { SharedModule } from './shared/shared.module';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 import { HttpClientModule } from '@angular/common/http';
 import { HTMLEscapeUnescapeModule } from 'html-escape-unescape';
-import { NgIdleModule } from "@ng-idle/core";
+import { NgIdleModule } from '@ng-idle/core';
 
 import { DashboardComponent } from './pages/dashboard.component';
 
@@ -58,7 +60,7 @@ import 'hammerjs';
     LabelModule,
     InputsModule,
     ButtonsModule,
-    NgIdleModule.forRoot()
+    NgIdleModule.forRoot(),
   ],
   declarations: [
     AppComponent,

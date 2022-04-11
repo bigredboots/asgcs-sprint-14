@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { GridContainerComponent } from './components/grid/grid-container/grid-container.component';
 import { GridCellDirective } from './components/grid/grid-cell/grid-cell.directive';
@@ -37,6 +38,8 @@ import {
     GridCellDirective,
     DonutComponent,
     DonutComponentAlt,
+    FormsModule,
+    ReactiveFormsModule,
     VertgridComponent,
     VertgridaltComponent,
     HorizgridComponent,
