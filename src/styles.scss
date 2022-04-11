@@ -225,7 +225,7 @@ my-app {
   background: $blue-color;
   background-color: transparent;
   background-image: none;
-  pointer-events: none;
+  // pointer-events: none;
 }
 .k-select .k-icon {
   width: 0px;
@@ -875,6 +875,7 @@ h4 {
 .logout-modal-open .idle.modal-window,
 .filter-open .expanded-filters.modal-window {
   display: flex !important;
+  z-index: 10;
   opacity: 1 !important;
   transform: translate(-50%, -50%) scale(1) !important;
   transition: 0.4s ease-in all;

@@ -173,7 +173,7 @@
     border: 1px solid $white;
     position: relative;
     border-radius: 10px;
-    background-position: 6px 2px;
+    background-position: 5px 1px;
     background-size: 3px;
     top: 2px;
     right: -3px;
@@ -184,7 +184,7 @@
     &::before {
       transition: 0.15s ease-in-out all;
       display: flex;
-      align-self: center;
+      // align-self: center;
     }
   }
   .moreinfo-icon:hover {
@@ -207,6 +207,7 @@
       color: #ccc;
       font-size: 21px;
       transform: rotate(45deg);
+      line-height:
     }
   }
   .maximize-icon {
