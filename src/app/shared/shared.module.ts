@@ -19,9 +19,7 @@ import { HorizgridComponent } from './components/horizgrid/horizgrid.component';
 import { DonutComponentAlt } from './components/charts/donut-chart-alt/donut-chart-alt.component';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 
-import {
-  DropDownsModule
-} from '@progress/kendo-angular-dropdowns';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { LabelModule } from '@progress/kendo-angular-label';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
@@ -34,13 +32,11 @@ import {
 
 @NgModule({
   declarations: [
-    FormsModule,
-    ReactiveFormsModule,
     GridContainerComponent,
     GridCellDirective,
     DonutComponent,
     DonutComponentAlt,
-    
+
     VertgridComponent,
     VertgridaltComponent,
     HorizgridComponent,
@@ -53,6 +49,8 @@ import {
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule,
     ChartsModule,
     GridModule,
@@ -79,5 +77,4 @@ import {
   ],
   bootstrap: [DonutComponent],
 })
-export class SharedModule {
-}
+export class SharedModule {}
