@@ -612,22 +612,6 @@ h4 {
   }
 }
 
-// .k-multiselect-wrap.k-floatwrap {
-//   background-color: #dcdcdc;
-//   padding: 0;
-//   border: 0;
-//   border-radius: 5px 0 0 5px;
-// }
-// .k-multiselect .k-multiselect-wrap .k-searchbar input {
-//   width: 100%;
-//   margin-top: 4px;
-// }
-// .k-multiselect .k-multiselect-wrap .k-searchbar input::placeholder {
-//   color: #999;
-// }
-// .k-multiselect .k-multiselect-wrap::before {
-//   height: auto;
-// }
 .k-dropdown-wrap {
   padding: 0px;
   width: 100%;
@@ -649,6 +633,7 @@ h4 {
     padding: 0;
     border: 0;
     border-radius: 5px 0px 0px 5px;
+    pointer-events: none;
 
     .k-select {
       display: none !important;
@@ -704,6 +689,16 @@ h4 {
       .k-button {
         padding-top: 2px;
       }
+    }
+    // .k-multiselect {
+    //   height: 24px;
+    // }
+    .k-select {
+      height: 20px;
+    }
+    .k-input {
+      background: $white;
+      margin-top: 1px !important;
     }
   }
   &.opened {
@@ -912,7 +907,7 @@ h4 {
 .filter-open.logout-modal-open .expanded-filters.modal-window,
 .excel-modal-open.logout-modal-open .excelloader.modal-window {
   opacity: 0 !important;
-  transform: translate(-50%, -50%) scale(.5) !important;
+  transform: translate(-50%, -50%) scale(0.5) !important;
 }
 
 //spinners

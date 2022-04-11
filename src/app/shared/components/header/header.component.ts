@@ -1,5 +1,5 @@
 import { BreadcrumbService } from './../../../services/breadcrumb.service';
-import { NgModule, Input } from '@angular/core';
+import { NgModule, Input, OnChanges } from '@angular/core';
 
 import {
   Component,
@@ -21,13 +21,14 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnChanges {
   @ViewChild('multiselectContainer') multiselectContainer: ElementRef;
   @Input() data: any;
   @Input() textField: any;
   @Input() valueField: any;
   @Input() value: any;
   @Output() valueChange = new EventEmitter<any>();
+  
 
   public slidervalue: [number, number] = [50, 100];
   public min = 0;
@@ -107,6 +108,7 @@ export class HeaderComponent implements OnInit {
     // this.reportfilters.nativeElement.classList.toggle('expanded');
     // this.overview.nativeElement.classList.toggle('filter-expanded');
   }
+
   toggleOverlayer() {
     document.body.classList.remove('filter-open');
     document.body.classList.remove('modal-open');
