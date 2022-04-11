@@ -520,7 +520,9 @@ h4 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+.k-slider-track-wrap {
+  height: 20px;
+}
 .full-screen {
   background: #009ddb;
   display: flex;
@@ -870,7 +872,8 @@ h4 {
 
 //loader for timeouts and modals
 .timeout-modal-open .idle.modal-window,
-.logout-modal-open .idle.modal-window {
+.logout-modal-open .idle.modal-window,
+.filter-open .expanded-filters.modal-window {
   display: flex !important;
   opacity: 1 !important;
   transform: translate(-50%, -50%) scale(1) !important;
@@ -883,6 +886,7 @@ h4 {
   opacity: 0;
   transition: 0.4s ease-in all;
 }
+
 .excel-modal-open .excelloader.modal-window {
   display: flex !important;
   opacity: 1 !important;
@@ -903,6 +907,11 @@ h4 {
 .logout-modal-open app-dashboard-layout .main-content,
 .timeout-modal-open app-dashboard-layout .main-content {
   filter: blur(4px);
+}
+.filter-open.logout-modal-open .expanded-filters.modal-window,
+.excel-modal-open.logout-modal-open .excelloader.modal-window {
+  opacity: 0 !important;
+  transform: translate(-50%, -50%) scale(.5) !important;
 }
 
 //spinners

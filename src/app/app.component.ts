@@ -23,17 +23,20 @@ export class AppComponent implements OnInit {
   public configuration: DashboardLayoutConfiguration;
   public links: NavigationLink[];
 
+
+
   constructor(private idle: Idle) {
     this.configuration = new DashboardLayoutConfiguration(
       SidePanelPosition.LEFT,
       SidePanelState.OPEN
     );
   }
+
   ngOnInit() {
     window.scroll(0, 0);
 
     // sets an idle timeout of 30 seconds.
-    this.idle.setIdle(3000);
+    this.idle.setIdle(30);
 
     // sets an  timer for 30 seconds.
     this.idle.setTimeout(30);
