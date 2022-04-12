@@ -23,13 +23,15 @@ export class AppComponent implements OnInit {
   public configuration: DashboardLayoutConfiguration;
   public links: NavigationLink[];
 
-
-
   constructor(private idle: Idle) {
     this.configuration = new DashboardLayoutConfiguration(
       SidePanelPosition.LEFT,
       SidePanelState.OPEN
     );
+  }
+
+  CloseFilters() {
+    document.body.classList.remove('filter-open');
   }
 
   ngOnInit() {

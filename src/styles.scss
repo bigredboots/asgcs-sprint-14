@@ -732,6 +732,9 @@ h4 {
     color: $black;
   }
 }
+.filter-open .k-dropdown-wrap .k-multiselect-wrap.k-floatwrap .k-searchbar .k-input {
+  margin-top: 0px;
+}
 
 .header.collapse .company-logo {
   width: 80px;
@@ -767,6 +770,16 @@ h4 {
 .k-button.full-screen.closed {
   display: none;
   border: 1px;
+}
+
+.filter-modal .k-input {
+  font-size: 16px;
+}
+.filter-modal .filter-input.k-dropdown-wrap.active {
+  height: 28px;
+}
+.filter-modal .filter-input.k-dropdown-wrap.active .k-select {
+  height: 24px;
 }
 
 //loader style
@@ -868,7 +881,7 @@ h4 {
 //loader for timeouts and modals
 .timeout-modal-open .idle.modal-window,
 .logout-modal-open .idle.modal-window,
-.filter-open .expanded-filters.modal-window {
+.filter-open .filter-modal.modal-window {
   display: flex !important;
   z-index: 10;
   opacity: 1 !important;
@@ -904,8 +917,10 @@ h4 {
 .timeout-modal-open app-dashboard-layout .main-content {
   filter: blur(4px);
 }
-.filter-open.logout-modal-open .expanded-filters.modal-window,
-.excel-modal-open.logout-modal-open .excelloader.modal-window {
+.filter-open.logout-modal-open .filter-modal.modal-window,
+.filter-open.timeout-modal-open .filter-modal.modal-window,
+.excel-modal-open.logout-modal-open .excelloader.modal-window,
+.excel-modal-open.timeout-modal-open .excelloader.modal-window {
   opacity: 0 !important;
   transform: translate(-50%, -50%) scale(0.5) !important;
 }

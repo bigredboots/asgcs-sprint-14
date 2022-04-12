@@ -24,11 +24,84 @@
     </div>
   </div>
 </div>
-<div class="expanded-filters modal-window">
-<div class="filters">
-<span class="filter-title">Filters</span>
-<span class="filter-close">+</span>
-</div>
+<div class="filter-modal modal-window">
+  <div class="filter-header">
+    <span class="filter-title">Filters</span>
+    <span class="filter-close" (click)="CloseFilters()">+</span>
+  </div>
+  <div class="filter-choices">
+    <label for="filter-one">Most Important Filter</label>
+    <span #multiselectContainer class="filter-input k-dropdown-wrap active">
+      <kendo-multiselect
+        #multiselect
+        kendoMultiSelectSummaryTag
+        placeholder="(2) Selected"
+      ></kendo-multiselect>
+      <span class="k-select">
+        <span class="k-icon k-i-arrow-s"></span>
+      </span>
+    </span>
+
+    <label for="filter-one">Secondary Filter</label>
+    <span #multiselectContainer class="filter-input k-dropdown-wrap">
+      <kendo-multiselect
+        #multiselect
+        kendoMultiSelectSummaryTag
+        placeholder="Select"
+      ></kendo-multiselect>
+      <span class="k-select">
+        <span class="k-icon k-i-arrow-s"></span>
+      </span>
+    </span>
+
+    <label for="filter-one">Tertiary Filter</label>
+    <span #multiselectContainer class="filter-input k-dropdown-wrap">
+      <kendo-multiselect
+        #multiselect
+        kendoMultiSelectSummaryTag
+        placeholder="Select"
+      ></kendo-multiselect>
+      <span class="k-select">
+        <span class="k-icon k-i-arrow-s"></span>
+      </span>
+    </span>
+
+    <label for="filter-one">Fourth Tertiary Filter</label>
+    <span #multiselectContainer class="filter-input k-dropdown-wrap">
+      <kendo-multiselect
+        #multiselect
+        kendoMultiSelectSummaryTag
+        placeholder="Select"
+      ></kendo-multiselect>
+      <span class="k-select">
+        <span class="k-icon k-i-arrow-s"></span>
+      </span>
+    </span>
+
+    <label for="filter-one">Fifth Tertiary Filter with long label</label>
+    <span #multiselectContainer class="filter-input k-dropdown-wrap">
+      <kendo-multiselect
+        #multiselect
+        kendoMultiSelectSummaryTag
+        placeholder="Select"
+      ></kendo-multiselect>
+      <span class="k-select">
+        <span class="k-icon k-i-arrow-s"></span>
+      </span>
+    </span>
+
+    <label for="filter-one">Sixth Tertiary Filter</label>
+    <span #multiselectContainer class="filter-input k-dropdown-wrap">
+      <kendo-multiselect
+        #multiselect
+        kendoMultiSelectSummaryTag
+        placeholder="Select"
+      ></kendo-multiselect>
+      <span class="k-select">
+        <span class="k-icon k-i-arrow-s"></span>
+      </span>
+    </span>
+  </div>
 </div>
 
 <app-dashboard-layout [configuration]="configuration">

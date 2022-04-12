@@ -51,12 +51,47 @@
   margin-top: 20px;
   gap: 10px;
 }
-.filter-title {
-  font-size: 18px;
-  letter-spacing: 1px;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 10px;
+.filter-modal {
+  flex-flow: column;
+  .filter-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .filter-title {
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+  .filter-close {
+    position: relative;
+    transform: rotate(45deg);
+    font-size: 30px;
+    line-height: 10px;
+    cursor: pointer;
+    transition: $fast-transition;
+
+    &:hover {
+      color: $white;
+      transform: rotate(45deg) scale(1.2);
+    }
+  }
+  .filter-choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: px 10px;
+
+    label {
+      grid-column: 1;
+      font-size: 18px;
+      text-align: end;
+    }
+    .filter-input {
+      grid-column: 2;
+      align-self: center;
+    }
+  }
 }
-
-

@@ -29,6 +29,11 @@
     transform: rotate(45deg);
     font-size: $largest-font;
     cursor: pointer;
+    transition: $fast-transition;
+
+    &:hover {
+      transform: rotate(45deg) scale(1.2);
+    }
   }
   label {
     font-size: $large-font;
