@@ -305,6 +305,32 @@ button.search-submit {
   background: black;
   border-radius: 0px 0px 5px 5px;
 }
+.custom-date {
+  border: 1px solid #ccc;
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px 20px;
+  width: 300px;
+  background: black;
+}
+
+.date-slider {
+  margin: 10px 0px;
+}
+.date-output {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.date-choice {
+    border: 1px solid #404040;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    color: #404040;
+}
+.custom-active .date-choice {
+  color: white;
+}
 
 /*toggle-search */
 #toggle-search:checked ~ .top-fields {
