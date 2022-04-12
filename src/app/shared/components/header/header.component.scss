@@ -292,6 +292,11 @@ button.search-submit {
     background: $blue-color;
     color: white;
   }
+  &.custom {
+    &:hover {
+      background: $black;
+    }
+  }
 }
 .date-open .select-options {
   max-height: 300px;

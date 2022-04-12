@@ -1,9 +1,8 @@
 import { BreadcrumbService } from './../../../services/breadcrumb.service';
-import { NgModule, Input, OnChanges } from '@angular/core';
+import { NgModule, Input, OnChanges, OnInit } from '@angular/core';
 
 import {
   Component,
-  OnInit,
   ViewChild,
   ElementRef,
   Output,
@@ -21,21 +20,15 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnChanges {
+export class HeaderComponent implements OnInit {
   @ViewChild('multiselectContainer') multiselectContainer: ElementRef;
   @Input() data: any;
   @Input() textField: any;
   @Input() valueField: any;
   @Input() value: any;
   @Output() valueChange = new EventEmitter<any>();
+
   
-
-  public slidervalue: [number, number] = [50, 100];
-  public min = 0;
-  public max = 200;
-  public largeStep = 2;
-  public smallStep = 20;
-
   private _subscriptionsSubject$: Subject<void>;
   public currentPanelState: SidePanelState;
   constructor(
