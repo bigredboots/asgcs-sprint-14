@@ -57,6 +57,7 @@ export class HeaderComponent implements OnInit {
   }
   @ViewChild('overview') overview: ElementRef;
   @ViewChild('datesblock') datesblock: ElementRef;
+  @ViewChild('customslide') customslide: ElementRef;
 
   @ViewChild('expandedfilters') expandedfilters: ElementRef;
   @ViewChild('filters') filters: ElementRef;
@@ -100,6 +101,9 @@ export class HeaderComponent implements OnInit {
     document.body.classList.add('filter-open');
     // this.reportfilters.nativeElement.classList.toggle('expanded');
     // this.overview.nativeElement.classList.toggle('filter-expanded');
+  }
+  sliderApply(){
+    this.customslide.nativeElement.classList.toggle('custom-active');
   }
 
   toggleOverlayer() {

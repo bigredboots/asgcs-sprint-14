@@ -278,7 +278,7 @@ button.search-submit {
   overflow: hidden;
   cursor: pointer;
   opacity: 0;
-  z-index: 1;
+  z-index: 3;
   position: absolute;
   border: 0px;
   width: 100%;
@@ -322,14 +322,29 @@ button.search-submit {
   font-size: 14px;
 }
 .date-choice {
-    border: 1px solid #404040;
-    padding: 5px 10px;
-    font-size: 18px;
-    border-radius: 5px;
-    color: #404040;
+  border: 1px solid #404040;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  color: #404040;
+
+  span {
+    padding: 0px 5px;
+  }
 }
 .custom-active .date-choice {
+  color: #ccc;
+}
+.slider-apply.blue {
+  background: $grey-darker;
+  color: $grey-lighter;
+  pointer-events: none;
+  border-color: $grey-darker;
+}
+.custom-active .slider-apply.blue {
+  background-color: $blue-color;
   color: white;
+  border-color: $blue-color;
 }
 
 /*toggle-search */
@@ -501,7 +516,7 @@ button.search-submit {
     color: $white;
 
     &:before {
-      filter: brightness(1.4)
+      filter: brightness(1.4);
     }
   }
 }

@@ -99,10 +99,11 @@
 }
 
 .sliderimg {
-  background-image: url(/assets/images/sliders.png);
-  width: 348px;
+  background-image: url('https://cdn.jsdelivr.net/gh/bigredboots/asgcs-sprint-14@master/src/assets/images/sliders.png');
+  width: 100%;
   height: 31px;
   content: '';
+  background-size: contain;
   background-repeat: no-repeat;
   
 }

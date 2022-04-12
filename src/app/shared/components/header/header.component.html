@@ -42,16 +42,22 @@
               <div class="date-selectors">Date Three</div>
               <div class="date-selectors">Date Four</div>
               <div class="date-selectors">Date Five</div>
-              <div class="date-selectors custom">
+              <div class="date-selectors custom" #customslide>
                 Custom Date
-                <div class="sliderimg"></div>
+                <a
+                  style="font-size: 10px; color: ##009ddc"
+                  href="https://jsfiddle.net/bigredboots/z1oxt7nf/"
+                  target="_blank"
+                  >See Functionality here
+                </a>
+                <div class="date-slider">
+                  <div class="sliderimg" (click)="sliderApply()"></div>
+                </div>
                 <div class="date-output">
                   <div class="date-choice">
-                    12/12/2021 to 04/19/2022
+                    <span>12/12/2021</span> to <span>04/19/2022</span>
                   </div>
-                  <button class="slider-apply">
-                    Apply
-                  </button>
+                  <button class="slider-apply blue">Apply</button>
                 </div>
               </div>
             </div>
@@ -123,9 +129,7 @@
                     placeholder="(2) Selected"
                   >
                   </kendo-multiselect>
-                  <span
-                    class="k-select"
-                  >
+                  <span class="k-select">
                     <span class="k-icon k-i-arrow-s"></span>
                   </span>
                 </span>
@@ -143,28 +147,21 @@
                     placeholder="Select"
                   >
                   </kendo-multiselect>
-                  <span
-                    class="k-select"
-                  >
+                  <span class="k-select">
                     <span class="k-icon k-i-arrow-s"></span>
                   </span>
                 </span>
               </div>
               <div class="filter-item">
                 <div class="filter-label">Tertiary Filter</div>
-                <span
-                  #multiselectContainer
-                  class="k-dropdown-wrap"
-                >
+                <span #multiselectContainer class="k-dropdown-wrap">
                   <kendo-multiselect
                     #multiselect
                     kendoMultiSelectSummaryTag
                     placeholder="Select"
                   >
                   </kendo-multiselect>
-                  <span
-                    class="k-select"
-                  >
+                  <span class="k-select">
                     <span class="k-icon k-i-arrow-s"></span>
                   </span>
                 </span>
