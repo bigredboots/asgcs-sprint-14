@@ -18,8 +18,7 @@ body {
   padding: 0px;
   background: $grey-color;
   color: $grey-lighter;
-  font-family: 'Arrow Display', 'slick', 'slock', courier;
-  //font-family: 'Arrow Display', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-family: 'Arrow Display', 'Helvetica Neue', 'Helvetica', Arial;
   font-size: $base-font;
   line-height: unset;
 }
@@ -732,7 +731,11 @@ h4 {
     color: $black;
   }
 }
-.filter-open .k-dropdown-wrap .k-multiselect-wrap.k-floatwrap .k-searchbar .k-input {
+.filter-open
+  .k-dropdown-wrap
+  .k-multiselect-wrap.k-floatwrap
+  .k-searchbar
+  .k-input {
   margin-top: 0px;
 }
 
