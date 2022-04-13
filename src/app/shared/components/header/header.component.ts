@@ -74,6 +74,10 @@ export class HeaderComponent implements OnInit {
   closedatechoice() {
     this.datesblock.nativeElement.classList.remove('date-open');
   }
+  changedatechoice() {
+    this.datesblock.nativeElement.classList.remove('date-open');
+    this.datesblock.nativeElement.classList.add('date-selected');
+  }
   toggleSidebar() {
     this.overview.nativeElement.classList.toggle('sidebar-active');
   }

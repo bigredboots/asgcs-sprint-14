@@ -248,13 +248,11 @@ button.search-submit {
 
 .dates-block {
   position: relative;
+  width: 300px;
 }
 .selected-choice {
   font-size: 21px;
   color: #fff;
-  text-decoration: underline;
-  text-underline-offset: 7px;
-  text-decoration-thickness: 2px;
   display: flex;
   font-weight: bold;
   align-items: center;
@@ -262,6 +260,7 @@ button.search-submit {
   letter-spacing: 0.5px;
   margin-bottom: 6px;
   cursor: pointer;
+  
 }
 .selected-choice:after {
   content: '';
@@ -517,7 +516,16 @@ button.search-submit {
     }
   }
 }
-
+.selected-choice .newchoice {
+  display: none;
+}
+.date-selected .selected-choice .newchoice {
+  display: block;
+  margin: 0px auto;
+}
+.date-selected .selected-choice .initchoice {
+  display: none;
+}
 
 .filter-expanded-row {
   display: flex;
