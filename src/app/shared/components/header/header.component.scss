@@ -234,13 +234,13 @@ button.search-submit {
     }
   }
 }
-/* date block */
+/*  date block  */
 .refresh-date {
   font-size: $smallest-font;
   color: $grey-light;
   position: relative;
   text-align: center;
-}
+} 
 .refresh-date .title {
   font-weight: bold;
   font-size: $small-font;
@@ -260,7 +260,7 @@ button.search-submit {
   letter-spacing: 0.5px;
   margin-bottom: 6px;
   cursor: pointer;
-  
+  border-bottom: 2px solid white;
 }
 .selected-choice:after {
   content: '';
