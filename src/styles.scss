@@ -784,6 +784,18 @@ h4 {
 .filter-modal .filter-input.k-dropdown-wrap.active .k-select {
   height: 24px;
 }
+.more-active .expand-filters {
+  border-color: $white !important;
+  color: $white;
+  font-weight: bold;
+
+  &:before {
+    filter: brightness(1.4);
+  }
+  .filterblock::before {
+    content: '(8) ';
+  }
+}
 
 //loader style
 

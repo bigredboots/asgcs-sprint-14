@@ -398,16 +398,13 @@ button.search-submit {
   height: 50px;
   transition: $default-transition;
 
-  &.filter-active {
-    width: 750px;
-  }
-  &.filter-active .overview-filters {
+  .overview-filters {
     max-width: 100%;
     transition: $default-transition;
     width: 100%;
     padding-right: 20px;
   }
-  &.filter-active .filters {
+  .filters {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     transition: $default-transition;
@@ -520,6 +517,7 @@ button.search-submit {
     }
   }
 }
+
 
 .filter-expanded-row {
   display: flex;
@@ -827,7 +825,7 @@ button.search-submit {
     top: 0px;
     max-height: 0px;
   }
-  .filter-block.filter-active .overview-filters {
+  .filter-block .overview-filters {
     top: 30px;
   }
   .filter-block {

@@ -77,26 +77,6 @@ export class HeaderComponent implements OnInit {
   toggleSidebar() {
     this.overview.nativeElement.classList.toggle('sidebar-active');
   }
-  toggleFilters() {
-    this.filters.nativeElement.classList.toggle('filter-active');
-    this.overview.nativeElement.classList.toggle('filter-active');
-  }
-  toggleHubFilters() {
-    this.hubfilters.nativeElement.classList.toggle('filter-active');
-    this.overview.nativeElement.classList.toggle('filter-active');
-  }
-  toggleSupplyFilters() {
-    this.supplyfilters.nativeElement.classList.toggle('filter-active');
-    this.overview.nativeElement.classList.toggle('filter-active');
-  }
-  toggleOutboundFilters() {
-    this.outboundfilters.nativeElement.classList.toggle('filter-active');
-    this.overview.nativeElement.classList.toggle('filter-active');
-  }
-  toggleReportFilters() {
-    this.reportfilters.nativeElement.classList.toggle('filter-active');
-    this.overview.nativeElement.classList.toggle('filter-active');
-  }
   toggleExpandedFilters() {
     document.body.classList.add('filter-open');
     // this.reportfilters.nativeElement.classList.toggle('expanded');

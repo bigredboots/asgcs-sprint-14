@@ -110,10 +110,10 @@
   </div>
 
   <ng-container *ngIf="breadcrumbService.currentModule$ | async as module">
-    <div class="filter-block filter-active" #reportfilters>
-      <div class="filters" (click)="toggleReportFilters()">
+    <div class="filter-block">
+      <div class="filters">
         <span class="filter-title">Filters</span>
-        <span class="filter-close">+</span>
+        <!-- <span class="filter-close">+</span> -->
       </div>
       <div class="overview-filters">
         <div class="filter-container">

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, } from '@angular/core';
 import { GlobalConstants } from './common/global-constants';
 import { Idle, DEFAULT_INTERRUPTSOURCES } from '@ng-idle/core';
 import {
@@ -29,7 +29,12 @@ export class AppComponent implements OnInit {
       SidePanelState.OPEN
     );
   }
+  @ViewChild('expandedfilters') expandedfilters: ElementRef;
 
+  applyExpandedFilters() {
+    document.body.classList.remove('filter-open');
+    document.body.classList.toggle('more-active');
+  }
   CloseFilters() {
     document.body.classList.remove('filter-open');
   }
