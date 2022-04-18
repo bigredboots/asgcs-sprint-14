@@ -240,7 +240,7 @@ button.search-submit {
   color: $grey-light;
   position: relative;
   text-align: center;
-} 
+}
 .refresh-date .title {
   font-weight: bold;
   font-size: $small-font;
@@ -851,5 +851,31 @@ button.search-submit {
   .filter-block.filter-active .filters .filter-close {
     top: -7px;
     right: -7px;
+  }
+}
+:host ::ng-deep .search-component {
+  border-width: 0;
+  position: relative;
+
+  input {
+    border: 0px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 2px 3px;
+    font-size: 14px;
+    width: 85px;
+padding-right: 30px;
+  }
+  button {
+    width: 16px;
+    text-indent: -999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    right: -10px;
+    background-color: transparent;
+    border: none;
+    background-size: 16px 16px;
+    margin-top: 4px;
+    position: absolute;
   }
 }
